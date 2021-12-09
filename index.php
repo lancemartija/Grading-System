@@ -16,12 +16,12 @@
 
 <body>
   <main class="flex flex-col justify-center items-center h-screen bg-blue-50">
-    <header class="pb-6">
+    <header class="pb-8">
       <h1 class="mb-3 text-6xl text-gray-700 text-center font-light"><b>S</b>tudent <b>G</b>rading <b>S</b>ystem</h1>
       <p class="text-base text-gray-700 text-center font-extralight">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
     </header>
-    <span class="w-10 bg-gray-400 p-px"></span>
-    <section class="flex justify-center items-center pt-6">
+    <span class="w-8 bg-gray-400 p-px"></span>
+    <section class="flex justify-center items-center pt-8">
       <div class="grid grid-cols-1 grid-rows-1 w-72 h-96 mr-6 rounded-xl bg-white transition duration-300 hover:shadow-lg transform hover:scale-105 scale-active">
         <svg class="w-full h-auto p-5" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="991.13988" height="770.17774" viewBox="0 0 991.13988 770.17774" xmlns:xlink="http://www.w3.org/1999/xlink">
           <title>professor</title>
@@ -73,8 +73,8 @@
           <polygon points="164.876 262.939 185.586 279.994 188.023 276.339 164.876 262.939" opacity="0.1" />
           <polygon points="206.296 267.812 191.678 276.339 192.896 279.994 206.296 267.812" opacity="0.1" />
         </svg>
-        <h2 class="px-6 text-2xl text-gray-700 font-bold">Administrator</h2>
-        <p class="px-6 font-extralight text-gray-500 leading-5">
+        <h2 class="px-6 text-xl text-gray-700 font-bold">Administrator</h2>
+        <p class="px-6 text-sm font-extralight text-gray-500 leading-5">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit.
         </p>
         <div class="p-5">
@@ -147,8 +147,8 @@
           </g>
           <path d="M937.56,179l14,13S939.56,187,937.56,179Z" transform="translate(-108.55 -48.49)" opacity="0.1" />
         </svg>
-        <h2 class="px-6 text-2xl text-gray-700 font-bold">Student</h2>
-        <p class="px-6 font-extralight text-gray-500 leading-5">
+        <h2 class="px-6 text-xl text-gray-700 font-bold">Student</h2>
+        <p class="px-6 text-sm font-extralight text-gray-500 leading-5">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit.
         </p>
         <div class="p-5">
