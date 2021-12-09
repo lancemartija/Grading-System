@@ -74,7 +74,7 @@
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
           </p>
         </div>
-        <a href="admin/" class="w-full bg-green-500 mr-3 px-6 py-2.5 focus:outline-none focus:ring-4 focus:ring-green-500 focus:ring-opacity-50 text-white text-center rounded hover:bg-green-600 transition duration-200">Admin</a>
+        <a href="admin/" class="w-full bg-green-500 mr-3 py-2.5 focus:outline-none focus:ring-4 focus:ring-green-500 focus:ring-opacity-50 text-white text-center rounded hover:bg-green-600 transition duration-200">Admin</a>
       </section>
       <section class="grid grid-cols-1 grid-rows-1 p-6 transition duration-300 transform bg-white w-72 h-96 rounded-xl hover:shadow-lg hover:scale-105 active:scale-100 scale-active">
         <svg class="w-full h-auto" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 982.89 803.03" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -142,13 +142,13 @@
           </g>
           <path d="M937.56,179l14,13S939.56,187,937.56,179Z" transform="translate(-108.55 -48.49)" opacity="0.1" />
         </svg>
-        <div class="pb-4">
+        <div class="pb-6">
           <h2 class="text-xl font-bold text-gray-700">Student</h2>
           <p class="text-sm leading-5 text-gray-500 font-extralight">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
           </p>
         </div>
-        <a href="student/" class="w-full bg-blue-500 mr-3 px-6 py-2.5 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 text-white text-center rounded hover:bg-blue-600 transition duration-200">Student</a>
+        <a href="student/" class="w-full bg-blue-500 py-2.5 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 text-white text-center rounded hover:bg-blue-600 transition duration-200">Student</a>
       </section>
     </form>
   </main>
