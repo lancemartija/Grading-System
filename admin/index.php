@@ -10,13 +10,13 @@ session_start();
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin Login</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/tailwind.css">
 </head>
 
 <body>
-  <main class="flex flex-col items-center justify-center h-screen bg-gray-50">
+  <main class="flex flex-col items-center justify-center h-screen bg-gray-50 font-inter">
     <header class="pb-8">
-      <h1 class="mb-3 text-6xl font-light text-center text-gray-700"><b>S</b>ign in to your account</h1>
+      <h1 class="mb-3 text-5xl text-center text-gray-700">Sign in to your account</h1>
     </header>
     <section class="w-full bg-white shadow rounded-xl md:mt-0 sm:max-w-screen-sm xl:p-0">
       <div class="p-6 space-y-8 sm:p-8 lg:p-16">
