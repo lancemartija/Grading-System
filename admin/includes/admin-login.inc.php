@@ -5,9 +5,9 @@ if (isset($_POST['submit'])) {
   $pwd = $_POST['password'];
 
   # instatiate LoginController class
-  include '../classes/database.classes.php';
-  include '../classes/admin-login.classes.php';
-  include '../controller/admin-login.contr.php';
+  include_once '../classes/database.classes.php';
+  include_once '../classes/admin-login.classes.php';
+  include_once '../controller/admin-login.contr.php';
   $login = new LoginContr($uid, $pwd);
 
   # Running error handlers and user login
