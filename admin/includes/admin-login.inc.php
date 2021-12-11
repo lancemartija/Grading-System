@@ -5,8 +5,8 @@ if (isset($_POST['submit'])) {
   $pwd = $_POST['password'];
 
   # instatiate LoginController class
-  include '../classes/database.class.php';
-  include '../classes/admin-login.class.php';
+  include '../classes/database.classes.php';
+  include '../classes/admin-login.classes.php';
   include '../controller/admin-login.contr.php';
   $login = new LoginContr($uid, $pwd);
 
@@ -14,7 +14,6 @@ if (isset($_POST['submit'])) {
   $login->loginUser();
 
   # Going to Admin Dashboard
-
   header('Location: ../view/dashboard.php');
 }
 print_r($_POST);
