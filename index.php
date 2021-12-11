@@ -68,10 +68,10 @@
           <polygon points="164.876 262.939 185.586 279.994 188.023 276.339 164.876 262.939" opacity="0.1" />
           <polygon points="206.296 267.812 191.678 276.339 192.896 279.994 206.296 267.812" opacity="0.1" />
         </svg>
-        <div class="pb-4">
+        <div class="pb-6">
           <h2 class="text-xl font-bold text-gray-700">Administrator</h2>
           <p class="text-sm leading-5 text-gray-500 font-extralight">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Manage users, update student information, and generate reports.
           </p>
         </div>
         <a href="admin/" class="w-full bg-green-500 mr-3 py-2.5 focus:outline-none focus:ring-4 focus:ring-green-500 focus:ring-opacity-50 text-white text-center rounded hover:bg-green-600 transition duration-200">Admin</a>
@@ -145,17 +145,14 @@
         <div class="pb-6">
           <h2 class="text-xl font-bold text-gray-700">Student</h2>
           <p class="text-sm leading-5 text-gray-500 font-extralight">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Edit your personal information and view your midterm and final grades
           </p>
         </div>
         <a href="student/" class="w-full bg-blue-500 py-2.5 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 text-white text-center rounded hover:bg-blue-600 transition duration-200">Student</a>
       </div>
     </section>
-    <footer class="absolute bottom-0 left-0 right-0 grid w-1/4 grid-cols-4 p-6 m-auto divide-x divide-gray-400">
-      <div class="text-sm text-center text-gray-400">Webdvt</div>
-      <div class="text-sm text-center text-gray-400">SA3</div>
-      <div class="text-sm text-center text-gray-400">C3A</div>
-      <div class="text-sm text-center text-gray-400">Group 1</div>
+    <footer class="absolute bottom-0 left-0 right-0 pb-6">
+      <p class="text-sm text-center text-gray-400">&#169; 2021 Webdvt SA3 Group 1. All rights reserved.</p>
     </footer>
   </main>
 </body>
