@@ -18,7 +18,7 @@ if (!isset($_SESSION['userid']) && !isset($_SESSION['useruid'])) {
 
 <body>
   <h1>Dashboard</h1>
-  <a href="logout.php">logout now</a>
+  <a href="../includes/logout.inc.php">logout now</a>
 </body>
 
 </html>
