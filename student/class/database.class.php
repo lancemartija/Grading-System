@@ -13,7 +13,6 @@ class Db
     $username = $this->username;
     $password = $this->password;
     $dbname = $this->dbname;
-
     $this->connect($hostname, $username, $password, $dbname);
   }
 
