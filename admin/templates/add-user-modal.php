@@ -11,20 +11,20 @@
           </svg>
         </button>
       </div>
-      <form action="#" method="post">
+      <form action="../includes/add-user.inc.php" method="post">
         <div class="p-6 space-y-6">
           <div class="grid grid-cols-6 gap-6">
             <div class="col-span-6 sm:col-span-3">
-              <label for="first-name" class="block mb-2 text-sm font-medium text-gray-900">First Name</label>
-              <input type="text" name="first-name" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none block w-full p-2.5" placeholder="John" required>
+              <label for="firstname" class="block mb-2 text-sm font-medium text-gray-900">First Name</label>
+              <input type="text" name="firstname" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none block w-full p-2.5" placeholder="John" required>
             </div>
             <div class="col-span-6 sm:col-span-3">
-              <label for="last-name" class="block mb-2 text-sm font-medium text-gray-900">Last Name</label>
-              <input type="text" name="last-name" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none block w-full p-2.5" placeholder="Doe" required>
+              <label for="lastname" class="block mb-2 text-sm font-medium text-gray-900">Last Name</label>
+              <input type="text" name="lastname" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none block w-full p-2.5" placeholder="Doe" required>
             </div>
             <div class="col-span-6 sm:col-span-3">
               <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Email</label>
-              <input type="email" name="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none block w-full p-2.5" placeholder="example@company.com" required>
+              <input type="email" name="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none block w-full p-2.5" placeholder="example@email.com" required>
             </div>
             <div class="col-span-6 sm:col-span-3">
               <label for="username" class="block mb-2 text-sm font-medium text-gray-900">Username</label>
@@ -35,11 +35,11 @@
               <input type="password" name="password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none block w-full p-2.5" placeholder="••••••••" required>
             </div>
             <div class="col-span-6 sm:col-span-3">
-              <label for="account-type" class="block mb-2 text-sm font-medium text-gray-900">Account Type</label>
-              <select name="account-type" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none block w-full p-2.5">
+              <label for="accounttype" class="block mb-2 text-sm font-medium text-gray-900">Account Type</label>
+              <select name="accounttype" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none block w-full p-2.5">
                 <option value="administrator">Administrator</option>
                 <option value="registrar">Registrar</option>
-                <option value="course-in-charge">Course In-charge</option>
+                <option value="course in-charge">Course In-charge</option>
                 <option value="encoder">Encoder</option>
                 <option value="student">Student</option>
               </select>
@@ -47,7 +47,7 @@
           </div>
         </div>
         <div class="items-center p-6 border-t border-gray-200 rounded-b">
-          <button class="text-white bg-green-600 hover:bg-green-700 focus:ring-4 focus:ring-green-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center" type="submit">Add user</button>
+          <button type="submit" name="submit" class="text-white bg-green-600 hover:bg-green-700 focus:ring-4 focus:ring-green-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Add user</button>
         </div>
       </form>
     </div>
