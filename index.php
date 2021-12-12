@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  <main class="h-screen font-inter bg-gray-50">
+  <main class="h-screen overflow-hidden font-inter bg-gray-50">
     <header class="flex flex-col items-center justify-center w-full mb-8 bg-blue-500 h-52">
       <h1 class="text-5xl font-bold text-center text-white uppercase">Student Grading System</h1>
       <p class="text-lg font-light text-center text-blue-100">A data and information management system for highschool students</p>
