@@ -27,11 +27,11 @@ session_start();
         <form class="mt-8 space-y-6" action="includes/admin-login.inc.php" method="post">
           <div>
             <label for="username" class="block mb-2 text-sm font-medium text-gray-700">Your username</label>
-            <input type="text" name="username" class="bg-gray-50 border border-gray-300 text-gray-900 focus:outline-none sm:text-sm rounded-lg focus:ring-green-600 focus:border-green-600 focus:ring-2 block w-full p-2.5" placeholder="username" required>
+            <input type="text" name="username" class="bg-gray-50 border border-gray-300 text-gray-900 focus:outline-none sm:text-sm rounded-lg focus:ring-green-600/50 focus:border-green-600 focus:ring-2 block w-full p-2.5" placeholder="username" required>
           </div>
           <div>
             <label for="password" class="block mb-2 text-sm font-medium text-gray-700">Your password</label>
-            <input type="password" name="password" class="bg-gray-50 border border-gray-300 text-gray-900 focus:outline-none sm:text-sm rounded-lg focus:ring-green-600 focus:border-green-600 focus:ring-2 block w-full p-2.5" placeholder="••••••••" required>
+            <input type="password" name="password" class="bg-gray-50 border border-gray-300 text-gray-900 focus:outline-none sm:text-sm rounded-lg focus:ring-green-600/50 focus:border-green-600 focus:ring-2 block w-full p-2.5" placeholder="••••••••" required>
           </div>
           <div class="flex items-start">
             <!-- <div class="flex items-center h-5">
