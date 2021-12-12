@@ -1,10 +1,11 @@
 <?php
+
 if (isset($_POST['submit'])) {
   # Grabbing data
   $uid = $_POST['username'];
   $pwd = $_POST['password'];
 
-  # instatiate LoginController class
+  # Instatiate LoginContr class
   include_once '../classes/database.classes.php';
   include_once '../classes/admin-login.classes.php';
   include_once '../controller/admin-login.contr.php';
