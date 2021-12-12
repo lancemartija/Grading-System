@@ -26,7 +26,7 @@ $user = $_SESSION['useruid'];
   <?php include_once '../templates/navbar.php'; ?>
   <div class="flex pt-16 overflow-hidden bg-white">
     <?php include_once '../templates/sidebar.php'; ?>
-    <main id="main-content" class="relative w-full h-full overflow-y-auto bg-gray-50 lg:ml-64">
+    <main id="main-content" class="relative w-full h-full ml-64 overflow-y-auto bg-gray-50">
       <div class="items-center justify-between block p-4 bg-white border-b border-gray-200 sm:flex">
         <div class="w-full mb-1">
           <div class="mb-4">
