@@ -74,7 +74,7 @@
           <h2 class="text-xl font-bold text-gray-700">Administrator</h2>
           <p class="text-sm font-light leading-5 text-gray-500">Manage users, update student information, and generate reports</p>
         </div>
-        <a href="admin/" class="w-full bg-green-500 mr-3 py-2.5 focus:outline-none focus:ring-4 focus:ring-green-500 focus:ring-opacity-50 text-white text-center rounded hover:bg-green-600 transition duration-200">Admin</a>
+        <a href="admin/" class="w-full bg-green-600 mr-3 py-2.5 focus:outline-none focus:ring-4 focus:ring-green-500 focus:ring-opacity-50 text-white text-center rounded hover:bg-green-700 transition duration-200">Admin</a>
       </div>
       <div class="grid grid-cols-1 grid-rows-1 p-6 mr-6 transition duration-300 transform bg-white shadow w-72 h-96 rounded-xl hover:shadow-lg hover:scale-105">
         <svg class="w-full h-auto" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 982.89 803.03" xmlns:xlink="http://www.w3.org/1999/xlink">
