@@ -16,11 +16,11 @@ $user = $_SESSION['useruid'];
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Users</title>
-  <link rel="stylesheet" href="../../css/tailwind.css">
+  <link rel="stylesheet" href="../../app/css/tailwind.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <script async defer src="../../js/modal.js"></script>
+  <script async defer src="../../app/js/modal.js"></script>
 </head>
 
 <body>
@@ -102,7 +102,7 @@ $user = $_SESSION['useruid'];
             </div>
           </div>
         </div>
-        <?php include '../templates/add-user-modal.php'; ?>
+        <?php include_once '../templates/add-user-modal.php'; ?>
       </main>
     </div>
   </div>
