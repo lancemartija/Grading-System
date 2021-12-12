@@ -4,9 +4,9 @@ class Login extends Dbh
 {
   protected function getUser($uid, $pwd)
   {
-    $stmt = $this->connect()->prepare('SELECT account_password FROM tbluseraccounts WHERE account_username = ?;');
+    $stmt = $this->connect()->prepare('SELECT account_password FROM tbluseraccounts WHERE account_username = ? OR account_email = ?;');
 
-    if (!$stmt->execute([$uid])) {
+    if (!$stmt->execute([$uid, $uid])) {
       $stmt = null;
       header("Location: ../index.php?error=stmtfailed");
       exit;
@@ -27,9 +27,9 @@ class Login extends Dbh
       exit;
     } else {
       $pwd = $pwdHashed[0]['account_password'];
-      $stmt = $this->connect()->prepare('SELECT * FROM tbluseraccounts WHERE account_username = ? AND account_password = ?;');
+      $stmt = $this->connect()->prepare('SELECT * FROM tbluseraccounts WHERE account_username = ? OR account_email = ? AND account_password = ?;');
 
-      if (!$stmt->execute([$uid, $pwd])) {
+      if (!$stmt->execute([$uid, $uid, $pwd])) {
         $stmt = null;
         header("Location: ../index.php?error=stmtfailed");
         exit;
