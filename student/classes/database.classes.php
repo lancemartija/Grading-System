@@ -5,7 +5,7 @@ class Dbh
   private $hostname = 'localhost';
   private $username = 'admin';
   private $password = '';
-  private $dbname = '';
+  private $dbname = 'dbstudentgrading';
 
   public function connect()
   {
