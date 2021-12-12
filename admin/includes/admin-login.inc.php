@@ -16,4 +16,3 @@ if (isset($_POST['submit'])) {
   # Going to Admin Dashboard
   header('Location: ../view/dashboard.php');
 }
-print_r($_POST);
