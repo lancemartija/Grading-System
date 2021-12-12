@@ -66,7 +66,7 @@ $user = $_SESSION['useruid'];
               <form class="lg:pr-3" action="#" method="GET">
                 <label for="users-search" class="sr-only">Search</label>
                 <div class="relative mt-1 lg:w-64 xl:w-96">
-                  <input type="text" name="email" id="users-search" class="bg-gray-50 border border-gray-300 text-gray-900 focus:outline-none sm:text-sm rounded-lg focus:ring-green-600 focus:border-green-600 focus:ring-2 block w-full p-2.5" placeholder="Search for users">
+                  <input type="text" name="email" id="users-search" class="bg-gray-50 border border-gray-300 text-gray-900 focus:outline-none sm:text-sm rounded-lg focus:ring-green-600/50 focus:border-green-600 focus:ring-2 block w-full p-2.5" placeholder="Search for users">
                 </div>
               </form>
               <div class="flex pl-0 mt-3 space-x-1 sm:pl-2 sm:mt-0">
