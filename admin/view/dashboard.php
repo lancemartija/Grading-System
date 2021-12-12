@@ -40,8 +40,8 @@ $user = $_SESSION['useruid'];
               </button>
               <div class="mt-2">
                 <ul class="absolute right-0 hidden w-32 origin-top-right bg-white rounded-md shadow-lg group-hover:block ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
-                  <li class="py-1 hover:bg-gray-400">
-                    <a href="#" class="flex items-center justify-center px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <li class="py-1">
+                    <a href="../includes/logout.inc.php" class="flex items-center justify-center px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
                       </svg>
                       Sign out</a>
