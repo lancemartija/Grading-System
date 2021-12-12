@@ -20,12 +20,13 @@ $user = $_SESSION['useruid'];
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script async defer src="../../js/modal.js"></script>
 </head>
 
 <body>
-  <?php include_once '../templates/navbar.inc.php'; ?>
+  <?php include_once '../templates/navbar.php'; ?>
   <div class="flex pt-16 overflow-hidden bg-white">
-    <?php include_once '../templates/sidebar.inc.php'; ?>
+    <?php include_once '../templates/sidebar.php'; ?>
     <div id="main-content" class="relative w-full h-full overflow-y-auto bg-gray-50 lg:ml-64">
       <main class="items-center justify-between block p-4 bg-white border-b border-gray-200 sm:flex">
         <div class="w-full mb-1">
@@ -92,7 +93,7 @@ $user = $_SESSION['useruid'];
               </div>
             </div>
             <div class="flex items-center ml-auto space-x-2 sm:space-x-3">
-              <button type="button" data-modal-toggle="add-user-modal" class="inline-flex items-center justify-center w-1/2 px-3 py-2 text-sm font-medium text-center text-white bg-green-600 rounded-lg hover:bg-green-700 focus:ring-4 focus:ring-green-500 focus:ring-opacity-50 sm:w-auto">
+              <button type="button" data-add-button class="inline-flex items-center justify-center w-1/2 px-3 py-2 text-sm font-medium text-center text-white bg-green-600 rounded-lg hover:bg-green-700 focus:ring-4 focus:ring-green-500 focus:ring-opacity-50 sm:w-auto">
                 <svg class="w-6 h-6 mr-2 -ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path>
                 </svg>
@@ -101,6 +102,7 @@ $user = $_SESSION['useruid'];
             </div>
           </div>
         </div>
+        <?php include '../templates/add-user-modal.php'; ?>
       </main>
     </div>
   </div>
