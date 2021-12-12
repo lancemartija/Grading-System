@@ -1,6 +1,12 @@
 module.exports = {
-  purge: [],
-  darkMode: false, // or 'media' or 'class'
+  content: [
+    './*.{php,js}',
+    './admin/**/*.{php,js}',
+    './student/**/*.{php,js}',
+    './admin/*.{php,js}',
+    './student/*.{php,js}',
+  ],
+  darkMode: 'media',
   theme: {
     extend: {
       fontFamily: {
