@@ -14,11 +14,11 @@
 
 <body>
   <main class="h-screen overflow-hidden font-inter bg-gray-50">
-    <header class="flex flex-col items-center justify-center w-full mb-8 bg-blue-500 h-52">
+    <header class="flex flex-col items-center justify-center w-full h-48 bg-blue-500">
       <h1 class="text-5xl font-bold text-center text-white uppercase">Student Grading System</h1>
       <p class="text-lg font-light text-center text-blue-100">A data and information management system for highschool students</p>
     </header>
-    <section class="flex items-center justify-center pt-8" method="post">
+    <section class="flex items-center justify-center pt-4" method="post">
       <div class="grid grid-cols-1 grid-rows-1 p-6 mr-6 transition duration-300 transform bg-white shadow w-72 h-96 rounded-xl hover:shadow-lg hover:scale-105">
         <svg class="w-full h-auto" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="991.13988" height="770.17774" viewBox="0 0 991.13988 770.17774" xmlns:xlink="http://www.w3.org/1999/xlink">
           <title>professor</title>
