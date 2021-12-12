@@ -19,7 +19,7 @@ session_start();
 <body>
   <main class="flex flex-col items-center justify-center h-screen bg-gray-50 font-inter">
     <header class="pb-8">
-      <h1 class="mb-3 text-5xl text-center text-gray-700">Sign in to your account</h1>
+      <h1 class="text-5xl text-center text-gray-700">Sign in to your account</h1>
     </header>
     <section class="w-full bg-white shadow rounded-xl md:mt-0 sm:max-w-screen-sm xl:p-0">
       <div class="p-6 space-y-8 sm:p-8 lg:p-16">
@@ -49,9 +49,6 @@ session_start();
         </div>
       </div>
     </section>
-    <footer class="absolute bottom-0 left-0 right-0 pb-6">
-      <p class="text-sm text-center text-gray-400">&#169; 2021 Webdvt SA3 Group 1. All rights reserved.</p>
-    </footer>
   </main>
 </body>
 
