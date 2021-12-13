@@ -1,10 +1,10 @@
 module.exports = {
   content: [
     './*.{php,js}',
-    './admin/**/*.{php,js}',
-    './student/**/*.{php,js}',
     './admin/*.{php,js}',
     './student/*.{php,js}',
+    './admin/**/*.{php,js}',
+    './student/**/*.{php,js}',
   ],
   darkMode: 'media',
   theme: {
