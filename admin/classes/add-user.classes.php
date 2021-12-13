@@ -4,7 +4,7 @@ class AddUser extends Dbh
 {
   protected function setUser($fname, $lname, $email, $uid, $pwd, $type)
   {
-    $stmt = $this->connect()->prepare('INSERT INTO tbluseraccounts (account_fname, account_lname, account_email, account_username, account_password, account_type) VALUES(?, ?, ?, ?, ?);');
+    $stmt = $this->connect()->prepare('INSERT INTO tbluseraccounts (account_firstname, account_lastname, account_email, account_username, account_password, account_type) VALUES(?, ?, ?, ?, ?, ?);');
 
     $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
 
