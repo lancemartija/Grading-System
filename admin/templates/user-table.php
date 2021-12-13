@@ -2,12 +2,6 @@
   <table class="min-w-full divide-y divide-gray-200 table-fixed">
     <thead class="bg-gray-100">
       <tr>
-        <th scope="col" class="p-4">
-          <div class="flex items-center">
-            <input id="checkbox" onclick="toggleAllCheckbox(this)" aria-describedby="checkbox-1" type="checkbox" class="w-4 h-4 border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-cyan-200">
-            <label for="checkbox" class="sr-only">checkbox</label>
-          </div>
-        </th>
         <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase">
           ID
         </th>
@@ -25,12 +19,6 @@
     <tbody class="bg-white divide-y divide-gray-200 ">
       <?php foreach ($result as $data) : ?>
         <tr class="hover:bg-gray-100 group">
-          <td class="w-4 p-4">
-            <div class="flex items-center">
-              <input id="checkbox" aria-describedby="checkbox" type="checkbox" class="w-4 h-4 border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-cyan-200">
-              <label for="checkbox" class="sr-only">checkbox</label>
-            </div>
-          </td>
           <td class="p-4 text-base font-normal text-gray-900 whitespace-nowrap">
             <div class="flex items-center">
               <?= $data['account_id']; ?>
