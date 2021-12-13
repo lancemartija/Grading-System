@@ -3,6 +3,7 @@ session_start();
 
 if (!isset($_SESSION['userid']) && !isset($_SESSION['useruid'])) {
   header('Location: ../../index.php');
+  exit;
 }
 
 $user = $_SESSION['useruid'];
