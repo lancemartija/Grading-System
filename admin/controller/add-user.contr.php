@@ -2,7 +2,8 @@
 
 class AddUserContr extends AddUser
 {
-  private $name;
+  private $fname;
+  private $lname;
   private $email;
   private $uid;
   private $pwd;
@@ -10,7 +11,8 @@ class AddUserContr extends AddUser
 
   public function __construct($fname, $lname, $email, $uid, $pwd, $type)
   {
-    $this->name = $fname . ' ' . $lname;
+    $this->fname = $fname;
+    $this->lname = $lname;
     $this->email = $email;
     $this->uid = $uid;
     $this->pwd = $pwd;
@@ -39,12 +41,12 @@ class AddUserContr extends AddUser
       exit;
     }
 
-    $this->setUser($this->name, $this->email, $this->uid, $this->pwd, $this->type);
+    $this->setUser($this->fname, $this->lname, $this->email, $this->uid, $this->pwd, $this->type);
   }
 
   private function emptyInput()
   {
-    if (empty($this->name) || empty($this->email) || empty($this->uid) || empty($this->pwd) || empty($this->type)) {
+    if (empty($this->fname) || empty($this->lname) || empty($this->email) || empty($this->uid) || empty($this->pwd) || empty($this->type)) {
       return false;
     }
     return true;
