@@ -2,13 +2,13 @@
 
 class AddUser extends Dbh
 {
-  protected function setUser($name, $email, $uid, $pwd, $type)
+  protected function setUser($fname, $lname, $email, $uid, $pwd, $type)
   {
-    $stmt = $this->connect()->prepare('INSERT INTO tbluseraccounts (account_name, account_email, account_username, account_password, account_type) VALUES(?, ?, ?, ?, ?);');
+    $stmt = $this->connect()->prepare('INSERT INTO tbluseraccounts (account_fname, account_lname, account_email, account_username, account_password, account_type) VALUES(?, ?, ?, ?, ?);');
 
     $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
 
-    if (!$stmt->execute([$name, $email, $uid, $hashedPwd, $type])) {
+    if (!$stmt->execute([$fname, $lname, $email, $uid, $hashedPwd, $type])) {
       $stmt = null;
       header("Location: ../view/users.php?error=stmtfailed");
       exit;
