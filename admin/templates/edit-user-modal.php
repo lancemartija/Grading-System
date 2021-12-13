@@ -11,7 +11,11 @@
           </svg>
         </button>
       </div>
-      <form action="../includes/edit-user.inc.php" method="post">
+      <form id="editform" action="../includes/edit-user.inc.php" method="post">
+        <div class="hidden">
+          <label for="id">ID</label>
+          <input id="id" type="number" name="id">
+        </div>
         <div class="p-6 space-y-6">
           <div class="grid grid-cols-6 gap-6">
             <div class="col-span-6 sm:col-span-3">
