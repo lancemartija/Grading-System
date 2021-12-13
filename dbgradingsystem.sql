@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 12, 2021 at 05:06 PM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 7.3.0
+-- Generation Time: Dec 13, 2021 at 11:18 AM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 7.4.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `dbstudentgrading`
+-- Database: `dbgradingsystem`
 --
 
 -- --------------------------------------------------------
@@ -30,7 +29,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `tbluseraccounts` (
   `account_id` int(11) NOT NULL,
-  `account_name` varchar(255) NOT NULL,
+  `account_firstname` varchar(255) NOT NULL,
+  `account_lastname` varchar(255) NOT NULL,
   `account_email` varchar(255) NOT NULL,
   `account_username` varchar(255) NOT NULL,
   `account_password` text NOT NULL,
@@ -41,9 +41,10 @@ CREATE TABLE `tbluseraccounts` (
 -- Dumping data for table `tbluseraccounts`
 --
 
-INSERT INTO `tbluseraccounts` (`account_id`, `account_name`, `account_email`, `account_username`, `account_password`, `account_type`) VALUES
-(1, 'test', 'test@test.com', 'test', '$2y$10$a4335R5fbBuanNsD7G59EeAp.4OJ5y2lFvX.aHBYKg3TxysJn0Npy', 'test'),
-(2, 'john doe', 'johndoe@email.com', 'johndoe', '$2y$10$pwyonzUNXuwDhUCpwh7Z5Ot5F0tvZnUlfCaNPbf7u0d9xVjHyHJBO', 'administrator');
+INSERT INTO `tbluseraccounts` (`account_id`, `account_firstname`, `account_lastname`, `account_email`, `account_username`, `account_password`, `account_type`) VALUES
+(1, 'test', 'test', 'test@test.com', 'test', '$2y$10$a4335R5fbBuanNsD7G59EeAp.4OJ5y2lFvX.aHBYKg3TxysJn0Npy', 'test'),
+(2, 'john', 'doe', 'johndoe@email.com', 'johndoe', '$2y$10$pwyonzUNXuwDhUCpwh7Z5Ot5F0tvZnUlfCaNPbf7u0d9xVjHyHJBO', 'administrator'),
+(3, 'lance jacob', 'martija', 'lance_jacob_martija@dlsl.edu.ph', 'lance', '$2y$10$R61mCGaaaTWDo7JIJlEsjuE/uhKPGYW3SHBemuM4UIMp6ZKSTqWp2', 'student');
 
 --
 -- Indexes for dumped tables
@@ -63,7 +64,7 @@ ALTER TABLE `tbluseraccounts`
 -- AUTO_INCREMENT for table `tbluseraccounts`
 --
 ALTER TABLE `tbluseraccounts`
-  MODIFY `account_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `account_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
