@@ -2,12 +2,12 @@
 
 if (isset($_POST['submit'])) {
   # Grabbing data
-  $fname = $_POST['firstname'];
-  $lname = $_POST['lastname'];
-  $email = $_POST['email'];
-  $uid = $_POST['username'];
-  $pwd = $_POST['password'];
-  $type = $_POST['accounttype'];
+  $fname = filter_var($_POST['firstname'], FILTER_SANITIZE_STRING);
+  $lname = filter_var($_POST['lastname'], FILTER_SANITIZE_STRING);
+  $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+  $uid = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
+  $pwd = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
+  $type = filter_var($_POST['accounttype'], FILTER_SANITIZE_STRING);
 
   # Instantiate AddUserContr class
   include_once '../classes/database.classes.php';
@@ -19,5 +19,5 @@ if (isset($_POST['submit'])) {
   $addUser->addUser();
 
   # Going to Users Page
-  header('Location: ../view/users.php');
+  header('Location: ../view/users.php?success=useradded');
 }
