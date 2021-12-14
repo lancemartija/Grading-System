@@ -7,6 +7,15 @@ if (!isset($_SESSION['userid']) && !isset($_SESSION['useruid'])) {
 }
 
 $user = $_SESSION['useruid'];
+
+include_once '../database/database.classes.php';
+include_once '../classes/display-data.classes.php';
+include_once '../controller/display-data.contr.php';
+
+$display = new DisplayRoomsContr;
+
+$page = $search = $table = $link = 'rooms';
+$btn = $modal = 'room';
 ?>
 
 <!DOCTYPE html>
@@ -31,12 +40,9 @@ $user = $_SESSION['useruid'];
     <div id="main-content" class="relative w-full h-full ml-64 overflow-y-auto bg-gray-50">
       <main>
         <?php
-        $page = 'rooms';
-        $search = 'rooms';
-        $btn = 'room';
-        $link = 'rooms';
-
         include_once '../templates/header.php';
+        include_once '../templates/modal/add-room-modal.php';
+        include_once '../includes/display-data.inc.php';
         ?>
       </main>
     </div>

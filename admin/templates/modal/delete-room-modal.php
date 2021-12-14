@@ -1,4 +1,4 @@
-<div class="fixed left-0 right-0 z-50 items-center justify-center hidden overflow-x-hidden overflow-y-auto bg-gray-900/50 top-4 md:inset-0 h-modal sm:h-full" id="delete-dept-modal" aria-modal="true" role="dialog">
+<div class="fixed left-0 right-0 z-50 items-center justify-center hidden overflow-x-hidden overflow-y-auto bg-gray-900/50 top-4 md:inset-0 h-modal sm:h-full" id="delete-room-modal" aria-modal="true" role="dialog">
   <div class="relative w-full h-full max-w-md px-4 md:h-auto">
     <div class="relative bg-white rounded-lg shadow">
       <div class="flex justify-end p-2">
@@ -13,7 +13,7 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
         </svg>
         <h3 class="mt-5 mb-6 text-xl font-normal text-gray-500">Are you sure you want to delete this department?</h3>
-        <form action="../includes/department.inc.php" method="get">
+        <form action="../includes/rooms.inc.php" method="get">
           <div class="hidden">
             <label for="id">ID</label>
             <input id="id" type="number" name="id">

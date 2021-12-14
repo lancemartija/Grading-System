@@ -18,17 +18,35 @@ class DisplayDeptContr extends DisplayDept
   }
 }
 
+class DisplayRoomsContr extends DisplayRooms
+{
+  private $query;
+
+  public function fetchData()
+  {
+    $result = $this->getRooms();
+    return $result;
+  }
+
+  public function fetchSearchData($query)
+  {
+    $this->query = $query;
+    $result = $this->getSearchData($this->query);
+    return $result;
+  }
+}
+
 class DisplayUsersContr extends DisplayUsers
 {
   private $query;
 
-  public function fetchUsers()
+  public function fetchData()
   {
     $result = $this->getUsers();
     return $result;
   }
 
-  public function fetchUser($query)
+  public function fetchSearchData($query)
   {
     $this->query = $query;
     $result = $this->getUser($this->query);
