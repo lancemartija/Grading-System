@@ -16,7 +16,7 @@ $user = $_SESSION['useruid'];
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Students</title>
+  <title>Grade Level</title>
   <link rel="stylesheet" href="../../app/css/tailwind.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,9 +31,10 @@ $user = $_SESSION['useruid'];
     <div id="main-content" class="relative w-full h-full ml-64 overflow-y-auto bg-gray-50">
       <main>
         <?php
-        $page = 'students';
-        $search = 'students';
-        $btn = 'student';
+        $page = 'grade level';
+        $search = 'grade levels';
+        $btn = 'grade level';
+
         include_once '../templates/header.php';
         ?>
       </main>
