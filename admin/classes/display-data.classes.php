@@ -27,10 +27,10 @@ class DisplayDept extends Dbh
 
   protected function getSearchData($query)
   {
-    $stmt = $this->connect()->prepare('SELECT * FROM tbldepartment WHERE dept_id = ? OR dept_name = ? OR dept_desc = ?;');
+    $stmt = $this->connect()->prepare('SELECT * FROM tbldepartment WHERE dept_id = ? OR dept_code = ? OR dept_name = ? OR dept_desc = ?;');
     $result = 0;
 
-    if (!$stmt->execute([$query, $query, $query])) {
+    if (!$stmt->execute([$query, $query, $query, $query])) {
       $stmt = null;
       header('Location: ../view/department.php?error=stmtfailed');
       exit;
@@ -80,10 +80,10 @@ class DisplayRooms extends Dbh
 
   protected function getSearchData($query)
   {
-    $stmt = $this->connect()->prepare('SELECT * FROM tblrooms WHERE room_id = ? OR room_name = ? OR room_desc = ?;');
+    $stmt = $this->connect()->prepare('SELECT * FROM tblrooms WHERE room_id = ? OR room_code = ?  OR room_name = ? OR room_desc = ?;');
     $result = 0;
 
-    if (!$stmt->execute([$query, $query, $query])) {
+    if (!$stmt->execute([$query, $query, $query, $query])) {
       $stmt = null;
       header('Location: ../view/rooms.php?error=stmtfailed');
       exit;
