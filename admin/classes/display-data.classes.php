@@ -189,7 +189,7 @@ class DisplayRooms extends Dbh
     $stmt = $this->connect()->prepare('SELECT * FROM tblrooms WHERE room_id = ? OR room_code = ?  OR room_name = ?;');
     $result = 0;
 
-    if (!$stmt->execute([$query, $query, $query, $query])) {
+    if (!$stmt->execute([$query, $query, $query])) {
       $stmt = null;
       header('Location: ../view/rooms.php?error=stmtfailed');
       exit;
