@@ -21,7 +21,7 @@ $user = $_SESSION['useruid'];
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <script async defer src="../../app/js/modal.js"></script>
+  <script async defer src="../../app/js/dept-modal.js"></script>
 </head>
 
 <body>
@@ -37,6 +37,8 @@ $user = $_SESSION['useruid'];
         $link = 'department';
 
         include_once '../templates/header.php';
+        include_once '../templates/modal/add-dept-modal.php';
+        include_once '../includes/display/display-dept.inc.php';
         ?>
       </main>
     </div>
