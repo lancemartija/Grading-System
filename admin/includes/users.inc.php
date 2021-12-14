@@ -2,12 +2,12 @@
 
 if (isset($_POST['add'])) {
   # Grabbing data
-  $fname = filter_var($_POST['firstname'], FILTER_SANITIZE_STRING);
-  $lname = filter_var($_POST['lastname'], FILTER_SANITIZE_STRING);
-  $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-  $uid = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
-  $pwd = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
-  $type = filter_var($_POST['accounttype'], FILTER_SANITIZE_STRING);
+  $fname = filter_var(trim($_POST['firstname']), FILTER_SANITIZE_STRING);
+  $lname = filter_var(trim($_POST['lastname']), FILTER_SANITIZE_STRING);
+  $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
+  $uid = filter_var(trim($_POST['username']), FILTER_SANITIZE_STRING);
+  $pwd = filter_var(trim($_POST['password']), FILTER_SANITIZE_STRING);
+  $type = filter_var(trim($_POST['accounttype']), FILTER_SANITIZE_STRING);
 
   # Instantiate AddUserContr class
   include_once '../database/database.classes.php';
@@ -24,13 +24,13 @@ if (isset($_POST['add'])) {
 
 if (isset($_POST['edit'])) {
   # Grabbing data
-  $id = filter_var($_POST['id'], FILTER_SANITIZE_NUMBER_INT);
-  $fname = filter_var($_POST['firstname'], FILTER_SANITIZE_STRING);
-  $lname = filter_var($_POST['lastname'], FILTER_SANITIZE_STRING);
-  $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-  $uid = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
-  $pwd = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
-  $type = filter_var($_POST['accounttype'], FILTER_SANITIZE_STRING);
+  $id = filter_var(trim($_POST['id']), FILTER_SANITIZE_NUMBER_INT);
+  $fname = filter_var(trim($_POST['firstname']), FILTER_SANITIZE_STRING);
+  $lname = filter_var(trim($_POST['lastname']), FILTER_SANITIZE_STRING);
+  $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
+  $uid = filter_var(trim($_POST['username']), FILTER_SANITIZE_STRING);
+  $pwd = filter_var(trim($_POST['password']), FILTER_SANITIZE_STRING);
+  $type = filter_var(trim($_POST['accounttype']), FILTER_SANITIZE_STRING);
 
   # Instantiate AddUserContr class
   include_once '../database/database.classes.php';
@@ -47,7 +47,7 @@ if (isset($_POST['edit'])) {
 
 if (isset($_GET['delete'])) {
   # Grabbing data
-  $id = filter_var($_GET['id'], FILTER_SANITIZE_NUMBER_INT);
+  $id = filter_var(trim($_GET['id']), FILTER_SANITIZE_NUMBER_INT);
 
   # Instantiate AddUserContr class
   include_once '../database/database.classes.php';
