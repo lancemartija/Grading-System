@@ -144,3 +144,18 @@ class EditUserContr extends EditUser
     return true;
   }
 }
+
+class DeleteUserContr extends DeleteUser
+{
+  private $id;
+
+  public function __construct($id)
+  {
+    $this->id = $id;
+  }
+
+  public function deleteUser()
+  {
+    $this->setUser($this->id);
+  }
+}
