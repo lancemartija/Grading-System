@@ -38,7 +38,7 @@ $user = $_SESSION['useruid'];
 
         include_once '../templates/header.php';
         include_once '../templates/modal/add-user-modal.php';
-        include_once '../includes/display-users.inc.php';
+        include_once '../includes/display/display-users.inc.php';
         ?>
       </main>
     </div>
