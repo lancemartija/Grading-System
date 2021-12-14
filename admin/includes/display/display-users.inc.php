@@ -1,8 +1,8 @@
 <?php
 
 include_once '../database/database.classes.php';
-include_once '../classes/display/display-users.classes.php';
-include_once '../controller/display/display-users.contr.php';
+include_once '../classes/display-data.classes.php';
+include_once '../controller/display-data.contr.php';
 
 $display = new DisplayUsersContr;
 $result = $display->fetchUsers();
