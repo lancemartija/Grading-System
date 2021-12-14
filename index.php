@@ -13,6 +13,7 @@
 </head>
 
 <body>
+  <p>hello world</p>
   <main class="h-screen overflow-hidden font-inter bg-gray-50">
     <header class="flex flex-col items-center justify-center w-full h-48 bg-blue-500">
       <h1 class="text-5xl font-bold text-center text-white uppercase">Student Grading System</h1>
