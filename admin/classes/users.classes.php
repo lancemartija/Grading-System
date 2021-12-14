@@ -19,7 +19,7 @@ class AddUser extends Dbh
 
   protected function checkUser($uid, $email)
   {
-    $stmt = $this->connect()->prepare('SELECT * FROM tbluseraccounts WHERE account_username = ? OR account_email = ?');
+    $stmt = $this->connect()->prepare('SELECT * FROM tbluseraccounts WHERE account_username = ? OR account_email = ?;');
 
     if (!$stmt->execute([$uid, $email])) {
       $stmt = null;
@@ -84,5 +84,21 @@ class EditUser extends Dbh
     }
 
     return true;
+  }
+}
+
+class DeleteUser extends Dbh
+{
+  protected function setUser($id)
+  {
+    $stmt = $this->connect()->prepare('DELETE FROM tbluseraccounts WHERE account_id = ?; SET @num := 0; UPDATE tbluseraccounts SET account_id = @num := (@num+1); ALTER TABLE tbluseraccounts AUTO_INCREMENT = 1;');
+
+    if (!$stmt->execute([$id])) {
+      $stmt = null;
+      header("Location: ../view/users.php?error=stmtfailed");
+      exit;
+    }
+
+    $stmt = null;
   }
 }
