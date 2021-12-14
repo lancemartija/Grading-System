@@ -34,6 +34,7 @@ $user = $_SESSION['useruid'];
         $page = 'users';
         $btn = 'user';
         $search = 'users';
+        $link = 'users';
 
         include_once '../templates/header.php';
         include_once '../templates/modal/add-user-modal.php';

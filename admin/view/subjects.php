@@ -34,6 +34,7 @@ $user = $_SESSION['useruid'];
         $page = 'subjects';
         $search = 'subject';
         $btn = 'subject';
+        $link = 'subjects';
 
         include_once '../templates/header.php';
         ?>

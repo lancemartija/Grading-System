@@ -34,6 +34,7 @@ $user = $_SESSION['useruid'];
         $page = 'grade level';
         $search = 'grade levels';
         $btn = 'grade level';
+        $link = 'grade-level';
 
         include_once '../templates/header.php';
         ?>

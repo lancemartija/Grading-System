@@ -34,6 +34,8 @@ $user = $_SESSION['useruid'];
         $page = 'class';
         $btn = 'class';
         $search = 'classes';
+        $link = 'class';
+
         include_once '../templates/header.php';
         ?>
       </main>
