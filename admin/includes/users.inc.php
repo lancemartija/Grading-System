@@ -36,29 +36,28 @@ if (isset($_POST['edit'])) {
   include_once '../database/database.classes.php';
   include_once '../classes/users.classes.php';
   include_once '../controller/users.contr.php';
-  $addUser = new EditUserContr($id, $fname, $lname, $email, $uid, $pwd, $type);
+  $editUser = new EditUserContr($id, $fname, $lname, $email, $uid, $pwd, $type);
 
   # Running error handlers and add user function
-  $addUser->editUser();
+  $editUser->editUser();
 
   # Going to Users Page
   header('Location: ../view/users.php?success=useredited');
 }
 
+if (isset($_GET['delete'])) {
+  # Grabbing data
+  $id = filter_var($_GET['id'], FILTER_SANITIZE_NUMBER_INT);
 
-// if (isset($_POST['delete'])) {
-//   # Grabbing data
-//   $id = filter_var($_POST['id'], FILTER_SANITIZE_NUMBER_INT);
+  # Instantiate AddUserContr class
+  include_once '../database/database.classes.php';
+  include_once '../classes/users.classes.php';
+  include_once '../controller/users.contr.php';
+  $deleteUser = new DeleteUserContr($id);
 
-//   # Instantiate AddUserContr class
-//   include_once '../classes/database.classes.php';
-//   include_once '../classes/users.classes.php';
-//   include_once '../controller/users.contr.php';
-//   $addUser = new DeleteUserContr($id);
+  # Running error handlers and add user function
+  $deleteUser->deleteUser();
 
-//   # Running error handlers and add user function
-//   $addUser->deleteUser();
-
-//   # Going to Users Page
-//   header('Location: ../view/users.php?success=userdeleted');
-// }
+  # Going to Users Page
+  header('Location: ../view/users.php?success=userdeleted');
+}
