@@ -11,7 +11,7 @@
           </svg>
         </button>
       </div>
-      <form action="../../includes/users.inc.php" method="post">
+      <form action="../includes/users.inc.php" method="post">
         <div class="p-6 space-y-6">
           <div class="grid grid-cols-6 gap-6">
             <div class="col-span-6 sm:col-span-3">

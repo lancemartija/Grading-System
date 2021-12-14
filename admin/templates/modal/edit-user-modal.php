@@ -11,7 +11,7 @@
           </svg>
         </button>
       </div>
-      <form action="../../includes/users.inc.php" method="post">
+      <form action="../includes/users.inc.php" method="post">
         <div class="hidden">
           <label for="id">ID</label>
           <input id="id" type="number" name="id">
