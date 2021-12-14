@@ -14,7 +14,7 @@ include_once '../controller/display-data.contr.php';
 
 $display = new DisplayGradeLevelContr;
 
-$page = $btn = 'grade level';
+$page = $btn = $breadcrumb = 'grade level';
 $search = 'grade levels';
 $link = $table = $modal = 'grade-level';
 ?>

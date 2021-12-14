@@ -12,7 +12,7 @@
         <svg class="w-20 h-20 mx-auto text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
         </svg>
-        <h3 class="mt-5 mb-6 text-xl font-normal text-gray-500">Are you sure you want to delete this department?</h3>
+        <h3 class="mt-5 mb-6 text-xl font-normal text-gray-500">Are you sure you want to delete this grade level?</h3>
         <form action="../includes/grade-level.inc.php" method="get">
           <div class="hidden">
             <label for="id">ID</label>

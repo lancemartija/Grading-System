@@ -14,7 +14,7 @@ include_once '../controller/display-data.contr.php';
 
 $display = new DisplayUsersContr;
 
-$page = $table = $search = $link = 'users';
+$page = $table = $search = $link = $breadcrumb = 'users';
 $btn = $modal = 'user';
 ?>
 

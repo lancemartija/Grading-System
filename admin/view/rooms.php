@@ -14,7 +14,7 @@ include_once '../controller/display-data.contr.php';
 
 $display = new DisplayRoomsContr;
 
-$page = $search = $table = $link = 'rooms';
+$page = $search = $table = $link = $breadcrumb = 'rooms';
 $btn = $modal = 'room';
 ?>
 

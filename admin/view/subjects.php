@@ -31,7 +31,7 @@ $user = $_SESSION['useruid'];
     <div id="main-content" class="relative w-full h-full ml-64 overflow-y-auto bg-gray-50">
       <main>
         <?php
-        $page = $search = $link = 'subjects';
+        $page = $search = $link = $breadcrumb = 'subjects';
         $btn = 'subject';
 
         include_once '../templates/header.php';

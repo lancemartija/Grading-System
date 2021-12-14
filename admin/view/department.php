@@ -15,7 +15,7 @@ include_once '../controller/display-data.contr.php';
 $display = new DisplayDeptContr;
 
 $page = $search = 'departments';
-$btn = $table = $link = 'department';
+$breadcrumb = $btn = $table = $link = 'department';
 $modal = 'dept';
 ?>
 
