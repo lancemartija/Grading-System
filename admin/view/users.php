@@ -105,7 +105,7 @@ $user = $_SESSION['useruid'];
             </div>
           </div>
         </div>
-        <?php include_once '../templates/add-user-modal.php'; ?>
+        <?php include_once '../templates/modal/add-user-modal.php'; ?>
         <?php include_once '../includes/display-users.inc.php'; ?>
       </main>
     </div>
