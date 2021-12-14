@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 14, 2021 at 02:14 PM
+-- Generation Time: Dec 14, 2021 at 04:46 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.26
 
@@ -24,18 +24,24 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblclass`
+-- Table structure for table `tblcourse`
 --
 
-CREATE TABLE `tblclass` (
-  `class_id` int(11) NOT NULL,
-  `class_code` int(11) NOT NULL,
-  `class_name` varchar(255) NOT NULL,
-  `class_level` int(11) NOT NULL,
-  `class_major` varchar(255) DEFAULT NULL,
-  `class_desc` varchar(255) DEFAULT NULL,
-  `dept_code` int(11) NOT NULL
+CREATE TABLE `tblcourse` (
+  `course_id` int(11) NOT NULL,
+  `course_code` int(11) NOT NULL,
+  `course_name` varchar(255) NOT NULL,
+  `course_level` int(11) NOT NULL,
+  `course_desc` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tblcourse`
+--
+
+INSERT INTO `tblcourse` (`course_id`, `course_code`, `course_name`, `course_level`, `course_desc`) VALUES
+(1, 1234, 'Grade 12', 12, 'Senior High School'),
+(2, 1235, 'Grade 11', 11, 'Senior High School');
 
 -- --------------------------------------------------------
 
@@ -55,7 +61,8 @@ CREATE TABLE `tbldepartment` (
 --
 
 INSERT INTO `tbldepartment` (`dept_id`, `dept_code`, `dept_name`, `dept_desc`) VALUES
-(1, 1234, 'asdf', 'asdf');
+(1, 1234, 'asdf', 'asdf'),
+(2, 1235, 'asdf', 'asdf');
 
 -- --------------------------------------------------------
 
@@ -76,8 +83,7 @@ CREATE TABLE `tblrooms` (
 
 INSERT INTO `tblrooms` (`room_id`, `room_code`, `room_name`, `room_desc`) VALUES
 (1, 1235, 'asdf', 'qweg'),
-(2, 1234, 'asdf', 'asdvasdv'),
-(3, 1245, 'sadfadf', 'qradf');
+(2, 1245, 'sadfadf', 'qradf');
 
 -- --------------------------------------------------------
 
@@ -100,7 +106,7 @@ CREATE TABLE `tbluseraccounts` (
 --
 
 INSERT INTO `tbluseraccounts` (`account_id`, `account_firstname`, `account_lastname`, `account_email`, `account_username`, `account_password`, `account_type`) VALUES
-(1, 'lance jacob', 'martija', 'lance_jacob_martija@dlsl.edu.ph', 'lance', '$2y$10$V1wiy/vkjbwWlMKLMMH8ye2YmZMdzin4cmr0pw32PO5KFMTfkEvOe', 'student'),
+(1, 'lance jacob', 'martija', 'lance_jacob_martija@dlsl.edu.ph', 'lance', '$2y$10$l3GCq56wiDjRmIoG8NNwg.lAAf2rq0u/I4ZYa.gFLWnljZCjFlnDq', 'student'),
 (2, 'john', 'doe', 'johndoe@email.com', 'johndoe', '$2y$10$gId3Dy5eLbNxFw5KwoRRZOdPzJlRklkMo/a8YJh6w.wl10.Rtiht6', 'registrar'),
 (3, 'jane', 'doe', 'jane.doe@email.com', 'janedoe', '$2y$10$vGbDozX0tWVXy64WScPwNunFH3OjoML.Ix1BsqvqnqilpBX2mlrAi', 'encoder'),
 (4, 'Tom', 'McDonough', 'TomMD@email.com', 'tom', '$2y$10$5fEwstXRMQDeKhaFTMO5U.fhkGJcw46t1nIitkbSXVKCca9Hjv3Ju', 'administrator');
@@ -110,11 +116,10 @@ INSERT INTO `tbluseraccounts` (`account_id`, `account_firstname`, `account_lastn
 --
 
 --
--- Indexes for table `tblclass`
+-- Indexes for table `tblcourse`
 --
-ALTER TABLE `tblclass`
-  ADD PRIMARY KEY (`class_id`),
-  ADD KEY `dept_code` (`dept_code`);
+ALTER TABLE `tblcourse`
+  ADD PRIMARY KEY (`course_id`);
 
 --
 -- Indexes for table `tbldepartment`
@@ -139,38 +144,28 @@ ALTER TABLE `tbluseraccounts`
 --
 
 --
--- AUTO_INCREMENT for table `tblclass`
+-- AUTO_INCREMENT for table `tblcourse`
 --
-ALTER TABLE `tblclass`
-  MODIFY `class_id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `tblcourse`
+  MODIFY `course_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tbldepartment`
 --
 ALTER TABLE `tbldepartment`
-  MODIFY `dept_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `dept_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tblrooms`
 --
 ALTER TABLE `tblrooms`
-  MODIFY `room_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `room_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tbluseraccounts`
 --
 ALTER TABLE `tbluseraccounts`
   MODIFY `account_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `tblclass`
---
-ALTER TABLE `tblclass`
-  ADD CONSTRAINT `dept_code` FOREIGN KEY (`dept_code`) REFERENCES `tbldepartment` (`dept_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
