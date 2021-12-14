@@ -14,7 +14,7 @@
       <form action="../includes/department.inc.php" method="post">
         <div class="hidden">
           <label for="id">ID</label>
-          <input id="id" type="number" name="id">
+          <input id="id" type="hidden" name="id">
         </div>
         <div class="p-6 space-y-6">
           <div class="grid grid-cols-6 gap-6">

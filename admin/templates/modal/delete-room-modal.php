@@ -16,7 +16,7 @@
         <form action="../includes/rooms.inc.php" method="get">
           <div class="hidden">
             <label for="id">ID</label>
-            <input id="id" type="number" name="id">
+            <input id="id" type="hidden" name="id">
           </div>
           <button type="submit" name="delete" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-base inline-flex items-center px-3 py-2.5 text-center mr-2">
             Yes, I'm sure
