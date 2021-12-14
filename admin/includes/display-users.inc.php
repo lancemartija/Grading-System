@@ -18,6 +18,7 @@ if (!empty($result)) {
   }
 
   include_once '../templates/user-table.php';
-  include_once '../templates/edit-user-modal.php';
-  include_once '../templates/delete-user-modal.php';
+  include_once '../templates/modal/view-user-modal.php';
+  include_once '../templates/modal/edit-user-modal.php';
+  include_once '../templates/modal/delete-user-modal.php';
 }
