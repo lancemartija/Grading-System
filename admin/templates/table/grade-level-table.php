@@ -9,10 +9,10 @@
           Grade Name
         </th>
         <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase">
-          Grade Level
+          Grade Code
         </th>
         <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase">
-          Grade Code
+          Grade Level
         </th>
         <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase">
           Description
@@ -40,12 +40,12 @@
           </td>
           <td class="p-4 text-base font-normal text-gray-900 whitespace-nowrap">
             <div class="flex items-center">
-              <?= $data['course_level']; ?>
+              <?= $data['course_code']; ?>
             </div>
           </td>
           <td class="p-4 text-base font-normal text-gray-900 whitespace-nowrap">
             <div class="flex items-center">
-              <?= $data['course_code']; ?>
+              <?= $data['course_level']; ?>
             </div>
           </td>
           <td class="p-4 text-base font-normal text-gray-600 whitespace-nowrap">
