@@ -6,6 +6,7 @@
   },
   "scripts": {
     "build": "tailwindcss -i style.css -o app/css/tailwind.css",
-    "watch": "tailwindcss -i style.css -o app/css/tailwind.css --watch"
+    "watch": "tailwindcss -i style.css -o app/css/tailwind.css --watch",
+    "minify": "tailwindcss -i style.css -o app/css/tailwind.css --minify"
   }
 }
