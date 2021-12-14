@@ -2,11 +2,11 @@
 
 class AddDept extends Dbh
 {
-  protected function setDept($deptname, $desc)
+  protected function setDept($code, $deptname, $desc)
   {
-    $stmt = $this->connect()->prepare('INSERT INTO tbldepartment (dept_name, dept_desc) VALUES(?, ?);');
+    $stmt = $this->connect()->prepare('INSERT INTO tbldepartment (dept_code, dept_name, dept_desc) VALUES(?, ?, ?);');
 
-    if (!$stmt->execute([$deptname, $desc])) {
+    if (!$stmt->execute([$code, $deptname, $desc])) {
       $stmt = null;
       header("Location: ../view/department.php?error=stmtfailed");
       exit;
@@ -15,11 +15,11 @@ class AddDept extends Dbh
     $stmt = null;
   }
 
-  protected function checkDept($deptname)
+  protected function checkCode($code)
   {
-    $stmt = $this->connect()->prepare('SELECT * FROM tbldepartment WHERE dept_name = ?;');
+    $stmt = $this->connect()->prepare('SELECT * FROM tbldepartment WHERE dept_code = ?;');
 
-    if (!$stmt->execute([$deptname])) {
+    if (!$stmt->execute([$code])) {
       $stmt = null;
       header('Location: ../view/department.php?error=stmtfailed');
       exit;
@@ -35,11 +35,11 @@ class AddDept extends Dbh
 
 class EditDept extends Dbh
 {
-  protected function setDept($id, $deptname, $desc)
+  protected function setDept($id, $code, $deptname, $desc)
   {
-    $stmt = $this->connect()->prepare('UPDATE tbldepartment SET dept_name = ?, dept_desc = ? WHERE dept_id = ?;');
+    $stmt = $this->connect()->prepare('UPDATE tbldepartment SET dept_code = ?, dept_name = ?, dept_desc = ? WHERE dept_id = ?;');
 
-    if (!$stmt->execute([$deptname, $desc, $id])) {
+    if (!$stmt->execute([$code, $deptname, $desc, $id])) {
       $stmt = null;
       header("Location: ../view/department.php?error=stmtfailed");
       exit;
@@ -48,11 +48,11 @@ class EditDept extends Dbh
     $stmt = null;
   }
 
-  protected function checkDeptname($id, $uid)
+  protected function checkCode($id, $code)
   {
-    $stmt = $this->connect()->prepare('SELECT * FROM tbldepartment WHERE dept_id <> ? AND dept_name = ?;');
+    $stmt = $this->connect()->prepare('SELECT * FROM tbldepartment WHERE dept_id <> ? AND dept_code = ?;');
 
-    if (!$stmt->execute([$id, $uid])) {
+    if (!$stmt->execute([$id, $code])) {
       $stmt = null;
       header('Location: ../view/department.php?error=stmtfailed');
       exit;

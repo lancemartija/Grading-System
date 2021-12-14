@@ -2,11 +2,13 @@
 
 class AddDeptContr extends AddDept
 {
+  private $code;
   private $deptname;
   private $desc;
 
-  public function __construct($deptname, $desc)
+  public function __construct($code, $deptname, $desc)
   {
+    $this->code = $code;
     $this->deptname = $deptname;
     $this->desc = $desc;
   }
@@ -18,17 +20,17 @@ class AddDeptContr extends AddDept
       exit;
     }
 
-    if ($this->checkDept($this->deptname) == false) {
+    if ($this->checkCode($this->code) == false) {
       header('Location: ../view/department.php?error=deptalreadyexists');
       exit;
     }
 
-    $this->setDept($this->deptname, $this->desc);
+    $this->setDept($this->code, $this->deptname, $this->desc);
   }
 
   private function emptyInput()
   {
-    if (empty($this->deptname) || empty($this->desc)) {
+    if (empty($this->code) || empty($this->deptname) || empty($this->desc)) {
       return false;
     }
     return true;
@@ -38,12 +40,14 @@ class AddDeptContr extends AddDept
 class EditDeptContr extends EditDept
 {
   private $id;
+  private $code;
   private $deptname;
   private $desc;
 
-  public function __construct($id, $deptname, $desc)
+  public function __construct($id, $code, $deptname, $desc)
   {
     $this->id = $id;
+    $this->code = $code;
     $this->deptname = $deptname;
     $this->desc = $desc;
   }
@@ -55,17 +59,17 @@ class EditDeptContr extends EditDept
       exit;
     }
 
-    if ($this->checkDeptname($this->id, $this->uid) == false) {
+    if ($this->checkCode($this->id, $this->code) == false) {
       header('Location: ../view/department.php?error=deptalreadyexists');
       exit;
     }
 
-    $this->setDept($this->id, $this->deptname, $this->desc);
+    $this->setDept($this->id, $this->code, $this->deptname, $this->desc);
   }
 
   private function emptyInput()
   {
-    if (empty($this->deptname) || empty($this->desc)) {
+    if (empty($this->code) || empty($this->deptname) || empty($this->desc)) {
       return false;
     }
     return true;

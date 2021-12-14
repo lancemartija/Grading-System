@@ -2,6 +2,7 @@
 
 if (isset($_POST['add'])) {
   # Grabbing data
+  $code = filter_var(trim($_POST['code']), FILTER_SANITIZE_NUMBER_INT);
   $deptname = filter_var(trim($_POST['deptname']), FILTER_SANITIZE_STRING);
   $desc = filter_var(trim($_POST['desc']), FILTER_SANITIZE_STRING);
 
@@ -9,7 +10,7 @@ if (isset($_POST['add'])) {
   include_once '../database/database.classes.php';
   include_once '../classes/department.classes.php';
   include_once '../controller/department.contr.php';
-  $addDept = new AddDeptContr($deptname, $desc);
+  $addDept = new AddDeptContr($code, $deptname, $desc);
 
   # Running error handlers and add dept function
   $addDept->addDept();
@@ -21,6 +22,7 @@ if (isset($_POST['add'])) {
 if (isset($_POST['edit'])) {
   # Grabbing data
   $id = filter_var(trim($_POST['id']), FILTER_SANITIZE_NUMBER_INT);
+  $code = filter_var(trim($_POST['code']), FILTER_SANITIZE_NUMBER_INT);
   $deptname = filter_var(trim($_POST['deptname']), FILTER_SANITIZE_STRING);
   $desc = filter_var(trim($_POST['desc']), FILTER_SANITIZE_STRING);
 
@@ -28,7 +30,7 @@ if (isset($_POST['edit'])) {
   include_once '../database/database.classes.php';
   include_once '../classes/department.classes.php';
   include_once '../controller/department.contr.php';
-  $editDept = new EditDeptContr($id, $deptname, $desc);
+  $editDept = new EditDeptContr($id, $code, $deptname, $desc);
 
   # Running error handlers and add dept function
   $editDept->editDept();

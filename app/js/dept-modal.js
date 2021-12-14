@@ -10,6 +10,7 @@ const editDeptModal = document.querySelector('#edit-dept-modal')
 const deleteDeptModal = document.querySelector('#delete-dept-modal')
 
 const inputFieldId = document.querySelectorAll('#id')
+const inputFieldCode = document.querySelectorAll('#code')
 const inputFieldName = document.querySelectorAll('#deptname')
 const inputFieldDesc = document.querySelectorAll('#desc')
 
@@ -20,9 +21,11 @@ addDeptBtn.addEventListener('click', () => {
 
 viewDeptBtn.forEach((btn) => {
   btn.addEventListener('click', () => {
+    let code = btn.getAttribute('data-code')
     let name = btn.getAttribute('data-name')
     let desc = btn.getAttribute('data-desc')
 
+    inputFieldCode[0].value = code
     inputFieldName[0].value = name
     inputFieldDesc[0].value = desc
 
@@ -34,10 +37,12 @@ viewDeptBtn.forEach((btn) => {
 editDeptBtn.forEach((btn) => {
   btn.addEventListener('click', () => {
     let id = btn.getAttribute('data-id')
+    let code = btn.getAttribute('data-code')
     let name = btn.getAttribute('data-name')
     let desc = btn.getAttribute('data-desc')
 
     inputFieldId[0].value = id
+    inputFieldCode[1].value = code
     inputFieldName[1].value = name
     inputFieldDesc[1].value = desc
 
