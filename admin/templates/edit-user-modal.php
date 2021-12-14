@@ -11,7 +11,7 @@
           </svg>
         </button>
       </div>
-      <form id="editform" action="../includes/edit-user.inc.php" method="post">
+      <form action="../includes/users.inc.php" method="post">
         <div class="hidden">
           <label for="id">ID</label>
           <input id="id" type="number" name="id">
@@ -51,7 +51,7 @@
           </div>
         </div>
         <div class="items-center p-6 border-t border-gray-200 rounded-b">
-          <button type="submit" name="submit" class="text-white bg-cyan-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Update user</button>
+          <button type="submit" name="edit" class="text-white bg-cyan-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Update user</button>
         </div>
       </form>
     </div>

@@ -6,7 +6,7 @@ if (isset($_POST['submit'])) {
   $pwd = $_POST['password'];
 
   # Instatiate LoginContr class
-  include_once '../classes/database.classes.php';
+  include_once '../database/database.classes.php';
   include_once '../classes/admin-login.classes.php';
   include_once '../controller/admin-login.contr.php';
   $login = new LoginContr($uid, $pwd);

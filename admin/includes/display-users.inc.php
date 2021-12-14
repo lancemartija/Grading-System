@@ -1,6 +1,6 @@
 <?php
 
-include_once '../classes/database.classes.php';
+include_once '../database/database.classes.php';
 include_once '../classes/display-users.classes.php';
 include_once '../controller/display-users.contr.php';
 
@@ -19,4 +19,5 @@ if (!empty($result)) {
 
   include_once '../templates/user-table.php';
   include_once '../templates/edit-user-modal.php';
+  include_once '../templates/delete-user-modal.php';
 }

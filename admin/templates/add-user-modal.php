@@ -11,7 +11,7 @@
           </svg>
         </button>
       </div>
-      <form action="../includes/add-user.inc.php" method="post">
+      <form action="../includes/users.inc.php" method="post">
         <div class="p-6 space-y-6">
           <div class="grid grid-cols-6 gap-6">
             <div class="col-span-6 sm:col-span-3">
@@ -47,7 +47,7 @@
           </div>
         </div>
         <div class="items-center p-6 border-t border-gray-200 rounded-b">
-          <button type="submit" name="submit" class="text-white bg-green-600 hover:bg-green-700 focus:ring-4 focus:ring-green-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Add user</button>
+          <button type="submit" name="add" class="text-white bg-green-600 hover:bg-green-700 focus:ring-4 focus:ring-green-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Add user</button>
         </div>
       </form>
     </div>
