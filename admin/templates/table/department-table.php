@@ -6,10 +6,10 @@
           ID
         </th>
         <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase">
-          Department Code
+          Department Name
         </th>
         <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase">
-          Department Name
+          Department Code
         </th>
         <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase">
           Description
@@ -27,17 +27,17 @@
               <?= $data['dept_id']; ?>
             </div>
           </td>
-          <td class="p-4 text-base font-normal text-gray-900 whitespace-nowrap">
-            <div class="flex items-center">
-              <?= $data['dept_code']; ?>
-            </div>
-          </td>
           <td class="flex items-center p-4 mr-12 space-x-6 whitespace-nowrap lg:mr-0">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-gray-500 group-hover:text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" />
             </svg>
             <div class="flex items-center capitalize">
               <?= $data['dept_name']; ?>
+            </div>
+          </td>
+          <td class="p-4 text-base font-normal text-gray-900 whitespace-nowrap">
+            <div class="flex items-center">
+              <?= $data['dept_code']; ?>
             </div>
           </td>
           <td class="p-4 text-base font-normal text-gray-600 whitespace-nowrap">
