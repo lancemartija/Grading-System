@@ -14,7 +14,7 @@
       <div class="p-6 space-y-6">
         <div class="grid grid-cols-6 gap-6 mb-4">
           <div class="col-span-6 sm:col-span-3">
-            <label for="code" class="block mb-2 text-sm font-medium text-gray-900">Code</label>
+            <label for="code" class="block mb-2 text-sm font-medium text-gray-900">Room Code</label>
             <input id="code" type="text" name="code" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-gray-600/50 focus:border-gray-600 focus:outline-none block w-full p-2.5" readonly>
           </div>
           <div class="col-span-6 sm:col-span-3">

@@ -7,6 +7,16 @@ if (!isset($_SESSION['userid']) && !isset($_SESSION['useruid'])) {
 }
 
 $user = $_SESSION['useruid'];
+
+include_once '../database/database.classes.php';
+include_once '../classes/display-data.classes.php';
+include_once '../controller/display-data.contr.php';
+
+$display = new DisplayGradeLevelContr;
+
+$page = $btn = 'grade level';
+$search = 'grade levels';
+$link = $table = $modal = 'grade-level';
 ?>
 
 <!DOCTYPE html>
@@ -31,12 +41,9 @@ $user = $_SESSION['useruid'];
     <div id="main-content" class="relative w-full h-full ml-64 overflow-y-auto bg-gray-50">
       <main>
         <?php
-        $page = 'grade level';
-        $search = 'grade levels';
-        $btn = 'grade level';
-        $link = 'grade-level';
-
         include_once '../templates/header.php';
+        include_once '../templates/modal/add-grade-level-modal.php';
+        include_once '../includes/display-data.inc.php';
         ?>
       </main>
     </div>

@@ -1,4 +1,4 @@
-<div class="fixed left-0 right-0 z-50 items-center justify-center hidden overflow-x-hidden overflow-y-auto bg-gray-900/50 top-4 md:inset-0 h-modal sm:h-full" id="edit-room-modal" aria-modal="true" role="dialog">
+<div class="fixed left-0 right-0 z-50 items-center justify-center hidden overflow-x-hidden overflow-y-auto bg-gray-900/50 top-4 md:inset-0 h-modal sm:h-full" id="edit-grade-level-modal" aria-modal="true" role="dialog">
   <div class="relative w-full h-full max-w-2xl px-4 md:h-auto">
     <div class="relative bg-white rounded-lg shadow">
       <div class="flex items-start justify-between p-5 border-b rounded-t">
@@ -11,7 +11,7 @@
           </svg>
         </button>
       </div>
-      <form action="../includes/rooms.inc.php" method="post">
+      <form action="../includes/grade-level.inc.php" method="post">
         <div class="hidden">
           <label for="id">ID</label>
           <input id="id" type="number" name="id">
@@ -19,12 +19,16 @@
         <div class="p-6 space-y-6">
           <div class="grid grid-cols-6 gap-6">
             <div class="col-span-4 sm:col-span-3">
-              <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Room Code</label>
+              <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Grade Code</label>
               <input id="code" type="number" name="code" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-cyan-600/50 focus:border-cyan-600 focus:outline-none block w-full p-2.5" required>
             </div>
             <div class="col-span-6 sm:col-span-3">
-              <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Room Name</label>
+              <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Grade Name</label>
               <input id="name" type="text" name="name" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-cyan-600/50 focus:border-cyan-600 focus:outline-none block w-full p-2.5" required>
+            </div>
+            <div class="col-span-6 sm:col-span-3">
+              <label for="level" class="block mb-2 text-sm font-medium text-gray-900">Grade Level</label>
+              <input id="level" type="number" name="level" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-cyan-600/50 focus:border-cyan-600 focus:outline-none block w-full p-2.5" required>
             </div>
             <div class="col-span-6 sm:col-span-3">
               <label for="desc" class="block mb-2 text-sm font-medium text-gray-900">Description</label>
@@ -33,7 +37,7 @@
           </div>
         </div>
         <div class="items-center p-6 border-t border-gray-200 rounded-b">
-          <button type="submit" name="edit" class="text-white bg-cyan-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Update room</button>
+          <button type="submit" name="edit" class="text-white bg-cyan-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Update grade level</button>
         </div>
       </form>
     </div>
