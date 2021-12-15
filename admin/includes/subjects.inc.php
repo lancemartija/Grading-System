@@ -5,6 +5,7 @@ if (isset($_POST['add'])) {
   $code = filter_var(trim($_POST['code']), FILTER_SANITIZE_NUMBER_INT);
   $name = filter_var(trim($_POST['name']), FILTER_SANITIZE_STRING);
   $desc = filter_var(trim($_POST['desc']), FILTER_SANITIZE_STRING);
+  $level = filter_var(trim($_POST['level']), FILTER_SANITIZE_STRING);
   $unit = filter_var(trim($_POST['unit']), FILTER_SANITIZE_NUMBER_INT);
   $ay = filter_var(trim($_POST['ay']), FILTER_SANITIZE_STRING);
   $sem = filter_var(trim($_POST['sem']), FILTER_SANITIZE_STRING);
@@ -13,7 +14,7 @@ if (isset($_POST['add'])) {
   include_once '../database/database.classes.php';
   include_once '../classes/subjects.classes.php';
   include_once '../controller/subjects.contr.php';
-  $addSubjects = new AddSubjectsContr($code, $name, $desc, $unit, $ay, $sem);
+  $addSubjects = new AddSubjectsContr($code, $name, $desc, $level, $unit, $ay, $sem);
 
   # Running error handlers and add subject function
   $addSubjects->addSubjects();
@@ -27,6 +28,7 @@ if (isset($_POST['edit'])) {
   $id = filter_var(trim($_POST['id']), FILTER_SANITIZE_NUMBER_INT);
   $name = filter_var(trim($_POST['name']), FILTER_SANITIZE_STRING);
   $desc = filter_var(trim($_POST['desc']), FILTER_SANITIZE_STRING);
+  $level = filter_var(trim($_POST['level']), FILTER_SANITIZE_STRING);
   $unit = filter_var(trim($_POST['unit']), FILTER_SANITIZE_NUMBER_INT);
   $ay = filter_var(trim($_POST['ay']), FILTER_SANITIZE_STRING);
   $sem = filter_var(trim($_POST['sem']), FILTER_SANITIZE_STRING);
@@ -35,7 +37,7 @@ if (isset($_POST['edit'])) {
   include_once '../database/database.classes.php';
   include_once '../classes/subjects.classes.php';
   include_once '../controller/subjects.contr.php';
-  $editSubjects = new EditSubjectsContr($id, $name, $desc, $unit, $ay, $sem);
+  $editSubjects = new EditSubjectsContr($id, $name, $desc, $level, $unit, $ay, $sem);
 
   # Running error handlers and add subject function
   $editSubjects->editSubjects();

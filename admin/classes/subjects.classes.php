@@ -2,11 +2,11 @@
 
 class AddSubjects extends Dbh
 {
-  protected function setSubjects($code, $name, $desc, $unit, $ay, $sem)
+  protected function setSubjects($code, $name, $desc, $level, $unit, $ay, $sem)
   {
-    $stmt = $this->connect()->prepare('INSERT INTO tblsubjects (subj_code, subj_name, subj_desc, subj_unit, subj_ay, subj_sem) VALUES(?, ?, ?, ?, ?, ?);');
+    $stmt = $this->connect()->prepare('INSERT INTO tblsubjects (subj_code, subj_name, subj_desc, subj_level, subj_unit, subj_ay, subj_sem) VALUES(?, ?, ?, ?, ?, ?, ?);');
 
-    if (!$stmt->execute([$code, $name, $desc, $unit, $ay, $sem])) {
+    if (!$stmt->execute([$code, $name, $desc, $level, $unit, $ay, $sem])) {
       $stmt = null;
       header("Location: ../view/subjects.php?error=stmtfailed");
       exit;
@@ -35,11 +35,11 @@ class AddSubjects extends Dbh
 
 class EditSubjects extends Dbh
 {
-  protected function setSubjects($id, $name, $desc, $unit, $ay, $sem)
+  protected function setSubjects($id, $name, $desc, $level, $unit, $ay, $sem)
   {
-    $stmt = $this->connect()->prepare('UPDATE tblsubjects SET subj_name = ?, subj_desc = ?, subj_unit = ?, subj_ay = ?, subj_sem = ? WHERE subj_id = ?;');
+    $stmt = $this->connect()->prepare('UPDATE tblsubjects SET subj_name = ?, subj_desc = ?, subj_level = ?, subj_unit = ?, subj_ay = ?, subj_sem = ? WHERE subj_id = ?;');
 
-    if (!$stmt->execute([$name, $desc, $unit, $ay, $sem, $id])) {
+    if (!$stmt->execute([$name, $desc, $level, $unit, $ay, $sem, $id])) {
       $stmt = null;
       header("Location: ../view/subjects.php?error=stmtfailed");
       exit;
