@@ -42,7 +42,7 @@ $modal = 'dept';
       <main>
         <?php
         include_once '../templates/header.php';
-        include_once '../templates/modal/add-dept-modal.php';
+        include_once '../page/department/add-dept-modal.php';
         include_once '../includes/display-data.inc.php';
         ?>
       </main>

@@ -41,7 +41,7 @@ $btn = $modal = 'user';
       <main>
         <?php
         include_once '../templates/header.php';
-        include_once '../templates/modal/add-user-modal.php';
+        include_once '../page/users/add-user-modal.php';
         include_once '../includes/display-data.inc.php';
         ?>
       </main>

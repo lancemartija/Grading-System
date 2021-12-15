@@ -106,6 +106,59 @@ class DisplayGradeLevel extends Dbh
   }
 }
 
+class DisplayFaculty extends Dbh
+{
+  protected function getData()
+  {
+    $sql = 'SELECT * FROM tblinstructor;';
+    $stmt = $this->connect()->query($sql);
+    $result = 0;
+
+    if (!$stmt) {
+      $stmt = null;
+      header('Location: ../view/faculty.php?error=stmtfailed');
+      exit;
+    } else {
+      while ($row = $stmt->fetchAll(PDO::FETCH_ASSOC)) {
+        $result = $row;
+      }
+
+      $stmt = null;
+      return $result;
+    }
+
+    $stmt = null;
+    return $result;
+  }
+
+  protected function getSearchData($query)
+  {
+    $stmt = $this->connect()->prepare('SELECT * FROM tblinstructor WHERE inst_code = ? OR inst_name = ? OR inst_gender = ? OR inst_status = ? OR inst_email = ? OR inst_empstatus = ?;');
+    $result = 0;
+
+    if (!$stmt->execute([$query, $query, $query, $query, $query, $query])) {
+      $stmt = null;
+      header('Location: ../view/faculty.php?error=stmtfailed');
+      exit;
+    } else {
+      if ($stmt->rowCount() == 0) {
+        $stmt = null;
+        return $result;
+      } else {
+        while ($row = $stmt->fetchAll(PDO::FETCH_ASSOC)) {
+          $result = $row;
+        }
+      }
+
+      $stmt = null;
+      return $result;
+    }
+
+    $stmt = null;
+    return $result;
+  }
+}
+
 class DisplayDept extends Dbh
 {
   protected function getData()

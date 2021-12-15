@@ -36,6 +36,24 @@ class DisplayGradeLevelContr extends DisplayGradeLevel
   }
 }
 
+class DisplayFacultyContr extends DisplayFaculty
+{
+  private $query;
+
+  public function fetchData()
+  {
+    $result = $this->getData();
+    return $result;
+  }
+
+  public function fetchSearchData($query)
+  {
+    $this->query = $query;
+    $result = $this->getSearchData($this->query);
+    return $result;
+  }
+}
+
 class DisplayDeptContr extends DisplayDept
 {
   private $query;

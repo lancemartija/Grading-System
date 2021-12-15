@@ -41,7 +41,7 @@ $btn = $modal = 'room';
       <main>
         <?php
         include_once '../templates/header.php';
-        include_once '../templates/modal/add-room-modal.php';
+        include_once '../page/rooms/add-room-modal.php';
         include_once '../includes/display-data.inc.php';
         ?>
       </main>

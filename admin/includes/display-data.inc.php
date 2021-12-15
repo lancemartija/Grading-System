@@ -12,8 +12,8 @@ if (!empty($result)) {
     }
   }
 
-  include_once '../templates/table/' . $table . '-table.php';
-  include_once '../templates/modal/view-' . $modal . '-modal.php';
-  include_once '../templates/modal/edit-' . $modal . '-modal.php';
-  include_once '../templates/modal/delete-' . $modal . '-modal.php';
+  include_once '../page/' . $table . ' /' . $table . '-table.php';
+  include_once '../page/' . $link . '/view-' . $modal . '-modal.php';
+  include_once '../page/' . $link . '/edit-' . $modal . '-modal.php';
+  include_once '../page/' . $link . '/delete-' . $modal . '-modal.php';
 }

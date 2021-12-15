@@ -41,7 +41,7 @@ $btn = $modal = 'subject';
       <main>
         <?php
         include_once '../templates/header.php';
-        include_once '../templates/modal/add-subject-modal.php';
+        include_once '../page/subjects/add-subject-modal.php';
         include_once '../includes/display-data.inc.php';
         ?>
       </main>

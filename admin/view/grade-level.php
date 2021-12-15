@@ -42,7 +42,7 @@ $link = $table = $modal = 'grade-level';
       <main>
         <?php
         include_once '../templates/header.php';
-        include_once '../templates/modal/add-grade-level-modal.php';
+        include_once '../page/grade-level/add-grade-level-modal.php';
         include_once '../includes/display-data.inc.php';
         ?>
       </main>
