@@ -15,19 +15,23 @@
         <div class="grid grid-cols-6 gap-6 mb-4">
           <div class="col-span-6 sm:col-span-3">
             <label for="code" class="block mb-2 text-sm font-medium text-gray-900">Subject Code</label>
-            <input id="code" type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" placeholder="Subject Code" disabled readonly>
+            <input id="code" type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" disabled readonly>
           </div>
           <div class="col-span-6 sm:col-span-3">
             <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Subject Name</label>
-            <input id="name" type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" placeholder="Subject Name" disabled readonly>
+            <input id="name" type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" disabled readonly>
           </div>
           <div class="col-span-6 sm:col-span-3">
             <label for="desc" class="block mb-2 text-sm font-medium text-gray-900">Description</label>
-            <input id="desc" type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" placeholder="0000" disabled readonly>
+            <input id="desc" type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" disabled readonly>
           </div>
           <div class="col-span-6 sm:col-span-3">
             <label for="unit" class="block mb-2 text-sm font-medium text-gray-900">Units</label>
-            <input id="unit" type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" placeholder="Units" disabled readonly>
+            <input id="unit" type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" disabled readonly>
+          </div>
+          <div class="col-span-6 sm:col-span-3">
+            <label for="level" class="block mb-2 text-sm font-medium text-gray-900">Grade Level</label>
+            <input id="level" type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" disabled readonly>
           </div>
           <div class="col-span-6 sm:col-span-3">
             <label for="ay" class="block mb-2 text-sm font-medium text-gray-900">Academic Year</label>
