@@ -19,9 +19,7 @@
               <a href="<?= $breadcrumblink; ?>" class="ml-1 text-sm font-medium text-gray-700 capitalize hover:text-gray-900 md:ml-2"><?= $breadcrumb1; ?></a>
             </div>
           </li>
-          <?php
-          if (!empty($breadcrumb2)) {
-          ?>
+          <?php if (!empty($breadcrumb2)) { ?>
             <li>
               <div class="flex items-center">
                 <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -38,6 +36,9 @@
     <div class="sm:flex">
       <div class="items-center hidden mb-3 sm:flex sm:divide-x sm:divide-gray-100 sm:mb-0">
         <form class="flex lg:pr-2" action="#" method="get">
+          <?php if (!empty($_GET['code'])) { ?>
+            <input type="hidden" name="code" value="<?= $_GET['code']; ?>">
+          <?php } ?>
           <label for="users-search" class="sr-only">Search</label>
           <div class="relative mr-2 lg:w-64 xl:w-96">
             <input type="text" name="search" class="bg-gray-50 border border-gray-300 text-gray-900 focus:outline-none sm:text-sm rounded-lg focus:ring-gray-200 focus:ring-4 block w-full p-2.5" placeholder="Search for <?= $search ?>" required>
