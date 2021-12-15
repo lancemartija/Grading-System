@@ -35,6 +35,15 @@
               <input id="unit" type="number" name="unit" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-cyan-600/50 focus:border-cyan-600 focus:outline-none block w-full p-2.5" placeholder="Units" required>
             </div>
             <div class="col-span-6 sm:col-span-3">
+              <label for="level" class="block mb-2 text-sm font-medium text-gray-900">Grade Level</label>
+              <select id="level" name="level" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none block w-full p-2.5">
+                <option value="" disabled selected hidden>Choose Grade Level</option>
+                <?php foreach ($options as $data) : ?>
+                  <option value="<?= $data['course_name']; ?>"><?= $data['course_name']; ?></option>
+                <?php endforeach ?>
+              </select>
+            </div>
+            <div class="col-span-6 sm:col-span-3">
               <label for="ay" class="block mb-2 text-sm font-medium text-gray-900">Academic Year</label>
               <select id="ay" name="ay" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-cyan-600/50 focus:border-cyan-600 focus:outline-none block w-full p-2.5">
                 <option value="2021-2022">2021-2022</option>
