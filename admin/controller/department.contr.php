@@ -62,7 +62,7 @@ class EditDeptContr extends EditDept
 
   private function emptyInput()
   {
-    if (empty($this->code) || empty($this->deptname) || empty($this->desc)) {
+    if (empty($this->deptname) || empty($this->desc)) {
       return false;
     }
     return true;

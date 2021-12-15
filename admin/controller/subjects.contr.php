@@ -69,7 +69,7 @@ class EditSubjectsContr extends EditSubjects
       exit;
     }
 
-    $this->setSubjects($this->id, $this->code, $this->name, $this->desc, $this->unit, $this->ay, $this->sem);
+    $this->setSubjects($this->id, $this->name, $this->desc, $this->unit, $this->ay, $this->sem);
   }
 
   private function emptyInput()

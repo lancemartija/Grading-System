@@ -66,7 +66,7 @@ class EditGradeLevelContr extends EditGradeLevel
 
   private function emptyInput()
   {
-    if (empty($this->code) || empty($this->name) || empty($this->level) || empty($this->desc)) {
+    if (empty($this->name) || empty($this->level) || empty($this->desc)) {
       return false;
     }
     return true;
