@@ -31,8 +31,10 @@ $user = $_SESSION['useruid'];
     <div id="main-content" class="relative w-full h-full ml-64 overflow-y-auto bg-gray-50">
       <main>
         <?php
-        $page = $breadcrumb = $btn = $link = 'class';
-        $search = 'classes';
+        $btn = 'class';
+        $page = $breadcrumb1 = $search = 'classes';
+        $breadcrumblink = '#';
+        $link = 'class.php';
 
         include_once '../templates/header.php';
         ?>

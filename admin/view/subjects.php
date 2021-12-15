@@ -14,8 +14,10 @@ include_once '../controller/display-data.contr.php';
 
 $display = new DisplaySubjectsContr;
 
-$page = $breadcrumb =  $search = $link = $table = 'subjects';
+$page = $breadcrumb1 =  $search = $link = $table = 'subjects';
 $btn = $modal = 'subject';
+$searchlink = 'subjects.php';
+$breadcrumblink = '#';
 ?>
 
 <!DOCTYPE html>
