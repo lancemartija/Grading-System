@@ -16,14 +16,16 @@ $user = $_SESSION['useruid'];
 include_once '../database/database.classes.php';
 // include_once '../classes/display-data.classes.php';
 // include_once '../controller/display-data.contr.php';
+include_once '../page/loads/subject-options.inc.php';
 
 // $display = new DisplayLoadsContr;
 
 $table = $search = 'loads';
-$breadcrumb1 = 'faculty';
+$breadcrumb1 = 'faculties';
 $page = $breadcrumb2 = 'List of Loads';
 $breadcrumblink = 'faculty.php';
-$modal = $btn = 'load';
+$modal = 'load';
+$btn = 'subject';
 $searchlink = 'loads.php?code=' . $_GET['code'];
 ?>
 
@@ -50,7 +52,7 @@ $searchlink = 'loads.php?code=' . $_GET['code'];
       <main>
         <?php
         include_once '../templates/header.php';
-        // include_once '../page/faculty/add-load-modal.php';
+        include_once '../page/loads/add-load-modal.php';
         // include_once '../includes/display-data.inc.php';
         ?>
       </main>
