@@ -15,31 +15,31 @@
         <div class="grid grid-cols-6 gap-6">
           <div class="col-span-6 sm:col-span-3">
             <label for="code" class="block mb-2 text-sm font-medium text-gray-900">Code</label>
-            <input id="code" type="text" name="code" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-gray-600/50 focus:border-gray-600 focus:outline-none block w-full p-2.5" placeholder="0000" readonly>
+            <input id="code" type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" placeholder="0000" disabled readonly>
           </div>
           <div class="col-span-6 sm:col-span-3">
             <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Name</label>
-            <input id="name" type="text" name="name" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-gray-600/50 focus:border-gray-600 focus:outline-none block w-full p-2.5" placeholder="First Name, Middle Name, Last Name" readonly>
+            <input id="name" type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" placeholder="First Name, Middle Name, Last Name" disabled readonly>
           </div>
           <div class="col-span-6 sm:col-span-3">
             <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Email</label>
-            <input id="email" type="email" name="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-gray-600/50 focus:border-gray-600 focus:outline-none block w-full p-2.5" placeholder="example@email.com" readonly>
+            <input id="email" type="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" placeholder="example@email.com" disabled readonly>
           </div>
           <div class="col-span-6 sm:col-span-3">
             <label for="address" class="block mb-2 text-sm font-medium text-gray-900">Address</label>
-            <input id="address" type="text" name="address" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-gray-600/50 focus:border-gray-600 focus:outline-none block w-full p-2.5" placeholder="Address" readonly>
+            <input id="address" type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" placeholder="Address" disabled readonly>
           </div>
           <div class="col-span-6 sm:col-span-3">
             <label for="gender" class="block mb-2 text-sm font-medium text-gray-900">Gender</label>
-            <input id="gender" type="text" name=" gender" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-gray-600/50 focus:border-gray-600 focus:outline-none block w-full p-2.5" readonly>
+            <input id="gender" type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" disabled readonly>
           </div>
           <div class="col-span-6 sm:col-span-3">
             <label for="status" class="block mb-2 text-sm font-medium text-gray-900">Status</label>
-            <input id="status" type="text" name="status" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-gray-600/50 focus:border-gray-600 focus:outline-none block w-full p-2.5" readonly>
+            <input id="status" type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" disabled readonly>
           </div>
           <div class="col-span-6 sm:col-span-3">
             <label for="empstatus" class="block mb-2 text-sm font-medium text-gray-900">Employment Status</label>
-            <input id="empstatus" type="text" name="empstatus" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-gray-600/50 focus:border-gray-600 focus:outline-none block w-full p-2.5" readonly>
+            <input id="empstatus" type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" disabled readonly>
           </div>
         </div>
       </div>

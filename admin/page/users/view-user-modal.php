@@ -15,23 +15,23 @@
         <div class="grid grid-cols-6 gap-6 mb-4">
           <div class="col-span-6 sm:col-span-3">
             <label for="firstname" class="block mb-2 text-sm font-medium text-gray-900">First Name</label>
-            <input id="firstname" type="text" name="firstname" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-gray-600/50 focus:border-gray-600 focus:outline-none block w-full p-2.5" readonly>
+            <input id="firstname" type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" disabled readonly>
           </div>
           <div class="col-span-6 sm:col-span-3">
             <label for="lastname" class="block mb-2 text-sm font-medium text-gray-900">Last Name</label>
-            <input id="lastname" type="text" name="lastname" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-gray-600/50 focus:border-gray-600 focus:outline-none block w-full p-2.5" readonly>
+            <input id="lastname" type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" disabled readonly>
           </div>
           <div class="col-span-6 sm:col-span-3">
             <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Email</label>
-            <input id="email" type="email" name="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-gray-600/50 focus:border-gray-600 focus:outline-none block w-full p-2.5" readonly>
+            <input id="email" type="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" disabled readonly>
           </div>
           <div class="col-span-6 sm:col-span-3">
             <label for="username" class="block mb-2 text-sm font-medium text-gray-900">Username</label>
-            <input id="username" type="text" name="username" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-gray-600/50 focus:border-gray-600 focus:outline-none block w-full p-2.5" readonly>
+            <input id="username" type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" disabled readonly>
           </div>
           <div class="col-span-6 sm:col-span-3">
             <label for="accounttype" class="block mb-2 text-sm font-medium text-gray-900">Account Type</label>
-            <input id="accounttype" type="text" name="accounttype" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-gray-600/50 focus:border-gray-600 focus:outline-none block w-full p-2.5" readonly>
+            <input id="accounttype" type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" disabled readonly>
           </div>
         </div>
       </div>
