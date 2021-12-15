@@ -15,12 +15,6 @@
           Address
         </th>
         <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase">
-          Gender
-        </th>
-        <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase">
-          Civil Status
-        </th>
-        <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase">
           Employment Status
         </th>
         <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase">
@@ -60,16 +54,6 @@
           <td class="p-4 text-base font-normal text-gray-900 whitespace-nowrap">
             <div class="flex items-center capitalize">
               <?= $data['inst_address']; ?>
-            </div>
-          </td>
-          <td class="p-4 text-base font-normal text-gray-900 whitespace-nowrap">
-            <div class="flex items-center capitalize">
-              <?= $data['inst_gender']; ?>
-            </div>
-          </td>
-          <td class="p-4 text-base font-normal text-gray-900 whitespace-nowrap">
-            <div class="flex items-center capitalize">
-              <?= $data['inst_status']; ?>
             </div>
           </td>
           <td class="p-4 text-base font-normal text-gray-900 whitespace-nowrap">
