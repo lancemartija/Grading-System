@@ -11,6 +11,7 @@ $user = $_SESSION['useruid'];
 include_once '../database/database.classes.php';
 include_once '../classes/display-data.classes.php';
 include_once '../controller/display-data.contr.php';
+include_once '../page/subjects/grade-level-options.inc.php';
 
 $display = new DisplaySubjectsContr;
 
