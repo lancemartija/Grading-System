@@ -35,34 +35,17 @@ class AddFaculty extends Dbh
 
 class EditFaculty extends Dbh
 {
-  protected function setFaculty($id, $code, $name, $address, $gender, $status, $email, $empstatus)
+  protected function setFaculty($id, $name, $address, $gender, $status, $email, $empstatus)
   {
-    $stmt = $this->connect()->prepare('UPDATE tblinstructor SET inst_code = ?, inst_name = ?, inst_address = ?, inst_gender = ?, inst_status = ?, inst_email = ?, inst_empstatus = ? WHERE inst_id = ?;');
+    $stmt = $this->connect()->prepare('UPDATE tblinstructor SET inst_name = ?, inst_address = ?, inst_gender = ?, inst_status = ?, inst_email = ?, inst_empstatus = ? WHERE inst_id = ?;');
 
-    if (!$stmt->execute([$code, $name, $address, $gender, $status, $email, $empstatus, $id])) {
+    if (!$stmt->execute([$name, $address, $gender, $status, $email, $empstatus, $id])) {
       $stmt = null;
       header("Location: ../view/faculty.php?error=stmtfailed");
       exit;
     }
 
     $stmt = null;
-  }
-
-  protected function checkCode($id, $code)
-  {
-    $stmt = $this->connect()->prepare('SELECT * FROM tblinstructor WHERE inst_id <> ? AND inst_code = ?;');
-
-    if (!$stmt->execute([$id, $code])) {
-      $stmt = null;
-      header('Location: ../view/faculty.php?error=stmtfailed');
-      exit;
-    }
-
-    if ($stmt->rowCount() > 0) {
-      return false;
-    }
-
-    return true;
   }
 }
 

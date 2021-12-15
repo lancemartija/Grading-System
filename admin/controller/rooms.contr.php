@@ -40,14 +40,12 @@ class AddRoomsContr extends AddRooms
 class EditRoomsContr extends EditRooms
 {
   private $id;
-  private $code;
   private $name;
   private $desc;
 
-  public function __construct($id, $code, $name, $desc)
+  public function __construct($id, $name, $desc)
   {
     $this->id = $id;
-    $this->code = $code;
     $this->name = $name;
     $this->desc = $desc;
   }
@@ -59,17 +57,12 @@ class EditRoomsContr extends EditRooms
       exit;
     }
 
-    if ($this->checkCode($this->id, $this->code) == false) {
-      header('Location: ../view/rooms.php?error=roomalreadyexists');
-      exit;
-    }
-
-    $this->setRooms($this->id, $this->code, $this->name, $this->desc);
+    $this->setRooms($this->id, $this->name, $this->desc);
   }
 
   private function emptyInput()
   {
-    if (empty($this->code) || empty($this->name) || empty($this->desc)) {
+    if (empty($this->name) || empty($this->desc)) {
       return false;
     }
     return true;

@@ -46,17 +46,15 @@ class AddSubjectsContr extends AddSubjects
 class EditSubjectsContr extends EditSubjects
 {
   private $id;
-  private $code;
   private $name;
   private $desc;
   private $unit;
   private $ay;
   private $sem;
 
-  public function __construct($id, $code, $name, $desc, $unit, $ay, $sem)
+  public function __construct($id, $name, $desc, $unit, $ay, $sem)
   {
     $this->id = $id;
-    $this->code = $code;
     $this->name = $name;
     $this->desc = $desc;
     $this->unit = $unit;
@@ -71,17 +69,12 @@ class EditSubjectsContr extends EditSubjects
       exit;
     }
 
-    if ($this->checkCode($this->id, $this->code) == false) {
-      header('Location: ../view/subjects.php?error=subjectalreadyexists');
-      exit;
-    }
-
     $this->setSubjects($this->id, $this->code, $this->name, $this->desc, $this->unit, $this->ay, $this->sem);
   }
 
   private function emptyInput()
   {
-    if (empty($this->code) || empty($this->name) || empty($this->desc) || empty($this->unit) || empty($this->ay) || empty($this->sem)) {
+    if (empty($this->name) || empty($this->desc) || empty($this->unit) || empty($this->ay) || empty($this->sem)) {
       return false;
     }
     return true;

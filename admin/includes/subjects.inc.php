@@ -25,7 +25,6 @@ if (isset($_POST['add'])) {
 if (isset($_POST['edit'])) {
   # Grabbing data
   $id = filter_var(trim($_POST['id']), FILTER_SANITIZE_NUMBER_INT);
-  $code = filter_var(trim($_POST['code']), FILTER_SANITIZE_NUMBER_INT);
   $name = filter_var(trim($_POST['name']), FILTER_SANITIZE_STRING);
   $desc = filter_var(trim($_POST['desc']), FILTER_SANITIZE_STRING);
   $unit = filter_var(trim($_POST['unit']), FILTER_SANITIZE_NUMBER_INT);
@@ -36,7 +35,7 @@ if (isset($_POST['edit'])) {
   include_once '../database/database.classes.php';
   include_once '../classes/subjects.classes.php';
   include_once '../controller/subjects.contr.php';
-  $editSubjects = new EditSubjectsContr($id, $code, $name, $desc, $unit, $ay, $sem);
+  $editSubjects = new EditSubjectsContr($id, $name, $desc, $unit, $ay, $sem);
 
   # Running error handlers and add subject function
   $editSubjects->editSubjects();

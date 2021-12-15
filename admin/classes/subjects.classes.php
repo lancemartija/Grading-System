@@ -35,34 +35,17 @@ class AddSubjects extends Dbh
 
 class EditSubjects extends Dbh
 {
-  protected function setSubjects($id, $code, $name, $desc, $unit, $ay, $sem)
+  protected function setSubjects($id, $name, $desc, $unit, $ay, $sem)
   {
-    $stmt = $this->connect()->prepare('UPDATE tblsubjects SET subj_code = ?, subj_name = ?, subj_desc = ?, subj_unit = ?, subj_ay = ?, subj_sem = ? WHERE subj_id = ?;');
+    $stmt = $this->connect()->prepare('UPDATE tblsubjects SET subj_name = ?, subj_desc = ?, subj_unit = ?, subj_ay = ?, subj_sem = ? WHERE subj_id = ?;');
 
-    if (!$stmt->execute([$code, $name, $desc, $unit, $ay, $sem, $id])) {
+    if (!$stmt->execute([$name, $desc, $unit, $ay, $sem, $id])) {
       $stmt = null;
       header("Location: ../view/subjects.php?error=stmtfailed");
       exit;
     }
 
     $stmt = null;
-  }
-
-  protected function checkCode($id, $code)
-  {
-    $stmt = $this->connect()->prepare('SELECT * FROM tblsubjects WHERE subj_id <> ? AND subj_code = ?;');
-
-    if (!$stmt->execute([$id, $code])) {
-      $stmt = null;
-      header('Location: ../view/subjects.php?error=stmtfailed');
-      exit;
-    }
-
-    if ($stmt->rowCount() > 0) {
-      return false;
-    }
-
-    return true;
   }
 }
 

@@ -35,34 +35,17 @@ class AddDept extends Dbh
 
 class EditDept extends Dbh
 {
-  protected function setDept($id, $code, $deptname, $desc)
+  protected function setDept($id, $deptname, $desc)
   {
-    $stmt = $this->connect()->prepare('UPDATE tbldepartment SET dept_code = ?, dept_name = ?, dept_desc = ? WHERE dept_id = ?;');
+    $stmt = $this->connect()->prepare('UPDATE tbldepartment SET dept_name = ?, dept_desc = ? WHERE dept_id = ?;');
 
-    if (!$stmt->execute([$code, $deptname, $desc, $id])) {
+    if (!$stmt->execute([$deptname, $desc, $id])) {
       $stmt = null;
       header("Location: ../view/department.php?error=stmtfailed");
       exit;
     }
 
     $stmt = null;
-  }
-
-  protected function checkCode($id, $code)
-  {
-    $stmt = $this->connect()->prepare('SELECT * FROM tbldepartment WHERE dept_id <> ? AND dept_code = ?;');
-
-    if (!$stmt->execute([$id, $code])) {
-      $stmt = null;
-      header('Location: ../view/department.php?error=stmtfailed');
-      exit;
-    }
-
-    if ($stmt->rowCount() > 0) {
-      return false;
-    }
-
-    return true;
   }
 }
 

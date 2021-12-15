@@ -23,7 +23,6 @@ if (isset($_POST['add'])) {
 if (isset($_POST['edit'])) {
   # Grabbing data
   $id = filter_var(trim($_POST['id']), FILTER_SANITIZE_NUMBER_INT);
-  $code = filter_var(trim($_POST['code']), FILTER_SANITIZE_NUMBER_INT);
   $name = filter_var(trim($_POST['name']), FILTER_SANITIZE_STRING);
   $level = filter_var(trim($_POST['level']), FILTER_SANITIZE_NUMBER_INT);
   $desc = filter_var(trim($_POST['desc']), FILTER_SANITIZE_STRING);
@@ -32,7 +31,7 @@ if (isset($_POST['edit'])) {
   include_once '../database/database.classes.php';
   include_once '../classes/grade-level.classes.php';
   include_once '../controller/grade-level.contr.php';
-  $editGradeLevel = new EditGradeLevelContr($id, $code, $name, $level, $desc);
+  $editGradeLevel = new EditGradeLevelContr($id, $name, $level, $desc);
 
   # Running error handlers and add grade level function
   $editGradeLevel->editGradeLevel();

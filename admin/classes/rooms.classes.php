@@ -35,34 +35,17 @@ class AddRooms extends Dbh
 
 class EditRooms extends Dbh
 {
-  protected function setRooms($id, $code, $name, $desc)
+  protected function setRooms($id, $name, $desc)
   {
-    $stmt = $this->connect()->prepare('UPDATE tblrooms SET room_code = ?, room_name = ?, room_desc = ? WHERE room_id = ?;');
+    $stmt = $this->connect()->prepare('UPDATE tblrooms SET room_name = ?, room_desc = ? WHERE room_id = ?;');
 
-    if (!$stmt->execute([$code, $name, $desc, $id])) {
+    if (!$stmt->execute([$name, $desc, $id])) {
       $stmt = null;
       header("Location: ../view/rooms.php?error=stmtfailed");
       exit;
     }
 
     $stmt = null;
-  }
-
-  protected function checkCode($id, $code)
-  {
-    $stmt = $this->connect()->prepare('SELECT * FROM tblrooms WHERE room_id <> ? AND room_code = ?;');
-
-    if (!$stmt->execute([$id, $code])) {
-      $stmt = null;
-      header('Location: ../view/rooms.php?error=stmtfailed');
-      exit;
-    }
-
-    if ($stmt->rowCount() > 0) {
-      return false;
-    }
-
-    return true;
   }
 }
 

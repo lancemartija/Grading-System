@@ -42,15 +42,13 @@ class AddGradeLevelContr extends AddGradeLevel
 class EditGradeLevelContr extends EditGradeLevel
 {
   private $id;
-  private $code;
   private $name;
   private $level;
   private $desc;
 
-  public function __construct($id, $code, $name, $level, $desc)
+  public function __construct($id, $name, $level, $desc)
   {
     $this->id = $id;
-    $this->code = $code;
     $this->name = $name;
     $this->level = $level;
     $this->desc = $desc;
@@ -63,12 +61,7 @@ class EditGradeLevelContr extends EditGradeLevel
       exit;
     }
 
-    if ($this->checkCode($this->id, $this->code) == false) {
-      header('Location: ../view/grade-level.php?error=gradelevelalreadyexists');
-      exit;
-    }
-
-    $this->setGradeLevel($this->id, $this->code, $this->name, $this->level, $this->desc);
+    $this->setGradeLevel($this->id, $this->name, $this->level, $this->desc);
   }
 
   private function emptyInput()

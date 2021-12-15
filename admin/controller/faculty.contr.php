@@ -61,7 +61,6 @@ class AddFacultyContr extends AddFaculty
 class EditFacultyContr extends EditFaculty
 {
   private $id;
-  private $code;
   private $name;
   private $address;
   private $gender;
@@ -69,10 +68,9 @@ class EditFacultyContr extends EditFaculty
   private $email;
   private $empstatus;
 
-  public function __construct($id, $code, $name, $address, $gender, $status, $email, $empstatus)
+  public function __construct($id, $name, $address, $gender, $status, $email, $empstatus)
   {
     $this->id = $id;
-    $this->code = $code;
     $this->name = $name;
     $this->address = $address;
     $this->gender = $gender;
@@ -88,22 +86,17 @@ class EditFacultyContr extends EditFaculty
       exit;
     }
 
-    if ($this->checkCode($this->id, $this->code) == false) {
-      header('Location: ../view/faculty.php?error=facultyalreadyexists');
-      exit;
-    }
-
     if ($this->invalidEmail() == false) {
       header('Location: ../view/faculty.php?error=invalidemail');
       exit;
     }
 
-    $this->setFaculty($this->id, $this->code, $this->name, $this->address, $this->gender, $this->status, $this->email, $this->empstatus);
+    $this->setFaculty($this->id, $this->name, $this->address, $this->gender, $this->status, $this->email, $this->empstatus);
   }
 
   private function emptyInput()
   {
-    if (empty($this->code) || empty($this->name) || empty($this->address) || empty($this->gender) || empty($this->status) || empty($this->email) || empty($this->empstatus)) {
+    if (empty($this->name) || empty($this->address) || empty($this->gender) || empty($this->status) || empty($this->email) || empty($this->empstatus)) {
       return false;
     }
     return true;

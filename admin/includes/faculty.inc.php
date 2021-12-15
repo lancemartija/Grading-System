@@ -26,7 +26,6 @@ if (isset($_POST['add'])) {
 if (isset($_POST['edit'])) {
   # Grabbing data
   $id = filter_var(trim($_POST['id']), FILTER_SANITIZE_NUMBER_INT);
-  $code = filter_var(trim($_POST['code']), FILTER_SANITIZE_NUMBER_INT);
   $name = filter_var(trim($_POST['name']), FILTER_SANITIZE_STRING);
   $address = filter_var(trim($_POST['address']), FILTER_SANITIZE_STRING);
   $gender = filter_var(trim($_POST['gender']), FILTER_SANITIZE_STRING);
@@ -38,7 +37,7 @@ if (isset($_POST['edit'])) {
   include_once '../database/database.classes.php';
   include_once '../classes/faculty.classes.php';
   include_once '../controller/faculty.contr.php';
-  $editFaculty = new EditFacultyContr($id, $code, $name, $address, $gender, $status, $email, $empstatus);
+  $editFaculty = new EditFacultyContr($id, $name, $address, $gender, $status, $email, $empstatus);
 
   # Running error handlers and add faculty function
   $editFaculty->editFaculty();

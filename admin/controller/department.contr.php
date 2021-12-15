@@ -40,14 +40,12 @@ class AddDeptContr extends AddDept
 class EditDeptContr extends EditDept
 {
   private $id;
-  private $code;
   private $deptname;
   private $desc;
 
-  public function __construct($id, $code, $deptname, $desc)
+  public function __construct($id, $deptname, $desc)
   {
     $this->id = $id;
-    $this->code = $code;
     $this->deptname = $deptname;
     $this->desc = $desc;
   }
@@ -59,12 +57,7 @@ class EditDeptContr extends EditDept
       exit;
     }
 
-    if ($this->checkCode($this->id, $this->code) == false) {
-      header('Location: ../view/department.php?error=deptalreadyexists');
-      exit;
-    }
-
-    $this->setDept($this->id, $this->code, $this->deptname, $this->desc);
+    $this->setDept($this->id, $this->deptname, $this->desc);
   }
 
   private function emptyInput()
