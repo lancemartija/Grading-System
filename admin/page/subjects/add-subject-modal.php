@@ -42,6 +42,7 @@
               <select name="sem" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none block w-full p-2.5">
                 <option value="First Semester">First Semester</option>
                 <option value="Second Semster">Second Semester</option>
+                <option value="Summer">Summer</option>
               </select>
             </div>
           </div>
