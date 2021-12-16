@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 15, 2021 at 04:55 PM
+-- Generation Time: Dec 16, 2021 at 09:55 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.26
 
@@ -29,15 +29,27 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `tblclass` (
   `class_id` int(11) NOT NULL,
-  `class_name` varchar(255) NOT NULL,
   `class_code` int(11) NOT NULL,
-  `subject_code` int(11) NOT NULL,
-  `inst_code` int(11) NOT NULL,
-  `subject_ay` varchar(255) NOT NULL,
+  `class_name` varchar(255) NOT NULL,
+  `class_desc` varchar(255) NOT NULL,
+  `class_inst` varchar(255) NOT NULL,
+  `class_level` varchar(255) NOT NULL,
+  `class_ay` varchar(255) NOT NULL,
+  `class_day` varchar(255) NOT NULL,
   `class_time` varchar(255) NOT NULL,
-  `room_name` varchar(255) NOT NULL,
+  `class_room` varchar(255) NOT NULL,
   `class_section` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tblclass`
+--
+
+INSERT INTO `tblclass` (`class_id`, `class_code`, `class_name`, `class_desc`, `class_inst`, `class_level`, `class_ay`, `class_day`, `class_time`, `class_room`, `class_section`) VALUES
+(1, 12345, 'Advanced Math', 'Mathematics Made Easy', 'Jimmy Nickelson Cricket', 'Grade 12', '2021-2022', '', '', '', ''),
+(2, 133575, 'Hangul 101', 'Foreign Languages', 'Maya Willis Hawke', 'Grade 11', '2021-2022', '', '', '', ''),
+(3, 133576, 'Hangul 101', 'Foreign Languages 2', 'Maya Willis Hawke', 'Grade 11', '2022-2023', '', '', '', ''),
+(4, 42345, 'Eloquent English', 'Eloquent English 101', 'Jimmy Nickelson Cricket', 'Grade 12', '2021-2022', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -58,8 +70,8 @@ CREATE TABLE `tblcourse` (
 --
 
 INSERT INTO `tblcourse` (`course_id`, `course_code`, `course_name`, `course_level`, `course_desc`) VALUES
-(1, 1235, 'Grade 11', 11, 'Senior High School'),
-(2, 1525, 'Grade 12', 12, 'Senior High School');
+(1, 1234, 'Grade 12', 12, 'Senior High School'),
+(2, 2351, 'Grade 11', 11, 'Senior High School');
 
 -- --------------------------------------------------------
 
@@ -143,6 +155,7 @@ CREATE TABLE `tblsubjects` (
   `subj_code` int(11) NOT NULL,
   `subj_name` varchar(255) NOT NULL,
   `subj_desc` varchar(255) DEFAULT NULL,
+  `subj_level` varchar(255) NOT NULL,
   `subj_unit` int(11) NOT NULL,
   `subj_ay` varchar(255) NOT NULL,
   `subj_sem` varchar(255) NOT NULL
@@ -152,11 +165,11 @@ CREATE TABLE `tblsubjects` (
 -- Dumping data for table `tblsubjects`
 --
 
-INSERT INTO `tblsubjects` (`subj_id`, `subj_code`, `subj_name`, `subj_desc`, `subj_unit`, `subj_ay`, `subj_sem`) VALUES
-(1, 1265, 'Eloquent English', 'Eloquent English 101', 3, '2021-2022', 'First Semester'),
-(2, 6353, 'Advanced Math', 'Mathematics Made Easy', 3, '2021-2022', 'First Semester'),
-(3, 6213, 'Algebra 101', 'Algebra Made Easy', 3, '2021-2022', 'Second Semster'),
-(4, 3111, 'Hangul 101', 'Foreign Languages', 2, '2022-2023', 'Summer');
+INSERT INTO `tblsubjects` (`subj_id`, `subj_code`, `subj_name`, `subj_desc`, `subj_level`, `subj_unit`, `subj_ay`, `subj_sem`) VALUES
+(1, 12345, 'Advanced Math', 'Mathematics Made Easy', 'Grade 12', 3, '2021-2022', 'First Semester'),
+(2, 42345, 'Eloquent English', 'Eloquent English 101', 'Grade 12', 3, '2021-2022', 'First Semester'),
+(3, 133575, 'Hangul 101', 'Foreign Languages', 'Grade 11', 2, '2021-2022', 'Second Semster'),
+(4, 133576, 'Hangul 101', 'Foreign Languages 2', 'Grade 11', 2, '2022-2023', 'Summer');
 
 -- --------------------------------------------------------
 
@@ -238,7 +251,7 @@ ALTER TABLE `tbluseraccounts`
 -- AUTO_INCREMENT for table `tblclass`
 --
 ALTER TABLE `tblclass`
-  MODIFY `class_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `class_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tblcourse`
