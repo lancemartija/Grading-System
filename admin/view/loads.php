@@ -52,7 +52,7 @@ $searchlink = 'loads.php?code=' . $_GET['code'];
       <main>
         <?php
         include_once '../templates/header.php';
-        include_once '../page/loads/add-load-modal.php';
+        include_once '../page/loads/assign-load-modal.php';
         // include_once '../includes/display-data.inc.php';
         ?>
       </main>
