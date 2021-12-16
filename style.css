@@ -3,12 +3,32 @@
 @tailwind utilities;
 
 @layer components {
+  .modal-grid {
+    @apply grid grid-cols-6 gap-6;
+  }
+
   .th {
     @apply p-4 text-xs font-medium text-left text-gray-500 uppercase;
   }
 
   .td {
     @apply p-4 text-base font-normal text-gray-900 whitespace-nowrap;
+  }
+
+  .td-title {
+    @apply flex items-center p-4 mr-12 space-x-6 whitespace-nowrap lg:mr-0;
+  }
+
+  .label {
+    @apply block mb-2 text-sm font-medium text-gray-900;
+  }
+
+  .input-field {
+    @apply text-gray-900 border border-gray-300 rounded-lg shadow-sm bg-gray-50 sm:text-sm block w-full p-2.5;
+  }
+
+  .input-field-view {
+    @apply shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5;
   }
 
   .btn-green {
