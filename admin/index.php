@@ -40,6 +40,10 @@ session_start();
             <div class="ml-3 text-sm">
               <label for="remember" class="font-medium text-gray-700">Remember me</label>
             </div> -->
+            <span class="text-red-600 bg-red-300"><?php if (isset($_SESSION['message'])) {
+                                                    echo $_SESSION['message'];
+                                                  }
+                                                  unset($_SESSION['message']) ?></span>
             <a href="#" onclick="alert('Please contact other administrators for further instructions.');" class="ml-auto text-sm text-green-600 hover:underline">Lost Password?</a>
           </div>
           <button type="submit" name="submit" class="w-full px-5 py-3 text-base font-medium text-center text-white transition duration-200 bg-green-600 rounded-lg hover:bg-green-700 focus:outline-none focus:ring-4 focus:ring-green-500 focus:ring-opacity-50 sm:w-auto">Login to account</button>
