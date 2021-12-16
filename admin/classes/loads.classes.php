@@ -16,18 +16,18 @@ class AssignLoads extends Dbh
   }
 }
 
-// class DeleteLoads extends Dbh
-// {
-//   protected function setLoads($id)
-//   {
-//     $stmt = $this->connect()->prepare('DELETE FROM tblclass WHERE subj_id = ?; SET @num := 0; UPDATE tblclass SET subj_id = @num := (@num+1); ALTER TABLE tblclass AUTO_INCREMENT = 1;');
+class DeleteLoads extends Dbh
+{
+  protected function setLoads($id)
+  {
+    $stmt = $this->connect()->prepare('DELETE FROM tblclass WHERE class_id = ?;');
 
-//     if (!$stmt->execute([$id])) {
-//       $stmt = null;
-//       header("Location: ../view/subjects.php?error=stmtfailed");
-//       exit;
-//     }
+    if (!$stmt->execute([$id])) {
+      $stmt = null;
+      header('Location: ../view/loads.php?code=' . $this->code . '&error=stmtfailed');
+      exit;
+    }
 
-//     $stmt = null;
-//   }
-// }
+    $stmt = null;
+  }
+}

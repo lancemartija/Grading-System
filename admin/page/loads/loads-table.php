@@ -84,7 +84,7 @@
             </a>
           </td>
           <td class="p-4 space-x-2 whitespace-nowrap">
-            <button type="button" data-id="<?= $data['class_id']; ?>" data-delete-button class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-600 rounded-lg hover:bg-red-800 focus:ring-4 focus:ring-red-300">
+            <button type="button" data-id="<?= $data['class_id']; ?>" data-code="<?= $instructor; ?>" data-delete-button class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-600 rounded-lg hover:bg-red-800 focus:ring-4 focus:ring-red-300">
               <svg class="w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z" clip-rule="evenodd" />
               </svg>

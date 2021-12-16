@@ -13,5 +13,5 @@ if (!empty($result)) {
   }
 
   include_once 'loads-table.php';
-  // include_once '../page/' . $link . '/delete-' . $modal . '-modal.php';
+  include_once 'unassign-load-modal.php';
 }

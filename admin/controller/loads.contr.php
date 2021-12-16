@@ -30,17 +30,17 @@ class AssignLoadsContr extends AssignLoads
   }
 }
 
-// class DeleteLoadsContr extends DeleteLoads
-// {
-//   private $id;
+class DeleteLoadsContr extends DeleteLoads
+{
+  private $id;
 
-//   public function __construct($id)
-//   {
-//     $this->id = $id;
-//   }
+  public function __construct($id)
+  {
+    $this->id = $id;
+  }
 
-//   public function deleteLoads()
-//   {
-//     $this->setLoads($this->id);
-//   }
-// }
+  public function deleteLoads()
+  {
+    $this->setLoads($this->id);
+  }
+}
