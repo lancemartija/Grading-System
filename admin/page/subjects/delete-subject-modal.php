@@ -20,10 +20,10 @@
             <label for="id">Code</label>
             <input id="code" type="hidden" name="code">
           </div>
-          <button type="submit" name="delete" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-base inline-flex items-center px-3 py-2.5 text-center mr-2">
+          <button type="submit" name="delete" class="btn-red-modal">
             Yes, I'm sure
           </button>
-          <button type="button" class="text-gray-900 bg-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 border border-gray-200 font-medium inline-flex items-center rounded-lg text-base px-3 py-2.5 text-center" data-close-button>
+          <button type="button" class="btn-white-modal" data-close-button>
             No, cancel
           </button>
         </form>
