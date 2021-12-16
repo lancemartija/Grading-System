@@ -74,8 +74,10 @@ editSubjectsBtn.forEach((btn) => {
 deleteSubjectsBtn.forEach((btn) => {
   btn.addEventListener('click', () => {
     let id = btn.getAttribute('data-id')
+    let code = btn.getAttribute('data-code')
 
     inputFieldId[1].value = id
+    inputFieldCode[2].value = code
 
     deleteSubjectsModal.classList.remove('hidden')
     deleteSubjectsModal.classList.add('flex')

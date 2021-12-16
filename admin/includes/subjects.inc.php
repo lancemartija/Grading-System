@@ -49,12 +49,13 @@ if (isset($_POST['edit'])) {
 if (isset($_GET['delete'])) {
   # Grabbing data
   $id = filter_var(trim($_GET['id']), FILTER_SANITIZE_NUMBER_INT);
+  $code = filter_var(trim($_GET['code']), FILTER_SANITIZE_NUMBER_INT);
 
   # Instantiate AddSubjectsContr class
   include_once '../database/database.classes.php';
   include_once '../classes/subjects.classes.php';
   include_once '../controller/subjects.contr.php';
-  $deleteSubjects = new DeleteSubjectsContr($id);
+  $deleteSubjects = new DeleteSubjectsContr($id, $code);
 
   # Running error handlers and add subject function
   $deleteSubjects->deleteSubjects();

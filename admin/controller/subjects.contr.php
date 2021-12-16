@@ -88,14 +88,16 @@ class EditSubjectsContr extends EditSubjects
 class DeleteSubjectsContr extends DeleteSubjects
 {
   private $id;
+  private $code;
 
-  public function __construct($id)
+  public function __construct($id, $code)
   {
     $this->id = $id;
+    $this->code = $code;
   }
 
   public function deleteSubjects()
   {
-    $this->setSubjects($this->id);
+    $this->setSubjects($this->id, $this->code);
   }
 }

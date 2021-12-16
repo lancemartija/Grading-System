@@ -37,7 +37,7 @@ class EditSubjects extends Dbh
 {
   protected function setSubjects($id, $name, $desc, $level, $unit, $ay, $sem)
   {
-    $stmt = $this->connect()->prepare('UPDATE tblsubjects SET subj_name = ?, subj_desc = ?, subj_level = ?, subj_unit = ?, subj_ay = ?, subj_sem = ? WHERE subj_id = ?;');
+    $stmt = $this->connect()->prepare('UPDATE tblsubjects SET subj_name = ?, subj_desc = ?, subj_level = ?, subj_unit = ?, subj_ay = ?, subj_sem = ? WHERE subj_id = ?; UPDATE tblclass c INNER JOIN tblsubjects s ON c.class_code = s.subj_code SET c.class_name = s.subj_name, c.class_desc = s.subj_desc, c.class_level = s.subj_level, c.class_ay = s.subj_ay;');
 
     if (!$stmt->execute([$name, $desc, $level, $unit, $ay, $sem, $id])) {
       $stmt = null;
@@ -51,11 +51,13 @@ class EditSubjects extends Dbh
 
 class DeleteSubjects extends Dbh
 {
-  protected function setSubjects($id)
+  protected function setSubjects($id, $code)
   {
-    $stmt = $this->connect()->prepare('DELETE FROM tblsubjects WHERE subj_id = ?; SET @num := 0; UPDATE tblsubjects SET subj_id = @num := (@num+1); ALTER TABLE tblsubjects AUTO_INCREMENT = 1;');
+    // $stmt = $this->connect()->prepare('DELETE FROM tblsubjects WHERE subj_id = ?; SET @num := 0; UPDATE tblsubjects SET subj_id = @num := (@num+1); ALTER TABLE tblsubjects AUTO_INCREMENT = 1;');
 
-    if (!$stmt->execute([$id])) {
+    $stmt = $this->connect()->prepare('DELETE FROM tblclass WHERE class_code = ?; DELETE FROM tblsubjects WHERE subj_id = ?; SET @num := 0; UPDATE tblsubjects SET subj_id = @num := (@num+1); ALTER TABLE tblsubjects AUTO_INCREMENT = 1;');
+
+    if (!$stmt->execute([$code, $id])) {
       $stmt = null;
       header("Location: ../view/subjects.php?error=stmtfailed");
       exit;
