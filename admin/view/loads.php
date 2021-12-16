@@ -51,7 +51,7 @@ $i = 0;
         <?php
         include_once '../templates/header.php';
         include_once '../page/loads/assign-load-modal.php';
-        include_once '../page/loads/loads-table.php';
+        include_once '../page/loads/display-data.inc.php';
         ?>
       </main>
     </div>

@@ -23,6 +23,13 @@ class DisplayLoadsContr extends DisplayLoads
     $result = $this->getData($this->instructor);
     return $result;
   }
+
+  public function fetchSearchData($query)
+  {
+    $this->query = $query;
+    $result = $this->getSearchData($this->query);
+    return $result;
+  }
 }
 
 class DisplayOptions extends Dbh
@@ -59,6 +66,30 @@ class DisplayLoads extends Dbh
       $stmt = null;
       echo "error";
       exit;
+    }
+
+    while ($row = $stmt->fetchAll(PDO::FETCH_ASSOC)) {
+      $result = $row;
+    }
+
+    $stmt = null;
+    return $result;
+  }
+
+  protected function getSearchData($query)
+  {
+    $stmt = $this->connect()->prepare('SELECT * FROM tblclass WHERE class_code = ? OR class_name = ? OR class_level = ? OR class_room = ? OR class_day = ? OR class_time = ?;');
+    $result = 0;
+
+    if (!$stmt->execute([$query, $query, $query, $query, $query, $query])) {
+      $stmt = null;
+      echo "error";
+      exit;
+    }
+
+    if ($stmt->rowCount() == 0) {
+      $stmt = null;
+      return $result;
     }
 
     while ($row = $stmt->fetchAll(PDO::FETCH_ASSOC)) {
