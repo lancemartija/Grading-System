@@ -9,9 +9,6 @@
           Room Name
         </th>
         <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase">
-          Room Code
-        </th>
-        <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase">
           Actions
         </th>
       </tr>
@@ -35,11 +32,6 @@
               <div class="text-sm font-normal text-gray-500">
                 <?= $data['room_desc']; ?>
               </div>
-            </div>
-          </td>
-          <td class="p-4 text-base font-normal text-gray-900 whitespace-nowrap">
-            <div class="flex items-center">
-              <?= $data['room_code']; ?>
             </div>
           </td>
           <td class="p-4 space-x-2 whitespace-nowrap">

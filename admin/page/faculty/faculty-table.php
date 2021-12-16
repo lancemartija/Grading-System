@@ -9,9 +9,6 @@
           Name
         </th>
         <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase">
-          Instructor Code
-        </th>
-        <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase">
           Address
         </th>
         <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase">
@@ -44,11 +41,6 @@
               <div class="text-sm font-normal text-gray-500">
                 <?= $data['inst_email']; ?>
               </div>
-            </div>
-          </td>
-          <td class="p-4 text-base font-normal text-gray-900 whitespace-nowrap">
-            <div class="flex items-center capitalize">
-              <?= $data['inst_code']; ?>
             </div>
           </td>
           <td class="p-4 text-base font-normal text-gray-900 whitespace-nowrap">

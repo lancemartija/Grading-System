@@ -9,9 +9,6 @@
           Subject Name
         </th>
         <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase">
-          Subject Code
-        </th>
-        <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase">
           Grade Level
         </th>
         <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase">
@@ -47,11 +44,6 @@
               <div class="text-sm font-normal text-gray-500">
                 <?= $data['subj_desc']; ?>
               </div>
-            </div>
-          </td>
-          <td class="p-4 text-base font-normal text-gray-900 whitespace-nowrap">
-            <div class="flex items-center capitalize">
-              <?= $data['subj_code']; ?>
             </div>
           </td>
           <td class="p-4 text-base font-normal text-gray-900 whitespace-nowrap">
