@@ -12,13 +12,10 @@ if (!isset($_GET['code'])) {
 }
 
 $user = $_SESSION['useruid'];
+$instructor = $_GET['code'];
 
 include_once '../database/database.classes.php';
-// include_once '../classes/display-data.classes.php';
-// include_once '../controller/display-data.contr.php';
-include_once '../page/loads/subject-options.inc.php';
-
-// $display = new DisplayLoadsContr;
+include_once '../page/loads/loads.classes.php';
 
 $table = $search = 'loads';
 $breadcrumb1 = 'faculties';
@@ -27,6 +24,7 @@ $breadcrumblink = 'faculty.php';
 $modal = 'load';
 $btn = 'subject';
 $searchlink = 'loads.php?code=' . $_GET['code'];
+$i = 0;
 ?>
 
 <!DOCTYPE html>
@@ -53,7 +51,7 @@ $searchlink = 'loads.php?code=' . $_GET['code'];
         <?php
         include_once '../templates/header.php';
         include_once '../page/loads/assign-load-modal.php';
-        // include_once '../includes/display-data.inc.php';
+        include_once '../page/loads/loads-table.php';
         ?>
       </main>
     </div>
