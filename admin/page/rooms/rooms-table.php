@@ -12,9 +12,6 @@
           Room Code
         </th>
         <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase">
-          Description
-        </th>
-        <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase">
           Actions
         </th>
       </tr>
@@ -31,18 +28,18 @@
             <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-gray-500 group-hover:text-gray-900" fill="none" viewBox="0 0 24 24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
             </svg>
-            <div class="flex items-center capitalize">
-              <?= $data['room_name']; ?>
+            <div class="text-sm font-normal text-gray-500">
+              <div class="text-base font-semibold text-gray-900 capitalize">
+                <?= $data['room_name']; ?>
+              </div>
+              <div class="text-sm font-normal text-gray-500">
+                <?= $data['room_desc']; ?>
+              </div>
             </div>
           </td>
           <td class="p-4 text-base font-normal text-gray-900 whitespace-nowrap">
             <div class="flex items-center">
               <?= $data['room_code']; ?>
-            </div>
-          </td>
-          <td class="p-4 text-base font-normal text-gray-600 whitespace-nowrap">
-            <div class="flex items-center capitalize">
-              <?= $data['room_desc']; ?>
             </div>
           </td>
           <td class="p-4 space-x-2 whitespace-nowrap">

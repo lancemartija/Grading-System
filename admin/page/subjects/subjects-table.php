@@ -12,16 +12,13 @@
           Subject Code
         </th>
         <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase">
-          Description
-        </th>
-        <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase">
           Grade Level
         </th>
         <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase">
           Units
         </th>
         <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase">
-          AY
+          Academic Year
         </th>
         <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase">
           Semester
@@ -44,19 +41,17 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
             </svg>
             <div class="text-sm font-normal text-gray-500">
-              <div class="text-base font-normal text-gray-900 capitalize">
+              <div class="text-base font-semibold text-gray-900 capitalize">
                 <?= $data['subj_name']; ?>
+              </div>
+              <div class="text-sm font-normal text-gray-500">
+                <?= $data['subj_desc']; ?>
               </div>
             </div>
           </td>
           <td class="p-4 text-base font-normal text-gray-900 whitespace-nowrap">
             <div class="flex items-center capitalize">
               <?= $data['subj_code']; ?>
-            </div>
-          </td>
-          <td class="p-4 text-base font-normal text-gray-900 whitespace-nowrap">
-            <div class="flex items-center capitalize">
-              <?= $data['subj_desc']; ?>
             </div>
           </td>
           <td class="p-4 text-base font-normal text-gray-900 whitespace-nowrap">
