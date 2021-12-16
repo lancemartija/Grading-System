@@ -14,7 +14,7 @@ class Login extends Dbh
 
     if ($stmt->rowCount() == 0) {
       session_start();
-      $_SESSION['message'] = "Invalid Username or Password";
+      $_SESSION['message'] = "User does not exist";
       $stmt = null;
       header("Location: ../index.php?error=usernotfound");
       exit;
