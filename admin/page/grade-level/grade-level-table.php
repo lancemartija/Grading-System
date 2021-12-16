@@ -12,9 +12,6 @@
           Grade Code
         </th>
         <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase">
-          Grade Level
-        </th>
-        <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase">
           Actions
         </th>
       </tr>
@@ -45,11 +42,6 @@
               <?= $data['course_code']; ?>
             </div>
           </td>
-          <td class="p-4 text-base font-normal text-gray-900 whitespace-nowrap">
-            <div class="flex items-center">
-              <?= $data['course_level']; ?>
-            </div>
-          </td>
           <td class="p-4 space-x-2 whitespace-nowrap">
             <button type="button" data-view-button data-code="<?= $data['course_code']; ?>" data-name="<?= $data['course_name']; ?>" data-level="<?= $data['course_level']; ?>" data-desc="<?= $data['course_desc']; ?>" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-gray-600 rounded-lg hover:bg-gray-700 focus:ring-4 focus:ring-gray-200">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
@@ -58,7 +50,7 @@
               </svg>
               View
             </button>
-            <button type="button" data-edit-button data-id="<?= $data['course_id']; ?>" data-code="<?= $data['course_code']; ?>" data-name="<?= $data['course_name']; ?>" data-level="<?= $data['course_level']; ?>" data-desc="<?= $data['course_desc']; ?>" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg bg-cyan-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200">
+            <button type="button" data-edit-button data-id="<?= $data['course_id']; ?>" data-code="<?= $data['course_code']; ?>" data-name="<?= $data['course_name']; ?>" data-desc="<?= $data['course_desc']; ?>" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg bg-cyan-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200">
               <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path>
                 <path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path>

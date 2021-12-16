@@ -14,7 +14,6 @@ const deleteGradeLevelModal = document.querySelector(
 const inputFieldId = document.querySelectorAll('#id')
 const inputFieldCode = document.querySelectorAll('#code')
 const inputFieldName = document.querySelectorAll('#name')
-const inputFieldLevel = document.querySelectorAll('#level')
 const inputFieldDesc = document.querySelectorAll('#desc')
 
 addGradeLevelBtn.addEventListener('click', () => {
@@ -26,12 +25,10 @@ viewGradeLevelBtn.forEach((btn) => {
   btn.addEventListener('click', () => {
     let code = btn.getAttribute('data-code')
     let name = btn.getAttribute('data-name')
-    let level = btn.getAttribute('data-level')
     let desc = btn.getAttribute('data-desc')
 
     inputFieldCode[0].value = code
     inputFieldName[0].value = name
-    inputFieldLevel[0].value = level
     inputFieldDesc[0].value = desc
 
     viewGradeLevelModal.classList.remove('hidden')
@@ -44,13 +41,11 @@ editGradeLevelBtn.forEach((btn) => {
     let id = btn.getAttribute('data-id')
     let code = btn.getAttribute('data-code')
     let name = btn.getAttribute('data-name')
-    let level = btn.getAttribute('data-level')
     let desc = btn.getAttribute('data-desc')
 
     inputFieldId[0].value = id
     inputFieldCode[1].value = code
     inputFieldName[1].value = name
-    inputFieldLevel[1].value = level
     inputFieldDesc[1].value = desc
 
     editGradeLevelModal.classList.remove('hidden')

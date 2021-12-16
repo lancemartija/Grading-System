@@ -2,11 +2,11 @@
 
 class AddGradeLevel extends Dbh
 {
-  protected function setGradeLevel($code, $name, $level, $desc)
+  protected function setGradeLevel($code, $name, $desc)
   {
-    $stmt = $this->connect()->prepare('INSERT INTO tblcourse (course_code, course_name, course_level, course_desc) VALUES(?, ?, ?, ?);');
+    $stmt = $this->connect()->prepare('INSERT INTO tblcourse (course_code, course_name, course_desc) VALUES(?, ?, ?);');
 
-    if (!$stmt->execute([$code, $name, $level, $desc])) {
+    if (!$stmt->execute([$code, $name, $desc])) {
       $stmt = null;
       header("Location: ../view/grade-level.php?error=stmtfailed");
       exit;
@@ -35,11 +35,11 @@ class AddGradeLevel extends Dbh
 
 class EditGradeLevel extends Dbh
 {
-  protected function setGradeLevel($id, $name, $level, $desc)
+  protected function setGradeLevel($id, $name, $desc)
   {
-    $stmt = $this->connect()->prepare('UPDATE tblcourse SET course_name = ?, course_level = ?, course_desc = ? WHERE course_id = ?;');
+    $stmt = $this->connect()->prepare('UPDATE tblcourse SET course_name = ?, course_desc = ? WHERE course_id = ?; UPDATE tblsubjects SET subj_level = ?;');
 
-    if (!$stmt->execute([$name, $level, $desc, $id])) {
+    if (!$stmt->execute([$name, $desc, $id, $name])) {
       $stmt = null;
       header("Location: ../view/grade-level.php?error=stmtfailed");
       exit;

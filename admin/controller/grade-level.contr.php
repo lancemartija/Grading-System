@@ -4,14 +4,12 @@ class AddGradeLevelContr extends AddGradeLevel
 {
   private $code;
   private $name;
-  private $level;
   private $desc;
 
-  public function __construct($code, $name, $level,  $desc)
+  public function __construct($code, $name, $desc)
   {
     $this->code = $code;
     $this->name = $name;
-    $this->level = $level;
     $this->desc = $desc;
   }
 
@@ -27,12 +25,12 @@ class AddGradeLevelContr extends AddGradeLevel
       exit;
     }
 
-    $this->setGradeLevel($this->code, $this->name, $this->level, $this->desc);
+    $this->setGradeLevel($this->code, $this->name, $this->desc);
   }
 
   private function emptyInput()
   {
-    if (empty($this->code) || empty($this->name) || empty($this->level) || empty($this->desc)) {
+    if (empty($this->code) || empty($this->name) || empty($this->desc)) {
       return false;
     }
     return true;
@@ -43,14 +41,12 @@ class EditGradeLevelContr extends EditGradeLevel
 {
   private $id;
   private $name;
-  private $level;
   private $desc;
 
-  public function __construct($id, $name, $level, $desc)
+  public function __construct($id, $name, $desc)
   {
     $this->id = $id;
     $this->name = $name;
-    $this->level = $level;
     $this->desc = $desc;
   }
 
@@ -61,12 +57,12 @@ class EditGradeLevelContr extends EditGradeLevel
       exit;
     }
 
-    $this->setGradeLevel($this->id, $this->name, $this->level, $this->desc);
+    $this->setGradeLevel($this->id, $this->name, $this->desc);
   }
 
   private function emptyInput()
   {
-    if (empty($this->name) || empty($this->level) || empty($this->desc)) {
+    if (empty($this->name) || empty($this->desc)) {
       return false;
     }
     return true;
