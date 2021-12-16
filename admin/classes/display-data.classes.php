@@ -12,13 +12,10 @@ class DisplaySubjects extends Dbh
       $stmt = null;
       header('Location: ../view/subjects.php?error=stmtfailed');
       exit;
-    } else {
-      while ($row = $stmt->fetchAll(PDO::FETCH_ASSOC)) {
-        $result = $row;
-      }
+    }
 
-      $stmt = null;
-      return $result;
+    while ($row = $stmt->fetchAll(PDO::FETCH_ASSOC)) {
+      $result = $row;
     }
 
     $stmt = null;
@@ -34,18 +31,15 @@ class DisplaySubjects extends Dbh
       $stmt = null;
       header('Location: ../view/subjects.php?error=stmtfailed');
       exit;
-    } else {
-      if ($stmt->rowCount() == 0) {
-        $stmt = null;
-        return $result;
-      } else {
-        while ($row = $stmt->fetchAll(PDO::FETCH_ASSOC)) {
-          $result = $row;
-        }
-      }
+    }
 
+    if ($stmt->rowCount() == 0) {
       $stmt = null;
       return $result;
+    }
+
+    while ($row = $stmt->fetchAll(PDO::FETCH_ASSOC)) {
+      $result = $row;
     }
 
     $stmt = null;
@@ -65,13 +59,10 @@ class DisplayGradeLevel extends Dbh
       $stmt = null;
       header('Location: ../view/grade-level.php?error=stmtfailed');
       exit;
-    } else {
-      while ($row = $stmt->fetchAll(PDO::FETCH_ASSOC)) {
-        $result = $row;
-      }
+    }
 
-      $stmt = null;
-      return $result;
+    while ($row = $stmt->fetchAll(PDO::FETCH_ASSOC)) {
+      $result = $row;
     }
 
     $stmt = null;
@@ -87,18 +78,15 @@ class DisplayGradeLevel extends Dbh
       $stmt = null;
       header('Location: ../view/grade-level.php?error=stmtfailed');
       exit;
-    } else {
-      if ($stmt->rowCount() == 0) {
-        $stmt = null;
-        return $result;
-      } else {
-        while ($row = $stmt->fetchAll(PDO::FETCH_ASSOC)) {
-          $result = $row;
-        }
-      }
+    }
 
+    if ($stmt->rowCount() == 0) {
       $stmt = null;
       return $result;
+    }
+
+    while ($row = $stmt->fetchAll(PDO::FETCH_ASSOC)) {
+      $result = $row;
     }
 
     $stmt = null;
@@ -118,14 +106,12 @@ class DisplayFaculty extends Dbh
       $stmt = null;
       header('Location: ../view/faculty.php?error=stmtfailed');
       exit;
-    } else {
-      while ($row = $stmt->fetchAll(PDO::FETCH_ASSOC)) {
-        $result = $row;
-      }
-
-      $stmt = null;
-      return $result;
     }
+
+    while ($row = $stmt->fetchAll(PDO::FETCH_ASSOC)) {
+      $result = $row;
+    }
+
 
     $stmt = null;
     return $result;
@@ -133,10 +119,10 @@ class DisplayFaculty extends Dbh
 
   protected function getSearchData($query)
   {
-    $stmt = $this->connect()->prepare('SELECT * FROM tblinstructor WHERE inst_code = ? OR inst_name = ? OR inst_gender = ? OR inst_status = ? OR inst_email = ? OR inst_empstatus = ?;');
+    $stmt = $this->connect()->prepare('SELECT * FROM tblinstructor WHERE inst_id = ? OR inst_code = ? OR inst_name = ? OR inst_gender = ? OR inst_status = ? OR inst_email = ? OR inst_empstatus = ?;');
     $result = 0;
 
-    if (!$stmt->execute([$query, $query, $query, $query, $query, $query])) {
+    if (!$stmt->execute([$query, $query, $query, $query, $query, $query, $query])) {
       $stmt = null;
       header('Location: ../view/faculty.php?error=stmtfailed');
       exit;
@@ -171,13 +157,10 @@ class DisplayDept extends Dbh
       $stmt = null;
       header('Location: ../view/department.php?error=stmtfailed');
       exit;
-    } else {
-      while ($row = $stmt->fetchAll(PDO::FETCH_ASSOC)) {
-        $result = $row;
-      }
+    }
 
-      $stmt = null;
-      return $result;
+    while ($row = $stmt->fetchAll(PDO::FETCH_ASSOC)) {
+      $result = $row;
     }
 
     $stmt = null;
@@ -193,18 +176,15 @@ class DisplayDept extends Dbh
       $stmt = null;
       header('Location: ../view/department.php?error=stmtfailed');
       exit;
-    } else {
-      if ($stmt->rowCount() == 0) {
-        $stmt = null;
-        return $result;
-      } else {
-        while ($row = $stmt->fetchAll(PDO::FETCH_ASSOC)) {
-          $result = $row;
-        }
-      }
+    }
 
+    if ($stmt->rowCount() == 0) {
       $stmt = null;
       return $result;
+    }
+
+    while ($row = $stmt->fetchAll(PDO::FETCH_ASSOC)) {
+      $result = $row;
     }
 
     $stmt = null;
@@ -224,13 +204,10 @@ class DisplayRooms extends Dbh
       $stmt = null;
       header('Location: ../view/rooms.php?error=stmtfailed');
       exit;
-    } else {
-      while ($row = $stmt->fetchAll(PDO::FETCH_ASSOC)) {
-        $result = $row;
-      }
+    }
 
-      $stmt = null;
-      return $result;
+    while ($row = $stmt->fetchAll(PDO::FETCH_ASSOC)) {
+      $result = $row;
     }
 
     $stmt = null;
@@ -246,18 +223,15 @@ class DisplayRooms extends Dbh
       $stmt = null;
       header('Location: ../view/rooms.php?error=stmtfailed');
       exit;
-    } else {
-      if ($stmt->rowCount() == 0) {
-        $stmt = null;
-        return $result;
-      } else {
-        while ($row = $stmt->fetchAll(PDO::FETCH_ASSOC)) {
-          $result = $row;
-        }
-      }
+    }
 
+    if ($stmt->rowCount() == 0) {
       $stmt = null;
       return $result;
+    }
+
+    while ($row = $stmt->fetchAll(PDO::FETCH_ASSOC)) {
+      $result = $row;
     }
 
     $stmt = null;
@@ -277,13 +251,10 @@ class DisplayUsers extends Dbh
       $stmt = null;
       header('Location: ../view/users.php?error=stmtfailed');
       exit;
-    } else {
-      while ($row = $stmt->fetchAll(PDO::FETCH_ASSOC)) {
-        $result = $row;
-      }
+    }
 
-      $stmt = null;
-      return $result;
+    while ($row = $stmt->fetchAll(PDO::FETCH_ASSOC)) {
+      $result = $row;
     }
 
     $stmt = null;
@@ -299,18 +270,15 @@ class DisplayUsers extends Dbh
       $stmt = null;
       header('Location: ../view/users.php?error=stmtfailed');
       exit;
-    } else {
-      if ($stmt->rowCount() == 0) {
-        $stmt = null;
-        return $result;
-      } else {
-        while ($row = $stmt->fetchAll(PDO::FETCH_ASSOC)) {
-          $result = $row;
-        }
-      }
+    }
 
+    if ($stmt->rowCount() == 0) {
       $stmt = null;
       return $result;
+    }
+
+    while ($row = $stmt->fetchAll(PDO::FETCH_ASSOC)) {
+      $result = $row;
     }
 
     $stmt = null;
