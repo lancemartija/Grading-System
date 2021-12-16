@@ -21,7 +21,7 @@
               <?= $data['dept_id']; ?>
             </div>
           </td>
-          <td class="flex items-center p-4 mr-12 space-x-6 whitespace-nowrap lg:mr-0">
+          <td class="td-title">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-gray-500 group-hover:text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" />
             </svg>

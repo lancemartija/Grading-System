@@ -12,34 +12,34 @@
         </button>
       </div>
       <div class="p-6 space-y-6">
-        <div class="grid grid-cols-6 gap-6">
+        <div class="modal-grid">
           <div class="col-span-6 sm:col-span-3">
-            <label for="code" class="block mb-2 text-sm font-medium text-gray-900">Code</label>
-            <input id="code" type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" placeholder="0000" disabled readonly>
+            <label for="code" class="label">Code</label>
+            <input id="code" type="text" class="input-field-view" placeholder="0000" disabled readonly>
           </div>
           <div class="col-span-6 sm:col-span-3">
-            <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Name</label>
-            <input id="name" type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" placeholder="First Name, Middle Name, Last Name" disabled readonly>
+            <label for="name" class="label">Name</label>
+            <input id="name" type="text" class="input-field-view" placeholder="First Name, Middle Name, Last Name" disabled readonly>
           </div>
           <div class="col-span-6 sm:col-span-3">
-            <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Email</label>
-            <input id="email" type="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" placeholder="example@email.com" disabled readonly>
+            <label for="email" class="label">Email</label>
+            <input id="email" type="email" class="input-field-view" placeholder="example@email.com" disabled readonly>
           </div>
           <div class="col-span-6 sm:col-span-3">
-            <label for="address" class="block mb-2 text-sm font-medium text-gray-900">Address</label>
-            <input id="address" type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" placeholder="Address" disabled readonly>
+            <label for="address" class="label">Address</label>
+            <input id="address" type="text" class="input-field-view" placeholder="Address" disabled readonly>
           </div>
           <div class="col-span-6 sm:col-span-3">
-            <label for="gender" class="block mb-2 text-sm font-medium text-gray-900">Gender</label>
-            <input id="gender" type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" disabled readonly>
+            <label for="gender" class="label">Gender</label>
+            <input id="gender" type="text" class="input-field-view" disabled readonly>
           </div>
           <div class="col-span-6 sm:col-span-3">
-            <label for="status" class="block mb-2 text-sm font-medium text-gray-900">Status</label>
-            <input id="status" type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" disabled readonly>
+            <label for="status" class="label">Status</label>
+            <input id="status" type="text" class="input-field-view" disabled readonly>
           </div>
           <div class="col-span-6 sm:col-span-3">
-            <label for="empstatus" class="block mb-2 text-sm font-medium text-gray-900">Employment Status</label>
-            <input id="empstatus" type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" disabled readonly>
+            <label for="empstatus" class="label">Employment Status</label>
+            <input id="empstatus" type="text" class="input-field-view" disabled readonly>
           </div>
         </div>
       </div>

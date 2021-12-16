@@ -13,30 +13,30 @@
       </div>
       <form action="../includes/users.inc.php" method="post">
         <div class="p-6 space-y-6">
-          <div class="grid grid-cols-6 gap-6">
+          <div class="modal-grid">
             <div class="col-span-6 sm:col-span-3">
-              <label for="firstname" class="block mb-2 text-sm font-medium text-gray-900">First Name</label>
-              <input type="text" name="firstname" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none block w-full p-2.5" placeholder="John" required>
+              <label for="firstname" class="label">First Name</label>
+              <input type="text" name="firstname" class="input-field focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none" placeholder="John" required>
             </div>
             <div class="col-span-6 sm:col-span-3">
-              <label for="lastname" class="block mb-2 text-sm font-medium text-gray-900">Last Name</label>
-              <input type="text" name="lastname" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none block w-full p-2.5" placeholder="Doe" required>
+              <label for="lastname" class="label">Last Name</label>
+              <input type="text" name="lastname" class="input-field focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none" placeholder="Doe" required>
             </div>
             <div class="col-span-6 sm:col-span-3">
-              <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Email</label>
-              <input type="email" name="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none block w-full p-2.5" placeholder="example@email.com" required>
+              <label for="email" class="label">Email</label>
+              <input type="email" name="email" class="input-field focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none" placeholder="example@email.com" required>
             </div>
             <div class="col-span-6 sm:col-span-3">
-              <label for="username" class="block mb-2 text-sm font-medium text-gray-900">Username</label>
-              <input type="text" name="username" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none block w-full p-2.5" placeholder="Username" required>
+              <label for="username" class="label">Username</label>
+              <input type="text" name="username" class="input-field focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none" placeholder="Username" required>
             </div>
             <div class="col-span-6 sm:col-span-3">
-              <label for="password" class="block mb-2 text-sm font-medium text-gray-900">Password</label>
-              <input type="password" name="password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none block w-full p-2.5" placeholder="••••••••" required>
+              <label for="password" class="label">Password</label>
+              <input type="password" name="password" class="input-field focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none" placeholder="••••••••" required>
             </div>
             <div class="col-span-6 sm:col-span-3">
-              <label for="accounttype" class="block mb-2 text-sm font-medium text-gray-900">Account Type</label>
-              <select name="accounttype" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none block w-full p-2.5">
+              <label for="accounttype" class="label">Account Type</label>
+              <select name="accounttype" class="input-field focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none">
                 <option value="Administrator">Administrator</option>
                 <option value="Registrar">Registrar</option>
                 <option value="Course In-charge">Course In-charge</option>

@@ -13,26 +13,26 @@
       </div>
       <form action="../includes/faculty.inc.php" method="post">
         <div class="p-6 space-y-6">
-          <div class="grid grid-cols-6 gap-6">
+          <div class="modal-grid">
             <div class="col-span-6 sm:col-span-3">
-              <label for="code" class="block mb-2 text-sm font-medium text-gray-900">Code</label>
-              <input type="number" name="code" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none block w-full p-2.5" placeholder="0000" required>
+              <label for="code" class="label">Code</label>
+              <input type="number" name="code" class="input-field focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none" placeholder="0000" required>
             </div>
             <div class="col-span-6 sm:col-span-3">
-              <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Name</label>
-              <input type="text" name="name" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none block w-full p-2.5" placeholder="First Name, Middle Name, Last Name" required>
+              <label for="name" class="label">Name</label>
+              <input type="text" name="name" class="input-field focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none" placeholder="First Name, Middle Name, Last Name" required>
             </div>
             <div class="col-span-6 sm:col-span-3">
-              <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Email</label>
-              <input type="email" name="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none block w-full p-2.5" placeholder="example@email.com" required>
+              <label for="email" class="label">Email</label>
+              <input type="email" name="email" class="input-field focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none" placeholder="example@email.com" required>
             </div>
             <div class="col-span-6 sm:col-span-3">
-              <label for="address" class="block mb-2 text-sm font-medium text-gray-900">Address</label>
-              <input type="text" name="address" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none block w-full p-2.5" placeholder="Address" required>
+              <label for="address" class="label">Address</label>
+              <input type="text" name="address" class="input-field focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none" placeholder="Address" required>
             </div>
             <div class="col-span-6 sm:col-span-3">
-              <label for="gender" class="block mb-2 text-sm font-medium text-gray-900">Gender</label>
-              <select name="gender" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none block w-full p-2.5">
+              <label for="gender" class="label">Gender</label>
+              <select name="gender" class="input-field focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none">
                 <option value="" disabled selected hidden>Choose Gender...</option>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
@@ -41,8 +41,8 @@
               </select>
             </div>
             <div class="col-span-6 sm:col-span-3">
-              <label for="status" class="block mb-2 text-sm font-medium text-gray-900">Status</label>
-              <select name="status" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none block w-full p-2.5">
+              <label for="status" class="label">Status</label>
+              <select name="status" class="input-field focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none">
                 <option value="" disabled selected hidden>Choose Status...</option>
                 <option value="Single">Single</option>
                 <option value="Female">Married</option>
@@ -51,8 +51,8 @@
               </select>
             </div>
             <div class="col-span-6 sm:col-span-3">
-              <label for="empstatus" class="block mb-2 text-sm font-medium text-gray-900">Employment Status</label>
-              <select name="empstatus" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none block w-full p-2.5">
+              <label for="empstatus" class="label">Employment Status</label>
+              <select name="empstatus" class="input-field focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none">
                 <option value="" disabled selected hidden>Choose Employment Status...</option>
                 <option value="Full-time">Full-time</option>
                 <option value="Part-time">Part-time</option>

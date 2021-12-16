@@ -12,18 +12,18 @@
         </button>
       </div>
       <div class="p-6 space-y-6">
-        <div class="grid grid-cols-6 gap-6 mb-4">
+        <div class="modal-grid mb-4">
           <div class="col-span-6 sm:col-span-3">
-            <label for="code" class="block mb-2 text-sm font-medium text-gray-900">Grade Code</label>
-            <input id="code" type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" disabled readonly>
+            <label for="code" class="label">Grade Code</label>
+            <input id="code" type="text" class="input-field-view" disabled readonly>
           </div>
           <div class="col-span-6 sm:col-span-3">
-            <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Grade Name</label>
-            <input id="name" type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" disabled readonly>
+            <label for="name" class="label">Grade Name</label>
+            <input id="name" type="text" class="input-field-view" disabled readonly>
           </div>
           <div class="col-span-6 sm:col-span-3">
-            <label for="desc" class="block mb-2 text-sm font-medium text-gray-900">Description</label>
-            <input id="desc" type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" disabled readonly>
+            <label for="desc" class="label">Description</label>
+            <input id="desc" type="text" class="input-field-view" disabled readonly>
           </div>
         </div>
       </div>

@@ -12,34 +12,34 @@
         </button>
       </div>
       <div class="p-6 space-y-6">
-        <div class="grid grid-cols-6 gap-6 mb-4">
+        <div class="modal-grid mb-4">
           <div class="col-span-6 sm:col-span-3">
-            <label for="code" class="block mb-2 text-sm font-medium text-gray-900">Subject Code</label>
-            <input id="code" type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" disabled readonly>
+            <label for="code" class="label">Subject Code</label>
+            <input id="code" type="text" class="input-field-view" disabled readonly>
           </div>
           <div class="col-span-6 sm:col-span-3">
-            <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Subject Name</label>
-            <input id="name" type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" disabled readonly>
+            <label for="name" class="label">Subject Name</label>
+            <input id="name" type="text" class="input-field-view" disabled readonly>
           </div>
           <div class="col-span-6 sm:col-span-3">
-            <label for="desc" class="block mb-2 text-sm font-medium text-gray-900">Description</label>
-            <input id="desc" type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" disabled readonly>
+            <label for="desc" class="label">Description</label>
+            <input id="desc" type="text" class="input-field-view" disabled readonly>
           </div>
           <div class="col-span-6 sm:col-span-3">
-            <label for="unit" class="block mb-2 text-sm font-medium text-gray-900">Units</label>
-            <input id="unit" type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" disabled readonly>
+            <label for="unit" class="label">Units</label>
+            <input id="unit" type="text" class="input-field-view" disabled readonly>
           </div>
           <div class="col-span-6 sm:col-span-3">
-            <label for="level" class="block mb-2 text-sm font-medium text-gray-900">Grade Level</label>
-            <input id="level" type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" disabled readonly>
+            <label for="level" class="label">Grade Level</label>
+            <input id="level" type="text" class="input-field-view" disabled readonly>
           </div>
           <div class="col-span-6 sm:col-span-3">
-            <label for="ay" class="block mb-2 text-sm font-medium text-gray-900">Academic Year</label>
-            <input id="ay" type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" disabled readonly>
+            <label for="ay" class="label">Academic Year</label>
+            <input id="ay" type="text" class="input-field-view" disabled readonly>
           </div>
           <div class="col-span-6 sm:col-span-3">
-            <label for="sem" class="block mb-2 text-sm font-medium text-gray-900">Semester</label>
-            <input id="sem" type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" disabled readonly>
+            <label for="sem" class="label">Semester</label>
+            <input id="sem" type="text" class="input-field-view" disabled readonly>
           </div>
         </div>
       </div>
