@@ -13,6 +13,8 @@ class Login extends Dbh
     }
 
     if ($stmt->rowCount() == 0) {
+      session_start();
+      $_SESSION['message'] = "Invalid Username or Password";
       $stmt = null;
       header("Location: ../index.php?error=usernotfound");
       exit;
@@ -23,6 +25,8 @@ class Login extends Dbh
 
     if ($checkedPwd == false) {
       $stmt = null;
+      session_start();
+      $_SESSION['message'] = "Invalid Username or Password";
       header("Location: ../index.php?error=wrongpassword");
       exit;
     } else {
