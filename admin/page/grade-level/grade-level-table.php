@@ -2,13 +2,13 @@
   <table class="min-w-full divide-y divide-gray-200 table-fixed">
     <thead class="bg-gray-100">
       <tr>
-        <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase">
+        <th scope="col" class="th">
           ID
         </th>
-        <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase">
+        <th scope="col" class="th">
           Grade Name
         </th>
-        <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase">
+        <th scope="col" class="th">
           Actions
         </th>
       </tr>
@@ -16,7 +16,7 @@
     <tbody class="bg-white divide-y divide-gray-200">
       <?php foreach ($result as $data) : ?>
         <tr class="hover:bg-gray-100 group">
-          <td class="p-4 text-base font-normal text-gray-900 whitespace-nowrap">
+          <td class="td">
             <div class="flex items-center">
               <?= $data['course_id']; ?>
             </div>
