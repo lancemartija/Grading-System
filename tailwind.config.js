@@ -6,7 +6,7 @@ module.exports = {
     './admin/**/*.{php,js}',
     './student/**/*.{php,js}',
     './admin/**/**/*.{php,js}',
-    './admin/page/loads/*.{php,js}',
+    './admin/**/**/*.{php,js}',
     './student/**/**/*.{php,js}',
   ],
   darkMode: 'media',
