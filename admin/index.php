@@ -41,7 +41,7 @@ session_start();
               <label for="remember" class="font-medium text-gray-700">Remember me</label>
             </div> -->
             <div class="text-sm">
-              <span class="text-red-600"><?= (isset($_SESSION['message'])) ? $_SESSION['message'] : ''; ?></span>
+              <span class="text-red-600"><?= (isset($_GET['error']) && $_GET['error'] == 'invalid') ? 'Invalid Username or Password' : ((isset($_GET['error']) && $_GET['error'] == 'usernotfound') ? 'User not found. Please try again.' : ''); ?></span>
             </div>
 
             <a href="#" onclick="alert('Please contact other administrators for further instructions.');" class="ml-auto text-sm text-green-600 hover:underline">Lost Password?</a>
