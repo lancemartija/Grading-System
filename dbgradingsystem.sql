@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 16, 2021 at 09:55 AM
+-- Generation Time: Dec 16, 2021 at 11:19 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.26
 
@@ -32,6 +32,7 @@ CREATE TABLE `tblclass` (
   `class_code` int(11) NOT NULL,
   `class_name` varchar(255) NOT NULL,
   `class_desc` varchar(255) NOT NULL,
+  `inst_code` int(11) NOT NULL,
   `class_inst` varchar(255) NOT NULL,
   `class_level` varchar(255) NOT NULL,
   `class_ay` varchar(255) NOT NULL,
@@ -45,11 +46,12 @@ CREATE TABLE `tblclass` (
 -- Dumping data for table `tblclass`
 --
 
-INSERT INTO `tblclass` (`class_id`, `class_code`, `class_name`, `class_desc`, `class_inst`, `class_level`, `class_ay`, `class_day`, `class_time`, `class_room`, `class_section`) VALUES
-(1, 12345, 'Advanced Math', 'Mathematics Made Easy', 'Jimmy Nickelson Cricket', 'Grade 12', '2021-2022', '', '', '', ''),
-(2, 133575, 'Hangul 101', 'Foreign Languages', 'Maya Willis Hawke', 'Grade 11', '2021-2022', '', '', '', ''),
-(3, 133576, 'Hangul 101', 'Foreign Languages 2', 'Maya Willis Hawke', 'Grade 11', '2022-2023', '', '', '', ''),
-(4, 42345, 'Eloquent English', 'Eloquent English 101', 'Jimmy Nickelson Cricket', 'Grade 12', '2021-2022', '', '', '', '');
+INSERT INTO `tblclass` (`class_id`, `class_code`, `class_name`, `class_desc`, `inst_code`, `class_inst`, `class_level`, `class_ay`, `class_day`, `class_time`, `class_room`, `class_section`) VALUES
+(1, 12345, 'Advanced Math', 'Mathematics Made Easy', 1152, 'Maya Willis Hawke', 'Grade 12', '2021-2022', '', '', '', ''),
+(2, 42345, 'Eloquent English', 'Eloquent English 101', 1152, 'Maya Willis Hawke', 'Grade 12', '2021-2022', '', '', '', ''),
+(3, 133575, 'Hangul 101', 'Foreign Languages', 111, 'Jimmy Nickelson Cricket', 'Grade 11', '2021-2022', '', '', '', ''),
+(4, 133576, 'Hangul 101', 'Foreign Languages 2', 111, 'Jimmy Nickelson Cricket', 'Grade 11', '2022-2023', '', '', '', ''),
+(6, 324, 'test', 'test', 111, 'Jimmy Nickelson Cricket', 'Grade 11', '2022-2023', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -169,7 +171,8 @@ INSERT INTO `tblsubjects` (`subj_id`, `subj_code`, `subj_name`, `subj_desc`, `su
 (1, 12345, 'Advanced Math', 'Mathematics Made Easy', 'Grade 12', 3, '2021-2022', 'First Semester'),
 (2, 42345, 'Eloquent English', 'Eloquent English 101', 'Grade 12', 3, '2021-2022', 'First Semester'),
 (3, 133575, 'Hangul 101', 'Foreign Languages', 'Grade 11', 2, '2021-2022', 'Second Semster'),
-(4, 133576, 'Hangul 101', 'Foreign Languages 2', 'Grade 11', 2, '2022-2023', 'Summer');
+(4, 133576, 'Hangul 101', 'Foreign Languages 2', 'Grade 11', 2, '2022-2023', 'Summer'),
+(5, 324, 'test', 'test', 'Grade 11', 3, '2022-2023', 'First Semester');
 
 -- --------------------------------------------------------
 
@@ -251,7 +254,7 @@ ALTER TABLE `tbluseraccounts`
 -- AUTO_INCREMENT for table `tblclass`
 --
 ALTER TABLE `tblclass`
-  MODIFY `class_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `class_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `tblcourse`
@@ -281,7 +284,7 @@ ALTER TABLE `tblrooms`
 -- AUTO_INCREMENT for table `tblsubjects`
 --
 ALTER TABLE `tblsubjects`
-  MODIFY `subj_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `subj_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `tbluseraccounts`
