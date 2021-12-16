@@ -37,9 +37,10 @@ class EditGradeLevel extends Dbh
 {
   protected function setGradeLevel($id, $name, $desc)
   {
-    $stmt = $this->connect()->prepare('UPDATE tblcourse SET course_name = ?, course_desc = ? WHERE course_id = ?; UPDATE tblsubjects SET subj_level = ?;');
+    $oldname = $name;
+    $stmt = $this->connect()->prepare('UPDATE tblcourse SET course_name = ?, course_desc = ? WHERE course_id = ?;');
 
-    if (!$stmt->execute([$name, $desc, $id, $name])) {
+    if (!$stmt->execute([$name, $desc, $id])) {
       $stmt = null;
       header("Location: ../view/grade-level.php?error=stmtfailed");
       exit;
