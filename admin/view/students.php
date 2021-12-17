@@ -7,6 +7,17 @@ if (!isset($_SESSION['userid']) && !isset($_SESSION['useruid'])) {
 }
 
 $user = $_SESSION['useruid'];
+
+include_once '../database/database.classes.php';
+include_once '../classes/display-data.classes.php';
+include_once '../controller/display-data.contr.php';
+
+$display = new DisplayStudentsContr;
+
+$page = $search = $breadcrumb1 = $table = $link = 'students';
+$modal = $btn = 'student';
+$searchlink = 'students.php';
+$breadcrumblink = '#';
 ?>
 
 <!DOCTYPE html>
@@ -31,12 +42,9 @@ $user = $_SESSION['useruid'];
     <div id="main-content" class="relative w-full h-full ml-64 overflow-y-auto bg-gray-50">
       <main>
         <?php
-        $page = $search = $breadcrumb1 = $link = 'students';
-        $btn = 'student';
-        $searchlink = 'students.php';
-        $breadcrumblink = '#';
-
         include_once '../templates/header.php';
+        include_once '../page/students/add-student-modal.php';
+        include_once '../includes/display-data.inc.php';
         ?>
       </main>
     </div>

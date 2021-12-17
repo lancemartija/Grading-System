@@ -3,7 +3,7 @@
     <div class="relative bg-white rounded-lg shadow">
       <div class="flex items-start justify-between p-5 border-b rounded-t">
         <h3 class="text-xl font-semibold">
-          Edit room
+          Edit year
         </h3>
         <button type="button" class="btn-close-modal" data-close-button>
           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">

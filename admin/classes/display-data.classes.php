@@ -1,5 +1,50 @@
 <?php
 
+class DisplayStudents extends Dbh
+{
+  protected function getData()
+  {
+    $sql = 'SELECT * FROM tblstudents;';
+    $stmt = $this->connect()->query($sql);
+    $result = 0;
+
+    if (!$stmt) {
+      $stmt = null;
+      exit;
+    }
+
+    while ($row = $stmt->fetchAll(PDO::FETCH_ASSOC)) {
+      $result = $row;
+    }
+
+    $stmt = null;
+    return $result;
+  }
+
+  protected function getSearchData($query)
+  {
+    $stmt = $this->connect()->prepare('SELECT * FROM tblstudents WHERE student_number = ? OR student_fname = ? OR student_mname = ? OR student_lname = ? OR student_gender = ? OR student_status = ? OR student_age = ? OR student_nationality = ? OR student_religion = ?;');
+    $result = 0;
+
+    if (!$stmt->execute([$query, $query, $query, $query, $query, $query, $query, $query, $query])) {
+      $stmt = null;
+      exit;
+    }
+
+    if ($stmt->rowCount() == 0) {
+      $stmt = null;
+      return $result;
+    }
+
+    while ($row = $stmt->fetchAll(PDO::FETCH_ASSOC)) {
+      $result = $row;
+    }
+
+    $stmt = null;
+    return $result;
+  }
+}
+
 class DisplaySubjects extends Dbh
 {
   protected function getData()
