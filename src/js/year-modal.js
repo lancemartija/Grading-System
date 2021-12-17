@@ -19,8 +19,10 @@ addYearBtn.addEventListener('click', () => {
 
 viewYearBtn.forEach((btn) => {
   btn.addEventListener('click', () => {
+    let id = btn.getAttribute('data-id')
     let name = btn.getAttribute('data-name')
 
+    inputFieldId[0].value = id
     inputFieldName[0].value = name
 
     viewYearModal.classList.remove('hidden')
@@ -33,7 +35,7 @@ editYearBtn.forEach((btn) => {
     let id = btn.getAttribute('data-id')
     let name = btn.getAttribute('data-name')
 
-    inputFieldId[0].value = id
+    inputFieldId[1].value = id
     inputFieldName[1].value = name
 
     editYearModal.classList.remove('hidden')
@@ -45,7 +47,7 @@ deleteYearBtn.forEach((btn) => {
   btn.addEventListener('click', () => {
     let id = btn.getAttribute('data-id')
 
-    inputFieldId[1].value = id
+    inputFieldId[2].value = id
 
     deleteYearModal.classList.remove('hidden')
     deleteYearModal.classList.add('flex')
