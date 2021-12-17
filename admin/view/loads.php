@@ -23,7 +23,7 @@ $page = $breadcrumb2 = 'List of Loads';
 $breadcrumblink = 'faculty.php';
 $modal = 'load';
 $btn = 'subject';
-$searchlink = 'loads.php?code=' . $_GET['code'];
+$searchlink = 'loads.php?code=' . $instructor;
 $i = 0;
 ?>
 
