@@ -19,6 +19,7 @@ class DisplayOptions extends Dbh
     $stmt = null;
     return $result;
   }
+
   protected function getGradeLevelData()
   {
     $sql = 'SELECT course_name FROM tblcourse;';
