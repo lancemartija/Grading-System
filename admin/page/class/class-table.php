@@ -24,7 +24,6 @@
           Options
         </th>
         <th scope="col" class="th">
-          Actions
         </th>
       </tr>
     </thead>
@@ -95,7 +94,7 @@
               View Students
             </a>
           </td>
-          <td class="p-4 space-x-2 whitespace-nowrap">
+          <td class="p-4 space-x-2 text-right whitespace-nowrap">
             <button type="button" data-view-button data-id="<?= $data['class_id']; ?>" data-day="<?= $data['class_day']; ?>" data-time="<?= $data['class_time']; ?>" data-room="<?= $data['class_room']; ?>" data-section="<?= $data['class_section']; ?>" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-gray-600 rounded-lg hover:bg-gray-700 focus:ring-4 focus:ring-gray-200">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
                 <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />

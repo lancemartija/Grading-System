@@ -18,7 +18,6 @@
           Options
         </th>
         <th scope="col" class="th">
-          Actions
         </th>
       </tr>
     </thead>
@@ -62,7 +61,7 @@
               List of Loads
             </a>
           </td>
-          <td class="p-4 space-x-2 whitespace-nowrap">
+          <td class="p-4 space-x-2 text-right whitespace-nowrap">
             <button type="button" data-view-button data-code="<?= $data['inst_code']; ?>" data-name="<?= $data['inst_name']; ?>" data-address="<?= $data['inst_address']; ?>" data-gender="<?= $data['inst_gender']; ?>" data-status="<?= $data['inst_status']; ?>" data-email="<?= $data['inst_email']; ?>" data-empstatus="<?= $data['inst_empstatus']; ?>" class="btn-gray">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
                 <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />

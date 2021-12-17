@@ -21,7 +21,6 @@
           Options
         </th>
         <th scope="col" class="th">
-          Actions
         </th>
       </tr>
     </thead>
@@ -83,7 +82,7 @@
               View Students
             </a>
           </td>
-          <td class="p-4 space-x-2 whitespace-nowrap">
+          <td class="p-4 space-x-2 text-right whitespace-nowrap">
             <button type="button" data-delete-button data-id="<?= $data['class_id']; ?>" data-code="<?= $instructor; ?>" class="btn-red">
               <svg class="w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z" clip-rule="evenodd" />

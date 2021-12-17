@@ -12,11 +12,10 @@
           Position
         </th>
         <th scope="col" class="th">
-          Actions
         </th>
       </tr>
     </thead>
-    <tbody class="bg-white divide-y divide-gray-200 ">
+    <tbody class="bg-white divide-y divide-gray-200">
       <?php foreach ($result as $data) : ?>
         <tr class="hover:bg-gray-100 group">
           <td class="td">
@@ -42,7 +41,7 @@
               <?= $data['account_type']; ?>
             </div>
           </td>
-          <td class="p-4 space-x-2 whitespace-nowrap">
+          <td class="p-4 space-x-2 text-right whitespace-nowrap">
             <button type="button" data-view-button data-fname="<?= $data['account_firstname']; ?>" data-lname="<?= $data['account_lastname']; ?>" data-email="<?= $data['account_email']; ?>" data-username="<?= $data['account_username']; ?>" data-type="<?= $data['account_type']; ?>" class="btn-gray">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
                 <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
