@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 16, 2021 at 11:19 AM
+-- Generation Time: Dec 17, 2021 at 09:50 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.26
 
@@ -47,11 +47,11 @@ CREATE TABLE `tblclass` (
 --
 
 INSERT INTO `tblclass` (`class_id`, `class_code`, `class_name`, `class_desc`, `inst_code`, `class_inst`, `class_level`, `class_ay`, `class_day`, `class_time`, `class_room`, `class_section`) VALUES
-(1, 12345, 'Advanced Math', 'Mathematics Made Easy', 1152, 'Maya Willis Hawke', 'Grade 12', '2021-2022', '', '', '', ''),
-(2, 42345, 'Eloquent English', 'Eloquent English 101', 1152, 'Maya Willis Hawke', 'Grade 12', '2021-2022', '', '', '', ''),
-(3, 133575, 'Hangul 101', 'Foreign Languages', 111, 'Jimmy Nickelson Cricket', 'Grade 11', '2021-2022', '', '', '', ''),
-(4, 133576, 'Hangul 101', 'Foreign Languages 2', 111, 'Jimmy Nickelson Cricket', 'Grade 11', '2022-2023', '', '', '', ''),
-(6, 324, 'test', 'test', 111, 'Jimmy Nickelson Cricket', 'Grade 11', '2022-2023', '', '', '', '');
+(7, 12345, 'Advanced Math', 'Mathematics Made Easy', 111, 'Jimmy Nickelson Cricket', 'Grade 12', '2021-2022', '', '', '', ''),
+(8, 42345, 'Eloquent English', 'Eloquent English 101', 111, 'Jimmy Nickelson Cricket', 'Grade 11', '2022-2023', '', '', '', ''),
+(19, 133576, 'Hiragana 101', 'Foreign Languages 1', 1152, 'Maya Willis Hawke', 'Grade  10', '2021-2022', '', '', '', ''),
+(20, 133575, 'Hangul 101', 'Foreign Languages 1', 1152, 'Maya Willis Hawke', 'Grade 11', '2021-2022', '', '', '', ''),
+(21, 5135, 'JavaScript Essentials', 'Web Development 101', 36256, 'Henry Gesault Fabien', 'Grade 12', '2021-2022', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -63,7 +63,6 @@ CREATE TABLE `tblcourse` (
   `course_id` int(11) NOT NULL,
   `course_code` int(11) NOT NULL,
   `course_name` varchar(255) NOT NULL,
-  `course_level` int(11) NOT NULL,
   `course_desc` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -71,9 +70,13 @@ CREATE TABLE `tblcourse` (
 -- Dumping data for table `tblcourse`
 --
 
-INSERT INTO `tblcourse` (`course_id`, `course_code`, `course_name`, `course_level`, `course_desc`) VALUES
-(1, 1234, 'Grade 12', 12, 'Senior High School'),
-(2, 2351, 'Grade 11', 11, 'Senior High School');
+INSERT INTO `tblcourse` (`course_id`, `course_code`, `course_name`, `course_desc`) VALUES
+(1, 1234, 'Grade 12', 'Senior High School'),
+(2, 2351, 'Grade 11', 'Senior High School'),
+(3, 3264, 'Grade  10', 'Junior High School'),
+(4, 765345, 'Grade 9', 'Junior High School'),
+(5, 53425, 'Grade 8', 'Junior High School'),
+(6, 3673, 'Grade 7', 'Junior High School');
 
 -- --------------------------------------------------------
 
@@ -120,7 +123,8 @@ CREATE TABLE `tblinstructor` (
 
 INSERT INTO `tblinstructor` (`inst_id`, `inst_code`, `inst_name`, `inst_address`, `inst_gender`, `inst_status`, `inst_email`, `inst_empstatus`) VALUES
 (1, 111, 'Jimmy Nickelson Cricket', 'Alberta, Canada', 'Male', 'Single', 'jimminy.cricket@email.com', 'Contract'),
-(2, 1152, 'Maya Willis Hawke', 'Manila, PH', 'Female', 'Single', 'hawke_maya17@email.com', 'Intern');
+(2, 1152, 'Maya Willis Hawke', 'Manila, PH', 'Female', 'Single', 'hawke_maya17@email.com', 'Intern'),
+(3, 36256, 'Henry Gesault Fabien', 'Paris, France', 'Male', 'Married', 'henry.g.fabien@email.com', 'Part-time');
 
 -- --------------------------------------------------------
 
@@ -169,10 +173,10 @@ CREATE TABLE `tblsubjects` (
 
 INSERT INTO `tblsubjects` (`subj_id`, `subj_code`, `subj_name`, `subj_desc`, `subj_level`, `subj_unit`, `subj_ay`, `subj_sem`) VALUES
 (1, 12345, 'Advanced Math', 'Mathematics Made Easy', 'Grade 12', 3, '2021-2022', 'First Semester'),
-(2, 42345, 'Eloquent English', 'Eloquent English 101', 'Grade 12', 3, '2021-2022', 'First Semester'),
-(3, 133575, 'Hangul 101', 'Foreign Languages', 'Grade 11', 2, '2021-2022', 'Second Semster'),
-(4, 133576, 'Hangul 101', 'Foreign Languages 2', 'Grade 11', 2, '2022-2023', 'Summer'),
-(5, 324, 'test', 'test', 'Grade 11', 3, '2022-2023', 'First Semester');
+(2, 42345, 'Eloquent English', 'Eloquent English 101', 'Grade 11', 3, '2022-2023', 'First Semester'),
+(3, 133575, 'Hangul 101', 'Foreign Languages 1', 'Grade 11', 2, '2021-2022', 'Second Semester'),
+(4, 133576, 'Hiragana 101', 'Foreign Languages 1', 'Grade  10', 2, '2021-2022', 'First Semester'),
+(5, 5135, 'JavaScript Essentials', 'Web Development 101', 'Grade 12', 3, '2021-2022', 'Second Semester');
 
 -- --------------------------------------------------------
 
@@ -199,6 +203,25 @@ INSERT INTO `tbluseraccounts` (`account_id`, `account_firstname`, `account_lastn
 (2, 'jane', 'doe', 'jane.doe@email.com', 'janedoe', '$2y$10$8exZgPMoCHdyXMZx97HcE.Ks.nGKNGvXaLh6oAa1W8qpT38OEMySS', 'Registrar'),
 (3, 'Michael', 'Stallenhaag', 'stallenhaag.michael@email.com', 'Stallen72', '$2y$10$j3N1Jt4khfkjPJOhO239feXuvValyqz0FXb1YUTiuNxsJI9ol2Qzm', 'Course In-charge'),
 (4, 'test', 'test', 'test@email.com', 'test', '$2y$10$L2R1hdWowC5VfE553i2UsO//KWSBJLOHKTz93IgK.90dT7mTBrp/2', 'Administrator');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tblyear`
+--
+
+CREATE TABLE `tblyear` (
+  `ay_id` int(11) NOT NULL,
+  `ay_name` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tblyear`
+--
+
+INSERT INTO `tblyear` (`ay_id`, `ay_name`) VALUES
+(1, '2021-2022'),
+(2, '2022-2023');
 
 --
 -- Indexes for dumped tables
@@ -247,6 +270,12 @@ ALTER TABLE `tbluseraccounts`
   ADD PRIMARY KEY (`account_id`);
 
 --
+-- Indexes for table `tblyear`
+--
+ALTER TABLE `tblyear`
+  ADD PRIMARY KEY (`ay_id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -254,13 +283,13 @@ ALTER TABLE `tbluseraccounts`
 -- AUTO_INCREMENT for table `tblclass`
 --
 ALTER TABLE `tblclass`
-  MODIFY `class_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `class_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `tblcourse`
 --
 ALTER TABLE `tblcourse`
-  MODIFY `course_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `course_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `tbldepartment`
@@ -272,7 +301,7 @@ ALTER TABLE `tbldepartment`
 -- AUTO_INCREMENT for table `tblinstructor`
 --
 ALTER TABLE `tblinstructor`
-  MODIFY `inst_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `inst_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `tblrooms`
@@ -291,6 +320,12 @@ ALTER TABLE `tblsubjects`
 --
 ALTER TABLE `tbluseraccounts`
   MODIFY `account_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `tblyear`
+--
+ALTER TABLE `tblyear`
+  MODIFY `ay_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
