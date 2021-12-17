@@ -37,7 +37,7 @@ class EditFaculty extends Dbh
 {
   protected function setFaculty($id, $name, $address, $gender, $status, $email, $empstatus)
   {
-    $stmt = $this->connect()->prepare('UPDATE tblinstructor SET inst_name = ?, inst_address = ?, inst_gender = ?, inst_status = ?, inst_email = ?, inst_empstatus = ? WHERE inst_id = ?;');
+    $stmt = $this->connect()->prepare('UPDATE tblinstructor SET inst_name = ?, inst_address = ?, inst_gender = ?, inst_status = ?, inst_email = ?, inst_empstatus = ? WHERE inst_id = ?; UPDATE tblclass c INNER JOIN tblinstructor i ON c.inst_code = i.inst_code SET c.class_inst = i.inst_name;');
 
     if (!$stmt->execute([$name, $address, $gender, $status, $email, $empstatus, $id])) {
       $stmt = null;
