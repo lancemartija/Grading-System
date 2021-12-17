@@ -38,7 +38,7 @@
               <label for="level" class="label">Grade Level</label>
               <select id="level" name="level" class="input-field focus:ring-2 focus:ring-cyan-600/50 focus:border-cyan-600 focus:outline-none">
                 <option value="" disabled selected hidden>Choose Grade Level</option>
-                <?php foreach ($options as $data) : ?>
+                <?php foreach ($gradelevel as $data) : ?>
                   <option value="<?= $data['course_name']; ?>"><?= $data['course_name']; ?></option>
                 <?php endforeach ?>
               </select>
@@ -46,8 +46,9 @@
             <div class="col-span-6 sm:col-span-3">
               <label for="ay" class="label">Academic Year</label>
               <select id="ay" name="ay" class="input-field focus:ring-2 focus:ring-cyan-600/50 focus:border-cyan-600 focus:outline-none">
-                <option value="2021-2022">2021-2022</option>
-                <option value="2022-2023">2022-2023</option>
+                <?php foreach ($year as $data) : ?>
+                  <option value="<?= $data['ay_name']; ?>"><?= $data['ay_name']; ?></option>
+                <?php endforeach ?>
               </select>
             </div>
             <div class="col-span-6 sm:col-span-3">

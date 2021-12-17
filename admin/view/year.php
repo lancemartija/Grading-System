@@ -11,14 +11,14 @@ $user = $_SESSION['useruid'];
 include_once '../database/database.classes.php';
 include_once '../classes/display-data.classes.php';
 include_once '../controller/display-data.contr.php';
-include_once '../page/subjects/options.inc.php';
 
-$display = new DisplaySubjectsContr;
+$display = new DisplayYearContr;
 
-$page = $breadcrumb1 =  $search = $link = $table = 'subjects';
-$btn = $modal = 'subject';
-$searchlink = 'subjects.php';
+$page = $search = $breadcrumb1 = 'academic year';
+$btn = $table = $modal = $link = 'year';
+$searchlink = 'year.php';
 $breadcrumblink = '#';
+$i = 0;
 ?>
 
 <!DOCTYPE html>
@@ -28,12 +28,12 @@ $breadcrumblink = '#';
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Subjects</title>
+  <title>Academic Year</title>
   <link rel="stylesheet" href="../../src/css/tailwind.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <script async defer src="../../src/js/subjects-modal.js"></script>
+  <script async defer src="../../src/js/year-modal.js"></script>
 </head>
 
 <body>
@@ -44,7 +44,7 @@ $breadcrumblink = '#';
       <main>
         <?php
         include_once '../templates/header.php';
-        include_once '../page/subjects/add-subject-modal.php';
+        include_once '../page/year/add-year-modal.php';
         include_once '../includes/display-data.inc.php';
         ?>
       </main>

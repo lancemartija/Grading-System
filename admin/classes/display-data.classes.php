@@ -45,6 +45,51 @@ class DisplaySubjects extends Dbh
   }
 }
 
+class DisplayYear extends Dbh
+{
+  protected function getData()
+  {
+    $sql = 'SELECT * FROM tblyear;';
+    $stmt = $this->connect()->query($sql);
+    $result = 0;
+
+    if (!$stmt) {
+      $stmt = null;
+      exit;
+    }
+
+    while ($row = $stmt->fetchAll(PDO::FETCH_ASSOC)) {
+      $result = $row;
+    }
+
+    $stmt = null;
+    return $result;
+  }
+
+  protected function getSearchData($query)
+  {
+    $stmt = $this->connect()->prepare('SELECT * FROM tblyear WHERE ay_id = ? OR ay_name = ?;');
+    $result = 0;
+
+    if (!$stmt->execute([$query, $query])) {
+      $stmt = null;
+      exit;
+    }
+
+    if ($stmt->rowCount() == 0) {
+      $stmt = null;
+      return $result;
+    }
+
+    while ($row = $stmt->fetchAll(PDO::FETCH_ASSOC)) {
+      $result = $row;
+    }
+
+    $stmt = null;
+    return $result;
+  }
+}
+
 class DisplayGradeLevel extends Dbh
 {
   protected function getData()
