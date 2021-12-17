@@ -51,16 +51,16 @@
             </div>
           </td>
           <td class="td">
-            <div class="flex items-center capitalize">
+            <div class="flex items-center">
               <?php if (!empty($data['class_room'])) { ?>
-                <?= $data['class_day']; ?>
+                <?= $data['class_room']; ?>
               <?php } else { ?>
                 None
               <?php } ?>
             </div>
           </td>
           <td class="td">
-            <div class="flex items-center capitalize">
+            <div class="flex items-center">
               <?php if (!empty($data['class_day'])) { ?>
                 <?= $data['class_day']; ?>
               <?php } else { ?>
