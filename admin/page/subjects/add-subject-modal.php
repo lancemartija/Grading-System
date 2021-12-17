@@ -34,7 +34,7 @@
               <label for="level" class="label">Grade Level</label>
               <select name="level" class="input-field focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none">
                 <option value="" disabled selected hidden>Choose Grade Level</option>
-                <?php foreach ($options as $data) : ?>
+                <?php foreach ($gradelevel as $data) : ?>
                   <option value="<?= $data['course_name']; ?>"><?= $data['course_name']; ?></option>
                 <?php endforeach ?>
               </select>

@@ -18,9 +18,6 @@
           Days and Time
         </th>
         <th scope="col" class="th">
-          Section
-        </th>
-        <th scope="col" class="th">
           Options
         </th>
         <th scope="col" class="th">
@@ -56,14 +53,14 @@
           <td class="td">
             <div class="flex items-center capitalize">
               <?php if (!empty($data['class_room'])) { ?>
-                <?= $data['class_day']; ?>
+                <?= $data['class_room']; ?>
               <?php } else { ?>
                 None
               <?php } ?>
             </div>
           </td>
           <td class="td">
-            <div class="flex items-center capitalize">
+            <div class="flex items-center">
               <?php if (!empty($data['class_day'])) { ?>
                 <?= $data['class_day']; ?>
               <?php } else { ?>
@@ -72,15 +69,6 @@
               /
               <?php if (!empty($data['class_time'])) { ?>
                 <?= $data['class_time']; ?>
-              <?php } else { ?>
-                None
-              <?php } ?>
-            </div>
-          </td>
-          <td class="td">
-            <div class="flex items-center capitalize">
-              <?php if (!empty($data['class_room'])) { ?>
-                <?= $data['class_section']; ?>
               <?php } else { ?>
                 None
               <?php } ?>
@@ -95,14 +83,14 @@
             </a>
           </td>
           <td class="p-4 space-x-2 text-right whitespace-nowrap">
-            <button type="button" data-view-button data-id="<?= $data['class_id']; ?>" data-day="<?= $data['class_day']; ?>" data-time="<?= $data['class_time']; ?>" data-room="<?= $data['class_room']; ?>" data-section="<?= $data['class_section']; ?>" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-gray-600 rounded-lg hover:bg-gray-700 focus:ring-4 focus:ring-gray-200">
+            <button type="button" data-view-button data-id="<?= $data['class_id']; ?>" data-name="<?= $data['class_name']; ?>" data-desc="<?= $data['class_desc']; ?>" data-inst="<?= $data['class_inst']; ?>" data-level="<?= $data['class_level']; ?>" data-day="<?= $data['class_day']; ?>" data-time="<?= $data['class_time']; ?>" data-room="<?= $data['class_room']; ?>" data-section="<?= $data['class_section']; ?>" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-gray-600 rounded-lg hover:bg-gray-700 focus:ring-4 focus:ring-gray-200">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
                 <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
                 <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" />
               </svg>
               View
             </button>
-            <button type="button" data-edit-button data-id="<?= $data['class_id']; ?>" data-day="<?= $data['class_day']; ?>" data-time="<?= $data['class_time']; ?>" data-room="<?= $data['class_room']; ?>" data-section="<?= $data['class_section']; ?>" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg bg-cyan-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200">
+            <button type="button" data-edit-button data-id="<?= $data['class_id']; ?>" data-name="<?= $data['class_name']; ?>" data-desc="<?= $data['class_desc']; ?>" data-inst="<?= $data['class_inst']; ?>" data-level="<?= $data['class_level']; ?>" data-day="<?= $data['class_day']; ?>" data-time="<?= $data['class_time']; ?>" data-room="<?= $data['class_room']; ?>" data-section="<?= $data['class_section']; ?>" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg bg-cyan-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200">
               <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path>
                 <path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path>

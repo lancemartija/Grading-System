@@ -16,6 +16,15 @@ class DisplayClassContr extends DisplayClass
   }
 }
 
+class DisplayOptionsContr extends DisplayOptions
+{
+  public function fetchRoomData()
+  {
+    $result = $this->getRoomData();
+    return $result;
+  }
+}
+
 class DisplayClass extends Dbh
 {
   protected function getData()
@@ -62,5 +71,30 @@ class DisplayClass extends Dbh
   }
 }
 
+class DisplayOptions extends Dbh
+{
+  protected function getRoomData()
+  {
+    $sql = 'SELECT room_name FROM tblrooms;';
+    $stmt = $this->connect()->query($sql);
+    $result = 0;
+
+    if (!$stmt) {
+      $stmt = null;
+      exit;
+    }
+
+    while ($row = $stmt->fetchAll(PDO::FETCH_ASSOC)) {
+      $result = $row;
+    }
+
+    $stmt = null;
+    return $result;
+  }
+}
+
 $display = new DisplayClassContr();
 $result = $display->fetchData();
+
+$selectionOptions = new DisplayOptionsContr;
+$rooms = $selectionOptions->fetchRoomData();

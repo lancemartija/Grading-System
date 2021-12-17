@@ -13,4 +13,6 @@ if (!empty($result)) {
   }
 
   include_once 'class-table.php';
+  include_once 'view-class-modal.php';
+  include_once 'edit-class-modal.php';
 }
