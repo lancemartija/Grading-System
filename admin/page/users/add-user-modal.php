@@ -16,11 +16,11 @@
           <div class="modal-grid">
             <div class="col-span-6 sm:col-span-3">
               <label for="firstname" class="label">First Name</label>
-              <input type="text" name="firstname" class="input-field focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none" placeholder="John" required>
+              <input type="text" name="firstname" class="input-field focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none" placeholder="First Name" required>
             </div>
             <div class="col-span-6 sm:col-span-3">
               <label for="lastname" class="label">Last Name</label>
-              <input type="text" name="lastname" class="input-field focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none" placeholder="Doe" required>
+              <input type="text" name="lastname" class="input-field focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none" placeholder="Last Name" required>
             </div>
             <div class="col-span-6 sm:col-span-3">
               <label for="email" class="label">Email</label>
