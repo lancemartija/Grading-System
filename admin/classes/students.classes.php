@@ -53,9 +53,9 @@ class DeleteStudents extends Dbh
 {
   protected function setStudents($id, $studentnumber)
   {
-    $stmt = $this->connect()->prepare('DELETE FROM tblstudents WHERE student_id = ?; DELETE FROM tblschoolyear WHERE student_number = ?;');
+    $stmt = $this->connect()->prepare('DELETE FROM tblstudents WHERE student_id = ?; DELETE FROM tblschoolyear WHERE student_number = ?; DELETE FROM tblgrades WHERE student_number = ?;');
 
-    if (!$stmt->execute([$id, $studentnumber])) {
+    if (!$stmt->execute([$id, $studentnumber, $studentnumber])) {
       $stmt = null;
       header("Location: ../view/students.php?error=stmtfailed");
       exit;
