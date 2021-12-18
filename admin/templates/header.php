@@ -25,7 +25,21 @@
                 <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
                 </svg>
-                <span class="ml-1 text-sm font-medium text-gray-400 md:ml-2" aria-current="page"><?= $breadcrumb2; ?></span>
+                <?php if (!empty($breadcrumb3)) { ?>
+                  <a href="<?= $breadcrumblink2; ?>" class="ml-1 text-sm font-medium text-gray-700 capitalize hover:text-gray-900 md:ml-2"><?= $breadcrumb2; ?></a>
+                <?php } else { ?>
+                  <span class="ml-1 text-sm font-medium text-gray-400 md:ml-2" aria-current="page"><?= $breadcrumb2; ?></span>
+                <?php } ?>
+              </div>
+            </li>
+          <?php } ?>
+          <?php if (!empty($breadcrumb3)) { ?>
+            <li>
+              <div class="flex items-center">
+                <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="ml-1 text-sm font-medium text-gray-400 md:ml-2" aria-current="page"><?= $breadcrumb3; ?></span>
               </div>
             </li>
           <?php } ?>
@@ -62,7 +76,7 @@
         </div>
       </div>
       <div class="flex items-center ml-auto space-x-2 sm:space-x-3">
-        <button type="button" data-add-button class="<?= (empty($options) && $page == 'List of Loads') ? 'btn-header-green-disabled' : 'btn-header-green'; ?>" <?= (empty($options) && $page == 'List of Loads') ? 'disabled' : ''; ?>>
+        <button type="button" data-add-button class="<?= (empty($options) && $page == 'List of Loads' || $page == 'Enrolled Subjects') ? 'btn-header-green-disabled' : 'btn-header-green'; ?>" <?= (empty($options) && $page == 'List of Loads' || $page == 'Enrolled Subjects') ? 'disabled' : ''; ?>>
           <svg class="w-6 h-6 mr-2 -ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path>
           </svg>
