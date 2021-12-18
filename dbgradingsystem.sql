@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 17, 2021 at 06:55 PM
+-- Generation Time: Dec 18, 2021 at 07:08 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.26
 
@@ -193,7 +193,9 @@ CREATE TABLE `tblschoolyear` (
 --
 
 INSERT INTO `tblschoolyear` (`sy_id`, `sy_ay`, `sy_sem`, `sy_level`, `class_id`, `student_number`, `sy_category`, `sy_enrolldate`, `sy_status`) VALUES
-(1, '2021-2022', 'First Semester', 'Grade 10', 345234, 1234125, 'Enrolled', '2021-08-12', 'New Student');
+(4, '2021-2022', 'Second Semester', 'Grade 7', 0, 235324, 'ENROLLED', '2021-12-14', 'Continuing'),
+(5, '2022-2023', 'First Semester', 'Grade 12', 0, 1234125, 'ENROLLED', '2021-12-22', 'Transferee'),
+(6, '2022-2023', 'Second Semester', 'Grade 11', 0, 1234125, 'ENROLLED', '2021-12-14', 'Transferee');
 
 -- --------------------------------------------------------
 
@@ -417,7 +419,7 @@ ALTER TABLE `tblrooms`
 -- AUTO_INCREMENT for table `tblschoolyear`
 --
 ALTER TABLE `tblschoolyear`
-  MODIFY `sy_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `sy_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `tblstudents`
