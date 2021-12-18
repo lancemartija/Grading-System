@@ -13,6 +13,7 @@ if (!isset($_GET['studentnumber'])) {
 
 $user = $_SESSION['useruid'];
 $studentnumber = $_GET['studentnumber'];
+$course = $_GET['course'];
 
 include_once '../database/database.classes.php';
 include_once '../page/subject-list/subject-list.classes.php';
@@ -22,8 +23,8 @@ $breadcrumblink = 'students.php';
 $breadcrumblink2 = 'records.php?studentnumber=' . $_GET['studentnumber'];
 $search = 'subjects';
 $breadcrumb2 = 'Enrollment Records';
-$table = $modal = 'subject-list';
-$btn = 'subject';
+$table = 'subject-list';
+$modal = $btn = 'subject';
 $searchlink = 'subject-list.php?studentnumber=' . $studentnumber;
 $page = $breadcrumb3 = 'Enrolled Subjects';
 $i = 0;
@@ -41,7 +42,7 @@ $i = 0;
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <script async defer src="../../src/js/stubject-list-modal.js"></script>
+  <script async defer src="../../src/js/subject-list-modal.js"></script>
 </head>
 
 <body>
@@ -52,8 +53,8 @@ $i = 0;
       <main>
         <?php
         include_once '../templates/header.php';
-        // include_once '../page/stubject-list/assign-subject-modal.php';
-        include_once '../page/stubject-list/display-data.inc.php';
+        include_once '../page/subject-list/assign-subject-modal.php';
+        include_once '../page/subject-list/display-data.inc.php';
         ?>
       </main>
     </div>
