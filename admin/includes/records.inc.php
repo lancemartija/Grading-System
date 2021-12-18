@@ -3,7 +3,6 @@
 if (isset($_POST['add'])) {
   # Grabbing data
   $studentnumber = filter_var(trim($_POST['studentnumber']), FILTER_SANITIZE_NUMBER_INT);
-  $sem = filter_var(trim($_POST['sem']), FILTER_SANITIZE_STRING);
   $status = filter_var(trim($_POST['status']), FILTER_SANITIZE_STRING);
   $level = filter_var(trim($_POST['level']), FILTER_SANITIZE_STRING);
   $year = filter_var(trim($_POST['year']), FILTER_SANITIZE_STRING);
@@ -13,7 +12,7 @@ if (isset($_POST['add'])) {
   include_once '../database/database.classes.php';
   include_once '../classes/records.classes.php';
   include_once '../controller/records.contr.php';
-  $addRecords = new AddRecordsContr($studentnumber, $sem, $status, $level, $year, $date);
+  $addRecords = new AddRecordsContr($studentnumber, $status, $level, $year, $date);
 
   # Running error handlers and add record function
   $addRecords->addRecords();
@@ -26,7 +25,6 @@ if (isset($_POST['edit'])) {
   # Grabbing data
   $id = filter_var(trim($_POST['id']), FILTER_SANITIZE_NUMBER_INT);
   $studentnumber = filter_var(trim($_POST['studentnumber']), FILTER_SANITIZE_NUMBER_INT);
-  $sem = filter_var(trim($_POST['sem']), FILTER_SANITIZE_STRING);
   $status = filter_var(trim($_POST['status']), FILTER_SANITIZE_STRING);
   $level = filter_var(trim($_POST['level']), FILTER_SANITIZE_STRING);
   $year = filter_var(trim($_POST['year']), FILTER_SANITIZE_STRING);
@@ -36,7 +34,7 @@ if (isset($_POST['edit'])) {
   include_once '../database/database.classes.php';
   include_once '../classes/records.classes.php';
   include_once '../controller/records.contr.php';
-  $editRecords = new EditRecordsContr($id, $studentnumber, $sem,  $status, $level, $year, $date);
+  $editRecords = new EditRecordsContr($id, $studentnumber, $status, $level, $year, $date);
 
   # Running error handlers and add record function
   $editRecords->editRecords();

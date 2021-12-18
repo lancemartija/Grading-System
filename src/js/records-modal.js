@@ -10,7 +10,6 @@ const editRecordsModal = document.querySelector('#edit-record-modal')
 const deleteRecordsModal = document.querySelector('#delete-record-modal')
 
 const inputFieldId = document.querySelectorAll('#id')
-const inputFieldSem = document.querySelectorAll('#sem')
 const inputFieldStatus = document.querySelectorAll('#status')
 const inputFieldLevel = document.querySelectorAll('#level')
 const inputFieldYear = document.querySelectorAll('#year')
@@ -24,13 +23,11 @@ addRecordsBtn.addEventListener('click', () => {
 viewRecordsBtn.forEach((btn) => {
   btn.addEventListener('click', () => {
     let id = btn.getAttribute('data-id')
-    let sem = btn.getAttribute('data-sem')
     let status = btn.getAttribute('data-status')
     let level = btn.getAttribute('data-level')
     let year = btn.getAttribute('data-year')
     let date = btn.getAttribute('data-date')
 
-    inputFieldSem[0].value = sem
     inputFieldStatus[0].value = status
     inputFieldLevel[0].value = level
     inputFieldYear[0].value = year
@@ -44,13 +41,11 @@ viewRecordsBtn.forEach((btn) => {
 editRecordsBtn.forEach((btn) => {
   btn.addEventListener('click', () => {
     let id = btn.getAttribute('data-id')
-    let sem = btn.getAttribute('data-sem')
     let status = btn.getAttribute('data-status')
     let level = btn.getAttribute('data-level')
     let year = btn.getAttribute('data-year')
 
     inputFieldId[0].value = id
-    inputFieldSem[1].value = sem
     inputFieldStatus[1].value = status
     inputFieldLevel[1].value = level
     inputFieldYear[1].value = year

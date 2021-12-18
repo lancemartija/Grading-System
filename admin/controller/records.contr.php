@@ -3,16 +3,14 @@
 class AddRecordsContr extends AddRecords
 {
   private $studentnumber;
-  private $sem;
   private $status;
   private $level;
   private $year;
   private $date;
 
-  public function __construct($studentnumber, $sem, $status, $level, $year, $date)
+  public function __construct($studentnumber, $status, $level, $year, $date)
   {
     $this->studentnumber = $studentnumber;
-    $this->sem = $sem;
     $this->status = $status;
     $this->level = $level;
     $this->year = $year;
@@ -26,12 +24,12 @@ class AddRecordsContr extends AddRecords
       exit;
     }
 
-    $this->setRecords($this->studentnumber, $this->sem, $this->status, $this->level, $this->year, $this->date);
+    $this->setRecords($this->studentnumber, $this->status, $this->level, $this->year, $this->date);
   }
 
   private function emptyInput()
   {
-    if (empty($this->studentnumber) || empty($this->sem) ||  empty($this->status) || empty($this->level) || empty($this->year) || empty($this->date)) {
+    if (empty($this->studentnumber) || empty($this->status) || empty($this->level) || empty($this->year) || empty($this->date)) {
       return false;
     }
     return true;
@@ -42,17 +40,15 @@ class EditRecordsContr extends EditRecords
 {
   private $id;
   private $studentnumber;
-  private $sem;
   private $status;
   private $level;
   private $year;
   private $date;
 
-  public function __construct($id, $studentnumber, $sem, $status, $level, $year, $date)
+  public function __construct($id, $studentnumber, $status, $level, $year, $date)
   {
     $this->id = $id;
     $this->studentnumber = $studentnumber;
-    $this->sem = $sem;
     $this->status = $status;
     $this->level = $level;
     $this->year = $year;
@@ -66,12 +62,12 @@ class EditRecordsContr extends EditRecords
       exit;
     }
 
-    $this->setRecords($this->id, $this->studentnumber, $this->sem, $this->status, $this->level, $this->year, $this->date);
+    $this->setRecords($this->id, $this->studentnumber, $this->status, $this->level, $this->year, $this->date);
   }
 
   private function emptyInput()
   {
-    if (empty($this->studentnumber) || empty($this->sem) || empty($this->status) || empty($this->level) || empty($this->year) || empty($this->date)) {
+    if (empty($this->studentnumber) || empty($this->status) || empty($this->level) || empty($this->year) || empty($this->date)) {
       return false;
     }
     return true;

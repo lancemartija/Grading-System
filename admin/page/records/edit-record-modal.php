@@ -51,14 +51,6 @@
               </select>
             </div>
             <div class="col-span-6 sm:col-span-3">
-              <label for="sem" class="label">Semester</label>
-              <select id="sem" name="sem" class="input-field focus:ring-2 focus:ring-cyan-600/50 focus:border-cyan-600 focus:outline-none" required>
-                <option value="First Semester">First Semester</option>
-                <option value="Second Semester">Second Semester</option>
-                <option value="Summer">Summer</option>
-              </select>
-            </div>
-            <div class="col-span-6 sm:col-span-3">
               <label for="date" class="label">Date Enrolled</label>
               <input id="date" type="date" name="date" class="input-field focus:ring-2 focus:ring-cyan-600/50 focus:border-cyan-600 focus:outline-none" required>
             </div>

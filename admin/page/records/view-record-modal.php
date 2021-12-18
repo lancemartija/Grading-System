@@ -34,10 +34,6 @@
             <input id="year" type="text" class="input-field" placeholder="Room" disabled readonly>
           </div>
           <div class="col-span-6 sm:col-span-3">
-            <label for="sem" class="label">Semester</label>
-            <input id="sem" type="text" class="input-field" disabled readonly>
-          </div>
-          <div class="col-span-6 sm:col-span-3">
             <label for="date" class="label">Date Enrolled</label>
             <input id="date" type="text" class="input-field" disabled readonly>
           </div>
