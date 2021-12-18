@@ -73,11 +73,11 @@ class DisplaySubjectsContr extends DisplaySubjects
   }
 }
 
-class DisplayOptions extends Dbh
+class DisplaySubjectOptions extends Dbh
 {
   protected function getData($course)
   {
-    $stmt = $this->connect()->prepare('SELECT * FROM tblsubjects s, tblgrades g WHERE s.subj_code <> g.subj_code AND s.subj_level = ?;');
+    $stmt = $this->connect()->prepare('SELECT * FROM tblsubjects WHERE subj_level = ?;');
     $result = 0;
 
     if (!$stmt->execute([$course])) {
@@ -95,7 +95,7 @@ class DisplayOptions extends Dbh
   }
 }
 
-class DisplayOptionsContr extends DisplayOptions
+class DisplaySubjectOptionsContr extends DisplaySubjectOptions
 {
   private $course;
 
@@ -111,7 +111,7 @@ class DisplayOptionsContr extends DisplayOptions
   }
 }
 
-$subjectOptions = new DisplayOptionsContr($course);
+$subjectOptions = new DisplaySubjectOptionsContr($course);
 $options = $subjectOptions->fetchData();
 
 $display = new DisplaySubjectsContr($course, $id, $studentnumber);
