@@ -4,7 +4,7 @@ class DisplaySubjects extends Dbh
 {
   protected function getData($course, $id, $studentnumber)
   {
-    $stmt = $this->connect()->prepare('SELECT * FROM tblgrades g WHERE g.student_number = ? AND g.sy_id = ?;');
+    $stmt = $this->connect()->prepare('SELECT * FROM tblgrades g, tblclass c WHERE g.student_number = ? AND g.sy_id = ? AND c.class_code = g.subj_code;');
     $result = 0;
 
     if (!$stmt->execute([$studentnumber, $id])) {

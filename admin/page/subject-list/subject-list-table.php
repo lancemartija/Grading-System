@@ -47,17 +47,16 @@
             </svg>
             <div class="text-sm font-normal text-gray-500">
               <div class="text-base font-semibold text-gray-900 capitalize">
-                <?= $data['subj_code']; ?>
-                <!-- Subject Name -->
+                <?= $data['class_name']; ?>
               </div>
               <div class="text-sm font-normal text-gray-500">
-                <!-- Subject Description -->
+                <?= $data['class_desc']; ?>
               </div>
             </div>
           </td>
           <td class="td">
             <div class="flex items-center capitalize">
-              <!-- Instructor -->
+              <?= $data['class_inst']; ?>
             </div>
           </td>
           <td class="td">
