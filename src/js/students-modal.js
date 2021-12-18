@@ -109,8 +109,10 @@ editStudentBtn.forEach((btn) => {
 deleteStudentBtn.forEach((btn) => {
   btn.addEventListener('click', () => {
     let id = btn.getAttribute('data-id')
+    let number = btn.getAttribute('data-number')
 
     inputFieldId[1].value = id
+    inputFieldStudentNumber[2].value = number
 
     deleteStudentModal.classList.remove('hidden')
     deleteStudentModal.classList.add('flex')

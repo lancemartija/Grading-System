@@ -89,5 +89,5 @@ $year = $selectionOptions->fetchYearData();
 $student = $selectionOptions->fetchStudentData($studentnumber);
 
 $studentname = $student[0]['student_lname'];
-$studentname .= ' ' . $student[0]['student_fname'];
+$studentname .= ', ' . $student[0]['student_fname'];
 $studentname .= ' ' . $student[0]['student_mname'];

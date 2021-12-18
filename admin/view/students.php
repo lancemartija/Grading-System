@@ -18,6 +18,7 @@ $page = $search = $breadcrumb1 = $table = $link = 'students';
 $modal = $btn = 'student';
 $searchlink = 'students.php';
 $breadcrumblink = '#';
+$i = 0;
 ?>
 
 <!DOCTYPE html>

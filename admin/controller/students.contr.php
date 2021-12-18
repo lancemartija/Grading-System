@@ -143,14 +143,16 @@ class EditStudentsContr extends EditStudents
 class DeleteStudentsContr extends DeleteStudents
 {
   private $id;
+  private $studentnumber;
 
-  public function __construct($id)
+  public function __construct($id, $studentnumber)
   {
     $this->id = $id;
+    $this->studentnumber = $studentnumber;
   }
 
   public function deleteStudents()
   {
-    $this->setStudents($this->id);
+    $this->setStudents($this->id, $this->studentnumber);
   }
 }

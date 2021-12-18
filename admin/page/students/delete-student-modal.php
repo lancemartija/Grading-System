@@ -15,6 +15,7 @@
         <h3 class="mt-5 mb-6 text-xl font-normal text-gray-500">Are you sure you want to delete this student?</h3>
         <form action="../includes/students.inc.php" method="get">
           <input id="id" type="hidden" name="id">
+          <input id="studentnumber" type="hidden" name="studentnumber">
           <button type="submit" name="delete" class="btn-red-modal">
             Yes, I'm sure
           </button>

@@ -63,12 +63,13 @@ if (isset($_POST['edit'])) {
 if (isset($_GET['delete'])) {
   # Grabbing data
   $id = filter_var(trim($_GET['id']), FILTER_SANITIZE_NUMBER_INT);
+  $studentnumber = filter_var(trim($_GET['studentnumber']), FILTER_SANITIZE_NUMBER_INT);
 
   # Instantiate AddStudentsContr class
   include_once '../database/database.classes.php';
   include_once '../classes/students.classes.php';
   include_once '../controller/students.contr.php';
-  $deleteStudents = new DeleteStudentsContr($id);
+  $deleteStudents = new DeleteStudentsContr($id, $studentnumber);
 
   # Running error handlers and add student function
   $deleteStudents->deleteStudents();
