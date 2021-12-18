@@ -44,7 +44,7 @@
                   <tr class="hover:bg-gray-100 group">
                     <td class="w-4 p-4">
                       <div class="flex items-center">
-                        <input type="checkbox" name="class[]" value="<?= $data['subj_code']; ?>" class="w-4 h-4 border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-cyan-200" required>
+                        <input type="checkbox" name="class[]" value="<?= $data['subj_code']; ?>" class="w-4 h-4 border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-cyan-200">
                         <label for="checkbox" class="sr-only">checkbox</label>
                       </div>
                     </td>

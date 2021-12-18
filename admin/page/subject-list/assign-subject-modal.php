@@ -1,4 +1,4 @@
-<div class="fixed left-0 right-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto bg-gray-900/50 top-4 md:inset-0 h-modal sm:h-full" id="assign-subject-modal" aria-modal="true" role="dialog">
+<div class="fixed left-0 right-0 z-50 items-center justify-center hidden overflow-x-hidden overflow-y-auto bg-gray-900/50 top-4 md:inset-0 h-modal sm:h-full" id="assign-subject-modal" aria-modal="true" role="dialog">
   <div class="relative w-full h-full max-w-5xl px-4 md:h-auto">
     <div class="relative bg-white rounded-lg shadow">
       <div class="flex items-start justify-between p-5 border-b rounded-t">
@@ -44,7 +44,7 @@
                   <tr class="hover:bg-gray-100 group">
                     <td class="w-4 p-4">
                       <div class="flex items-center">
-                        <input type="checkbox" name="class[]" value="<?= $data['subj_code']; ?>" class="w-4 h-4 border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-cyan-200" required>
+                        <input type="checkbox" name="class[]" value="<?= $data['subj_code']; ?>" class="w-4 h-4 border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-cyan-200">
                         <label for="checkbox" class="sr-only">checkbox</label>
                       </div>
                     </td>
