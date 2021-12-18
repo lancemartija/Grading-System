@@ -16,7 +16,7 @@
           <div class="modal-grid">
             <div class="col-span-4 sm:col-span-3">
               <label for="studentnumber" class="label">Student ID</label>
-              <input type="text" name="studentnumber" value="<?= $studentnumber; ?>" class="input-field focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none" readonly>
+              <input type="text" name="studentnumber" value="<?= $studentnumber; ?>" class="cursor-default input-field focus:outline-none" readonly>
             </div>
             <div class="col-span-4 sm:col-span-3">
               <label class="label">Student Name</label>
