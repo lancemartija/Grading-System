@@ -6,6 +6,11 @@ if (!isset($_SESSION['userid']) && !isset($_SESSION['useruid'])) {
   exit;
 }
 
+if (!isset($_GET['studentnumber'])) {
+  header('Location: students.php');
+  exit;
+}
+
 $user = $_SESSION['useruid'];
 $studentnumber = $_GET['studentnumber'];
 
