@@ -8,8 +8,7 @@ const editRecordsModal = document.querySelector('#edit-record-modal')
 const deleteRecordsModal = document.querySelector('#delete-record-modal')
 
 const inputFieldId = document.querySelectorAll('#id')
-const inputFieldStudentNumber = document.querySelector('#studentnumber')
-const inputFieldName = document.querySelector('#name')
+const inputFieldSem = document.querySelector('#sem')
 const inputFieldStatus = document.querySelector('#status')
 const inputFieldLevel = document.querySelector('#level')
 const inputFieldYear = document.querySelector('#year')
@@ -22,15 +21,13 @@ addRecordsBtn.addEventListener('click', () => {
 editRecordsBtn.forEach((btn) => {
   btn.addEventListener('click', () => {
     let id = btn.getAttribute('data-id')
-    let studentnumber = btn.getAttribute('data-studentnumber')
-    let name = btn.getAttribute('data-name')
+    let sem = btn.getAttribute('data-sem')
     let status = btn.getAttribute('data-status')
     let level = btn.getAttribute('data-level')
     let year = btn.getAttribute('data-year')
 
     inputFieldId[0].value = id
-    inputFieldStudentNumber.value = studentnumber
-    inputFieldName.value = name
+    inputFieldSem.value = sem
     inputFieldStatus.value = status
     inputFieldLevel.value = level
     inputFieldYear.value = year

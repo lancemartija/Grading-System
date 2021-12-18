@@ -13,8 +13,9 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
         </svg>
         <h3 class="mt-5 mb-6 text-xl font-normal text-gray-500">Are you sure you want to delete this record?</h3>
-        <form action="../includes/record.inc.php" method="get">
+        <form action="../includes/records.inc.php" method="post">
           <input id="id" type="hidden" name="id">
+          <input type="hidden" name="studentnumber" value="<?= $studentnumber; ?>">
           <button type="submit" name="delete" class="btn-red-modal">
             Yes, I'm sure
           </button>

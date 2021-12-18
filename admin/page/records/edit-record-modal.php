@@ -17,11 +17,11 @@
           <div class="modal-grid">
             <div class="col-span-4 sm:col-span-3">
               <label for="studentnumber" class="label">Student ID</label>
-              <input id="studentnumber" type="text" class="input-field focus:ring-2 focus:ring-cyan-600/50 focus:border-cyan-600 focus:outline-none" disabled readonly>
+              <input type="text" name="studentnumber" value="<?= $studentnumber; ?>" class="input-field focus:ring-2 focus:ring-cyan-600/50 focus:border-cyan-600 focus:outline-none" readonly>
             </div>
             <div class="col-span-4 sm:col-span-3">
-              <label for="name" class="label">Student Name</label>
-              <input id="name" type="text" class="input-field focus:ring-2 focus:ring-cyan-600/50 focus:border-cyan-600 focus:outline-none" disabled readonly>
+              <label class="label">Student Name</label>
+              <input type="text" value="<?= $studentname; ?>" class="input-field focus:ring-2 focus:ring-cyan-600/50 focus:border-cyan-600 focus:outline-none" disabled readonly>
             </div>
             <div class="col-span-6 sm:col-span-3">
               <label for="status" class="label">Status</label>
@@ -48,6 +48,14 @@
                 <?php foreach ($year as $data) : ?>
                   <option value="<?= $data['ay_name']; ?>"><?= $data['ay_name']; ?></option>
                 <?php endforeach ?>
+              </select>
+            </div>
+            <div class="col-span-6 sm:col-span-3">
+              <label for="sem" class="label">Semester</label>
+              <select id="sem" name="sem" class="input-field focus:ring-2 focus:ring-cyan-600/50 focus:border-cyan-600 focus:outline-none" required>
+                <option value="First Semester">First Semester</option>
+                <option value="Second Semester">Second Semester</option>
+                <option value="Summer">Summer</option>
               </select>
             </div>
             <div class="col-span-6 sm:col-span-3">

@@ -13,6 +13,7 @@ if (!empty($result)) {
   }
 
   include_once '../page/' . $table . ' /' . $table . '-table.php';
+  include_once '../page/' . $link . '/view-' . $modal . '-modal.php';
   include_once '../page/' . $link . '/edit-' . $modal . '-modal.php';
   include_once '../page/' . $link . '/delete-' . $modal . '-modal.php';
 }

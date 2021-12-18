@@ -12,16 +12,15 @@
         </button>
       </div>
       <form action="../includes/records.inc.php" method="post">
-        <input id="id" type="hidden" name="id">
         <div class="p-6 space-y-6">
           <div class="modal-grid">
             <div class="col-span-4 sm:col-span-3">
               <label for="studentnumber" class="label">Student ID</label>
-              <input id="studentnumber" type="text" class="input-field focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none" disabled readonly>
+              <input type="text" name="studentnumber" value="<?= $studentnumber; ?>" class="input-field focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none" readonly>
             </div>
             <div class="col-span-4 sm:col-span-3">
-              <label for="name" class="label">Student Name</label>
-              <input id="name" type="text" class="input-field focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none" disabled readonly>
+              <label class="label">Student Name</label>
+              <input type="text" value="<?= $studentname; ?>" class="input-field focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none" disabled readonly>
             </div>
             <div class="col-span-6 sm:col-span-3">
               <label for="status" class="label">Status</label>
@@ -51,13 +50,22 @@
               </select>
             </div>
             <div class="col-span-6 sm:col-span-3">
+              <label for="sem" class="label">Semester</label>
+              <select name="sem" class="input-field focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none" required>
+                <option value="" disabled selected hidden>Choose Semester</option>
+                <option value="First Semester">First Semester</option>
+                <option value="Second Semester">Second Semester</option>
+                <option value="Summer">Summer</option>
+              </select>
+            </div>
+            <div class="col-span-6 sm:col-span-3">
               <label for="date" class="label">Date Enrolled</label>
               <input type="date" name="date" class="input-field focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none" required>
             </div>
           </div>
         </div>
         <div class="items-center p-6 border-t border-gray-200 rounded-b">
-          <button type="submit" name="edit" class="btn-green-modal">Add record</button>
+          <button type="submit" name="add" class="btn-green-modal">Add record</button>
         </div>
       </form>
     </div>
