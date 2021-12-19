@@ -14,9 +14,10 @@
         </svg>
         <h3 class="mt-5 mb-6 text-xl font-normal text-gray-500">Are you sure you want to unassign this subject?</h3>
         <form action="../includes/subject-list.inc.php" method="get">
-          <div class="hidden">
-            <input id="id" type="hidden" name="id">
-          </div>
+          <input id="id" type="hidden" name="id">
+          <input type="hidden" name="syid" value="<?= $syid; ?>">
+          <input type="hidden" name="studentnumber" value="<?= $studentnumber; ?>">
+          <input type="hidden" name="course" value="<?= $course; ?>">
           <button type="submit" name="delete" class="btn-red-modal">
             Yes, I'm sure
           </button>

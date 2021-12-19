@@ -2,12 +2,12 @@
 
 class DisplaySubjects extends Dbh
 {
-  protected function getData($course, $id, $studentnumber)
+  protected function getData($course, $syid, $studentnumber)
   {
     $stmt = $this->connect()->prepare('SELECT * FROM tblgrades g, tblclass c WHERE g.student_number = ? AND g.sy_id = ? AND c.class_code = g.subj_code;');
     $result = 0;
 
-    if (!$stmt->execute([$studentnumber, $id])) {
+    if (!$stmt->execute([$studentnumber, $syid])) {
       $stmt = null;
       echo "error";
       exit;
@@ -48,20 +48,20 @@ class DisplaySubjects extends Dbh
 
 class DisplaySubjectsContr extends DisplaySubjects
 {
-  private $id;
+  private $syid;
   private $studentnumber;
   private $course;
 
-  public function __construct($course, $id, $studentnumber)
+  public function __construct($course, $syid, $studentnumber)
   {
-    $this->id = $id;
+    $this->syid = $syid;
     $this->studentnumber = $studentnumber;
     $this->course = $course;
   }
 
   public function fetchData()
   {
-    $result = $this->getData($this->course, $this->id, $this->studentnumber);
+    $result = $this->getData($this->course, $this->syid, $this->studentnumber);
     return $result;
   }
 
@@ -114,5 +114,5 @@ class DisplaySubjectOptionsContr extends DisplaySubjectOptions
 $subjectOptions = new DisplaySubjectOptionsContr($course);
 $options = $subjectOptions->fetchData();
 
-$display = new DisplaySubjectsContr($course, $id, $studentnumber);
+$display = new DisplaySubjectsContr($course, $syid, $studentnumber);
 $result = $display->fetchData();

@@ -12,9 +12,9 @@
         </button>
       </div>
       <form action="../includes/subject-list.inc.php" method="post">
-        <?php if (!empty($studentnumber)) { ?>
-          <input type="hidden" name="studentnumber" value="<?= $studentnumber; ?>">
-        <?php } ?>
+        <input type="hidden" name="syid" value="<?= $syid; ?>">
+        <input type="hidden" name="studentnumber" value="<?= $studentnumber; ?>">
+        <input type="hidden" name="course" value="<?= $course; ?>">
         <div class="p-6">
           <div class="flex flex-col min-w-full overflow-hidden overflow-x-auto align-middle shadow">
             <table class="min-w-full divide-y divide-gray-200 table-fixed">

@@ -13,7 +13,7 @@ if (!isset($_GET['studentnumber'])) {
 
 $user = $_SESSION['useruid'];
 
-$id = $_GET['id'];
+$syid = $_GET['id'];
 $studentnumber = $_GET['studentnumber'];
 $course = $_GET['course'];
 
