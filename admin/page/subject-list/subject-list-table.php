@@ -47,10 +47,10 @@
             </svg>
             <div class="text-sm font-normal text-gray-500">
               <div class="text-base font-semibold text-gray-900 capitalize">
-                <?= $data['class_name']; ?>
+                <?= $data['subj_name']; ?>
               </div>
               <div class="text-sm font-normal text-gray-500">
-                <?= $data['class_desc']; ?>
+                <?= $data['subj_desc']; ?>
               </div>
             </div>
           </td>

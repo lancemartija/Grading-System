@@ -4,7 +4,7 @@ class DisplaySubjectList extends Dbh
 {
   protected function getData($syid, $studentnumber)
   {
-    $stmt = $this->connect()->prepare('SELECT * FROM tblgrades g INNER JOIN tblclass c ON g.student_number = ? AND g.sy_id = ? AND c.class_code = g.subj_code;');
+    $stmt = $this->connect()->prepare('SELECT * FROM tblgrades g, tblsubjects s, tblclass c WHERE g.student_number = ? AND g.sy_id = ? AND s.subj_code = g.subj_code AND c.class_code = g.subj_code;');
     $result = 0;
 
     if (!$stmt->execute([$studentnumber, $syid])) {
@@ -23,10 +23,10 @@ class DisplaySubjectList extends Dbh
 
   protected function getSearchData($syid, $studentnumber, $query)
   {
-    $stmt = $this->connect()->prepare('SELECT * FROM tblgrades g INNER JOIN tblclass c ON g.student_number = ? AND g.sy_id = ? AND c.class_code = g.subj_code AND (c.class_name = ? OR c.class_desc = ? OR c.class_inst = ?);');
+    $stmt = $this->connect()->prepare('SELECT * FROM tblgrades g, tblsubjects s, tblclass c WHERE g.student_number = ? AND g.sy_id = ? AND s.subj_code = g.subj_code AND c.class_code = g.subj_code AND (g.grade_remarks = ? OR s.subj_name = ? OR s.subj_desc = ? OR c.class_inst = ?);');
     $result = 0;
 
-    if (!$stmt->execute([$studentnumber, $syid, $query, $query, $query])) {
+    if (!$stmt->execute([$studentnumber, $syid, $query, $query, $query, $query])) {
       $stmt = null;
       echo "error";
       exit;
