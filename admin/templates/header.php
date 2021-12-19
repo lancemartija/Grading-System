@@ -52,8 +52,15 @@
         <form class="flex lg:pr-2" action="#" method="get">
           <?php if (!empty($_GET['code'])) { ?>
             <input type="hidden" name="code" value="<?= $_GET['code']; ?>">
-          <?php } else if (!empty($_GET['studentnumber'])) { ?>
+          <?php }
+          if (!empty($_GET['id'])) { ?>
+            <input type="hidden" name="id" value="<?= $_GET['id']; ?>">
+          <?php }
+          if (!empty($_GET['studentnumber'])) { ?>
             <input type="hidden" name="studentnumber" value="<?= $_GET['studentnumber']; ?>">
+          <?php }
+          if (!empty($_GET['course'])) { ?>
+            <input type="hidden" name="course" value="<?= $_GET['course']; ?>">
           <?php } ?>
           <label for="users-search" class="sr-only">Search</label>
           <div class="relative mr-2 lg:w-64 xl:w-96">
