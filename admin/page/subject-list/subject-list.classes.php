@@ -1,10 +1,10 @@
 <?php
 
-class DisplaySubjects extends Dbh
+class DisplaySubjectList extends Dbh
 {
-  protected function getData($course, $syid, $studentnumber)
+  protected function getData($syid, $studentnumber)
   {
-    $stmt = $this->connect()->prepare('SELECT * FROM tblgrades g, tblclass c WHERE g.student_number = ? AND g.sy_id = ? AND c.class_code = g.subj_code;');
+    $stmt = $this->connect()->prepare('SELECT * FROM tblgrades g INNER JOIN tblclass c ON g.student_number = ? AND g.sy_id = ? AND c.class_code = g.subj_code;');
     $result = 0;
 
     if (!$stmt->execute([$studentnumber, $syid])) {
@@ -21,12 +21,12 @@ class DisplaySubjects extends Dbh
     return $result;
   }
 
-  protected function getSearchData($query)
+  protected function getSearchData($syid, $studentnumber, $query)
   {
-    $stmt = $this->connect()->prepare('SELECT * FROM tblgrades WHERE subj_code = ?;');
+    $stmt = $this->connect()->prepare('SELECT * FROM tblgrades g INNER JOIN tblclass c ON g.student_number = ? AND g.sy_id = ? AND c.class_code = g.subj_code AND (c.class_name = ? OR c.class_desc = ? OR c.class_inst = ?);');
     $result = 0;
 
-    if (!$stmt->execute([$query])) {
+    if (!$stmt->execute([$studentnumber, $syid, $query, $query, $query])) {
       $stmt = null;
       echo "error";
       exit;
@@ -46,29 +46,28 @@ class DisplaySubjects extends Dbh
   }
 }
 
-class DisplaySubjectsContr extends DisplaySubjects
+class DisplaySubjectListContr extends DisplaySubjectList
 {
   private $syid;
   private $studentnumber;
   private $course;
 
-  public function __construct($course, $syid, $studentnumber)
+  public function __construct($syid, $studentnumber, $course)
   {
     $this->syid = $syid;
     $this->studentnumber = $studentnumber;
-    $this->course = $course;
   }
 
   public function fetchData()
   {
-    $result = $this->getData($this->course, $this->syid, $this->studentnumber);
+    $result = $this->getData($this->syid, $this->studentnumber);
     return $result;
   }
 
   public function fetchSearchData($query)
   {
     $this->query = $query;
-    $result = $this->getSearchData($this->query);
+    $result = $this->getSearchData($this->syid, $this->studentnumber, $this->query);
     return $result;
   }
 }
@@ -114,5 +113,5 @@ class DisplaySubjectOptionsContr extends DisplaySubjectOptions
 $subjectOptions = new DisplaySubjectOptionsContr($course);
 $options = $subjectOptions->fetchData();
 
-$display = new DisplaySubjectsContr($course, $syid, $studentnumber);
+$display = new DisplaySubjectListContr($syid, $studentnumber, $course);
 $result = $display->fetchData();
