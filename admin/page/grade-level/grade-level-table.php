@@ -3,10 +3,10 @@
     <thead class="bg-gray-100">
       <tr>
         <th scope="col" class="th">
-          ID
+          No.
         </th>
         <th scope="col" class="th">
-          Grade Name
+          Grade Level
         </th>
         <th scope="col" class="th">
         </th>
