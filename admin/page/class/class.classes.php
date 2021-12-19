@@ -48,10 +48,10 @@ class DisplayClass extends Dbh
 
   protected function getSearchData($query)
   {
-    $stmt = $this->connect()->prepare('SELECT * FROM tblclass WHERE class_code = ? OR class_name = ? OR class_inst = ? OR class_level = ? OR class_room = ? OR class_day = ? OR class_time = ?;');
+    $stmt = $this->connect()->prepare('SELECT * FROM tblclass WHERE class_name = ? OR class_inst = ? OR class_room = ? OR class_day = ? OR class_time = ?;');
     $result = 0;
 
-    if (!$stmt->execute([$query, $query, $query, $query, $query, $query, $query])) {
+    if (!$stmt->execute([$query, $query, $query, $query, $query])) {
       $stmt = null;
       echo "error";
       exit;

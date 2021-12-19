@@ -46,10 +46,10 @@ class DisplayRecords extends Dbh
 
   protected function getRecord($query, $studentnumber)
   {
-    $stmt = $this->connect()->prepare('SELECT * FROM tblschoolyear WHERE OR sy_status = ? AND student_number = ?;');
+    $stmt = $this->connect()->prepare('SELECT * FROM tblschoolyear WHERE sy_level = ? OR sy_ay = ? OR sy_status = ? OR sy_enrolldate = ? AND student_number = ?;');
     $result = 0;
 
-    if (!$stmt->execute([$query, $studentnumber])) {
+    if (!$stmt->execute([$query, $query, $query, $query, $studentnumber])) {
       $stmt = null;
       exit;
     }

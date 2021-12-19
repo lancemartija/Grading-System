@@ -23,10 +23,10 @@ class DisplayStudents extends Dbh
 
   protected function getSearchData($query)
   {
-    $stmt = $this->connect()->prepare('SELECT * FROM tblstudents WHERE student_number = ? OR student_fname = ? OR student_mname = ? OR student_lname = ? OR student_gender = ? OR student_status = ? OR student_age = ? OR student_nationality = ? OR student_religion = ?;');
+    $stmt = $this->connect()->prepare('SELECT * FROM tblstudents WHERE student_number = ? OR student_fname = ? OR student_mname = ? OR student_lname = ? OR student_gender = ?;');
     $result = 0;
 
-    if (!$stmt->execute([$query, $query, $query, $query, $query, $query, $query, $query, $query])) {
+    if (!$stmt->execute([$query, $query, $query, $query, $query])) {
       $stmt = null;
       exit;
     }
@@ -68,10 +68,10 @@ class DisplaySubjects extends Dbh
 
   protected function getSearchData($query)
   {
-    $stmt = $this->connect()->prepare('SELECT * FROM tblsubjects WHERE subj_id = ? OR subj_code = ? OR subj_name = ? OR subj_level = ? OR subj_ay = ? OR subj_sem = ?;');
+    $stmt = $this->connect()->prepare('SELECT * FROM tblsubjects WHERE subj_name = ? OR subj_level = ? OR subj_ay = ? OR subj_sem = ?;');
     $result = 0;
 
-    if (!$stmt->execute([$query, $query, $query, $query, $query, $query])) {
+    if (!$stmt->execute([$query, $query, $query, $query])) {
       $stmt = null;
       exit;
     }
@@ -113,7 +113,7 @@ class DisplayYear extends Dbh
 
   protected function getSearchData($query)
   {
-    $stmt = $this->connect()->prepare('SELECT * FROM tblyear WHERE ay_id = ? OR ay_name = ?;');
+    $stmt = $this->connect()->prepare('SELECT * FROM tblyear WHERE ay_name = ?;');
     $result = 0;
 
     if (!$stmt->execute([$query, $query])) {
@@ -158,10 +158,10 @@ class DisplayGradeLevel extends Dbh
 
   protected function getSearchData($query)
   {
-    $stmt = $this->connect()->prepare('SELECT * FROM tblcourse WHERE course_id = ? OR course_code = ? OR course_name = ? OR course_level = ?;');
+    $stmt = $this->connect()->prepare('SELECT * FROM tblcourse WHERE course_name = ? OR course_level = ?;');
     $result = 0;
 
-    if (!$stmt->execute([$query, $query, $query, $query])) {
+    if (!$stmt->execute([$query, $query])) {
       $stmt = null;
       exit;
     }
@@ -204,10 +204,10 @@ class DisplayFaculty extends Dbh
 
   protected function getSearchData($query)
   {
-    $stmt = $this->connect()->prepare('SELECT * FROM tblinstructor WHERE inst_id = ? OR inst_code = ? OR inst_name = ? OR inst_gender = ? OR inst_status = ? OR inst_email = ? OR inst_empstatus = ?;');
+    $stmt = $this->connect()->prepare('SELECT * FROM tblinstructor WHERE inst_name = ? OR inst_gender = ? OR inst_empstatus = ?;');
     $result = 0;
 
-    if (!$stmt->execute([$query, $query, $query, $query, $query, $query, $query])) {
+    if (!$stmt->execute([$query, $query, $query])) {
       $stmt = null;
       exit;
     }
@@ -249,10 +249,10 @@ class DisplayDept extends Dbh
 
   protected function getSearchData($query)
   {
-    $stmt = $this->connect()->prepare('SELECT * FROM tbldepartment WHERE dept_id = ? OR dept_code = ? OR dept_name = ? OR dept_desc = ?;');
+    $stmt = $this->connect()->prepare('SELECT * FROM tbldepartment WHERE dept_id = ? OR dept_name = ? OR dept_desc = ?;');
     $result = 0;
 
-    if (!$stmt->execute([$query, $query, $query, $query])) {
+    if (!$stmt->execute([$query, $query, $query])) {
       $stmt = null;
       exit;
     }
@@ -294,7 +294,7 @@ class DisplayRooms extends Dbh
 
   protected function getSearchData($query)
   {
-    $stmt = $this->connect()->prepare('SELECT * FROM tblrooms WHERE room_id = ? OR room_code = ?  OR room_name = ?;');
+    $stmt = $this->connect()->prepare('SELECT * FROM tblrooms WHERE room_id = ? OR room_name = ? OR room_desc = ?;');
     $result = 0;
 
     if (!$stmt->execute([$query, $query, $query])) {
@@ -339,10 +339,10 @@ class DisplayUsers extends Dbh
 
   protected function getUser($query)
   {
-    $stmt = $this->connect()->prepare('SELECT * FROM tbluseraccounts WHERE account_id = ? OR account_firstname = ? OR account_lastname = ? OR account_email = ? OR account_username = ? OR account_type = ?;');
+    $stmt = $this->connect()->prepare('SELECT * FROM tbluseraccounts WHERE account_id = ? OR account_firstname = ? OR account_lastname = ? OR account_username = ? OR account_type = ?;');
     $result = 0;
 
-    if (!$stmt->execute([$query, $query, $query, $query, $query, $query])) {
+    if (!$stmt->execute([$query, $query, $query, $query, $query])) {
       $stmt = null;
       exit;
     }
