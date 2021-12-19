@@ -23,7 +23,7 @@ class Login extends Dbh
 
     if ($checkedPwd == false) {
       $stmt = null;
-      header("Location: ../index.php?error=wrongpassword");
+      header("Location: ../index.php?error=invalid");
       exit;
     } else {
       $pwd = $pwdHashed[0]['account_password'];

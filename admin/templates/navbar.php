@@ -1,7 +1,7 @@
 <header class="fixed z-30 w-full bg-white border-b border-gray-200">
   <nav class="flex items-center justify-between p-3">
     <div class="flex items-center justify-start">
-      <a href="#" class="ml-3 text-xl font-bold text-gray-500 uppercase transition duration-75 hover:text-gray-900">Student Grading System</a>
+      <a href="#" class="ml-3 text-xl font-bold text-gray-900 uppercase transition duration-75">Student Grading System</a>
     </div>
     <div class="relative text-left group">
       <button type="button" class="flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm" id="menu-button" aria-expanded="true" aria-haspopup="true">
