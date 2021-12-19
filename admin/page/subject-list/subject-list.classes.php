@@ -74,12 +74,12 @@ class DisplaySubjectListContr extends DisplaySubjectList
 
 class DisplaySubjectOptions extends Dbh
 {
-  protected function getData($course)
+  protected function getData($course, $studentnumber)
   {
-    $stmt = $this->connect()->prepare('SELECT * FROM tblsubjects s WHERE s.subj_level = ? AND s.subj_code NOT IN (SELECT subj_code FROM tblgrades);');
+    $stmt = $this->connect()->prepare('SELECT * FROM tblsubjects s WHERE s.subj_level = ? AND s.subj_code NOT IN (SELECT subj_code FROM tblgrades g WHERE g.student_number = ?);');
     $result = 0;
 
-    if (!$stmt->execute([$course])) {
+    if (!$stmt->execute([$course, $studentnumber])) {
       $stmt = null;
       echo "error";
       exit;
@@ -97,20 +97,22 @@ class DisplaySubjectOptions extends Dbh
 class DisplaySubjectOptionsContr extends DisplaySubjectOptions
 {
   private $course;
+  private $studentnumber;
 
-  public function __construct($course)
+  public function __construct($course, $studentnumber)
   {
     $this->course = $course;
+    $this->studentnumber = $studentnumber;
   }
 
   public function fetchData()
   {
-    $result = $this->getData($this->course);
+    $result = $this->getData($this->course, $this->studentnumber);
     return $result;
   }
 }
 
-$subjectOptions = new DisplaySubjectOptionsContr($course);
+$subjectOptions = new DisplaySubjectOptionsContr($course, $studentnumber);
 $options = $subjectOptions->fetchData();
 
 $display = new DisplaySubjectListContr($syid, $studentnumber, $course);
