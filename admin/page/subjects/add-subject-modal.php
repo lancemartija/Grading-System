@@ -43,8 +43,9 @@
               <label for="ay" class="label">Academic Year</label>
               <select name="ay" class="input-field focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none">
                 <option value="" disabled selected hidden>Choose Academic Year</option>
-                <option value="2021-2022">2021-2022</option>
-                <option value="2022-2023">2022-2023</option>
+                <?php foreach ($year as $data) : ?>
+                  <option value="<?= $data['ay_name']; ?>"><?= $data['ay_name']; ?></option>
+                <?php endforeach ?>
               </select>
             </div>
             <div class="col-span-6 sm:col-span-3">
