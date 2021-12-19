@@ -14,7 +14,7 @@
       <div class="p-6 space-y-6">
         <div class="modal-grid">
           <div class="col-span-6 sm:col-span-3">
-            <label for="code" class="label">Code</label>
+            <label for="code" class="label">Instructor Code</label>
             <input id="code" type="text" class="input-field-view" placeholder="0000" disabled readonly>
           </div>
           <div class="col-span-6 sm:col-span-3">
