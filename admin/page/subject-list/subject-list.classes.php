@@ -76,7 +76,7 @@ class DisplaySubjectOptions extends Dbh
 {
   protected function getData($course)
   {
-    $stmt = $this->connect()->prepare('SELECT * FROM tblsubjects WHERE subj_level = ?;');
+    $stmt = $this->connect()->prepare('SELECT * FROM tblsubjects s WHERE s.subj_level = ? AND s.subj_code NOT IN (SELECT subj_code FROM tblgrades);');
     $result = 0;
 
     if (!$stmt->execute([$course])) {
