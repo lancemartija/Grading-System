@@ -18,6 +18,7 @@ $page = $search = $breadcrumb1 = 'faculties';
 $btn = $modal = $link = $table = 'faculty';
 $searchlink = 'faculty.php';
 $breadcrumblink = '#';
+$search .= ' (Name, Gender, Employment Status)'
 ?>
 
 <!DOCTYPE html>

@@ -24,6 +24,7 @@ $breadcrumblink = 'faculty.php';
 $modal = 'load';
 $btn = 'subject';
 $searchlink = 'loads.php?code=' . $instructor;
+$search .= ' (Subject Name, Course, Room, Schedule)';
 $i = 0;
 ?>
 

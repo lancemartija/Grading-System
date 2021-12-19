@@ -18,6 +18,7 @@ $page = $table = $search = $link = $breadcrumb1 = 'users';
 $btn = $modal = 'user';
 $searchlink = 'users.php';
 $breadcrumblink = '#';
+$search .= ' (ID, Name, Username, Type)';
 ?>
 
 <!DOCTYPE html>

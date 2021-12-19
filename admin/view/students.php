@@ -14,10 +14,11 @@ include_once '../controller/display-data.contr.php';
 
 $display = new DisplayStudentsContr;
 
-$page = $search = $breadcrumb1 = $table = $link = 'students';
+$page = $breadcrumb1 = $search = $table = $link = 'students';
 $modal = $btn = 'student';
 $searchlink = 'students.php';
 $breadcrumblink = '#';
+$search .= ' (Student ID, Name, Gender)';
 $i = 0;
 ?>
 

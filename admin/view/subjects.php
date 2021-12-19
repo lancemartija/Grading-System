@@ -19,6 +19,7 @@ $page = $breadcrumb1 =  $search = $link = $table = 'subjects';
 $btn = $modal = 'subject';
 $searchlink = 'subjects.php';
 $breadcrumblink = '#';
+$search .= ' (Name, Course, School Year, Semester)';
 ?>
 
 <!DOCTYPE html>

@@ -26,6 +26,7 @@ $search = $table = $link = 'records';
 $breadcrumb2 = $page = 'Enrollment Records';
 $modal = $btn = 'record';
 $searchlink = 'records.php?studentnumber=' . $studentnumber;
+$search .= ' (Course, AY, Status, Date of Enrollment)';
 $i = 0;
 ?>
 

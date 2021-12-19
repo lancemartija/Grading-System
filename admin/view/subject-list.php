@@ -22,12 +22,12 @@ include_once '../page/subject-list/subject-list.classes.php';
 
 $breadcrumb1 = 'students';
 $breadcrumblink = 'students.php';
-$breadcrumblink2 = 'records.php?studentnumber=' . $_GET['studentnumber'];
-$search = 'subjects';
+$breadcrumblink2 = 'records.php?studentnumber=' . $studentnumber;
+$search = 'subjects (Subject Name, Instructor, Remarks)';
 $breadcrumb2 = 'Enrollment Records';
 $table = 'subject-list';
 $modal = $btn = 'subject';
-$searchlink = 'subject-list.php?studentnumber=' . $studentnumber;
+$searchlink = 'subject-list.php?id=' . $syid . '&studentnumber=' . $studentnumber . '&course=' . $course;
 $page = $breadcrumb3 = 'Enrolled Subjects';
 $i = 0;
 ?>
