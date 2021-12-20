@@ -23,7 +23,7 @@
                 <form class="mt-8 space-y-6" action="includes/student-login.inc.php" method="post">
                     <div>
                         <label for="studentid" class="block mb-2 text-sm font-medium text-gray-700"> Your Student ID</label>
-                        <input type="text" name="studentid" class="bg-gray-50 border border-gray-300 text-gray-900 focus:outline-none sm:text-sm rounded-lg focus:ring-green-600/50 focus:border-green-600 focus:ring-2 block w-full p-2.5" placeholder="Student ID">
+                        <input type="text" name="studentid" class="bg-gray-50 border border-gray-300 text-gray-900 focus:outline-none sm:text-sm rounded-lg focus:ring-blue-600/50 focus:border-blue-600 focus:ring-2 block w-full p-2.5" placeholder="Student ID">
                     </div>
 
                     <div class="flex items-start">
@@ -34,15 +34,13 @@
               <label for="remember" class="font-medium text-gray-700">Remember me</label>
             </div> -->
                         <div class="text-sm">
-                            <span class="text-red-600"><?= (isset($_GET['error']) && $_GET['error'] == 'invalid') ? 'Invalid Username or Password' : ((isset($_GET['error']) && $_GET['error'] == 'usernotfound') ? 'User not found. Please try again.' : ''); ?></span>
+                            <span class="text-red-600"><?= (isset($_GET['error']) && $_GET['error'] == 'empty') ? 'Please enter your student ID.' : ((isset($_GET['error']) && $_GET['error'] == 'usernotfound') ? 'Student not found. Please try again.' : ''); ?></span>
                         </div>
-
-                        <a href="#" onclick="alert('Please contact other administrators for further instructions.');" class="ml-auto text-sm text-green-600 hover:underline">Lost Password?</a>
                     </div>
-                    <button type="submit" name="submit" class="w-full px-5 py-3 text-base font-medium text-center text-white transition duration-200 bg-green-600 rounded-lg hover:bg-green-700 focus:outline-none focus:ring-4 focus:ring-green-500 focus:ring-opacity-50 sm:w-auto">Login to account</button>
+                    <button type="submit" name="submit" class="w-full px-5 py-3 text-base font-medium text-center text-white transition duration-200 bg-blue-600 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 sm:w-auto">Login to account</button>
                 </form>
                 <div class="text-sm text-gray-500">
-                    Not a Student?<br><a href="../" class="text-green-600 hover:underline">Return to selection menu</a>
+                    Not a Student?<br><a href="../" class="text-blue-600 hover:underline">Return to selection menu</a>
                 </div>
             </div>
         </section>
