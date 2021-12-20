@@ -2,14 +2,11 @@
 
 class StudentLogin extends Dbh
 {
-
-    protected function getUser($studentID)
+    protected function getUser($studentid)
     {
-
         $stmt = $this->connect()->prepare("SELECT * FROM tblstudents WHERE student_number = ?;");
 
-
-        if (!$stmt->execute([$studentID])) {
+        if (!$stmt->execute([$studentid])) {
             $stmt = null;
             header("Location: ../index.php?error=stmtfailed");
             exit;
