@@ -3,7 +3,7 @@
 class Dbh
 {
   private $hostname = 'localhost';
-  private $username = 'admin';
+  private $username = 'root';
   private $password = '';
   private $dbname = 'dbgradingsystem';
 

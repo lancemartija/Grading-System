@@ -1,3 +1,3 @@
 <?php
 
-# student dashboard
+echo "dashboard";
