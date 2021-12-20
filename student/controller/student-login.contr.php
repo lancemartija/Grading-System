@@ -1,13 +1,12 @@
 <?php
 
-class LoginCtr extends StudentLogin
+class StudentLoginContr extends StudentLogin
 {
+    private $studentid;
 
-    private $StudentID;
-
-    public function __construct($StudentID)
+    public function __construct($studentid)
     {
-        $this->StudentID = $StudentID;
+        $this->studentid = $studentid;
     }
 
     public function loginUser()
@@ -17,12 +16,12 @@ class LoginCtr extends StudentLogin
             exit;
         }
 
-        $this->getUser($this->StudentID);
+        $this->getUser($this->studentid);
     }
 
     private function emptyInput()
     {
-        if (empty($this->StudentID)) {
+        if (empty($this->studentid)) {
             return false;
         }
         return true;
