@@ -76,7 +76,8 @@ $i = 0;
                 </li>
               </ol>
             </nav>
-            <h1 class="flex items-center text-xl font-semibold text-gray-900 sm:text-2xl">List of Students <span class="inline-flex items-center px-3 py-1.5 ml-2 text-sm font-medium text-center text-white bg-teal-500 rounded-2xl shadow-sm"><?= $result[0]['subj_name']; ?></span></h1>
+            <h1 class="flex items-center text-xl font-semibold text-gray-900 sm:text-2xl">List of Students<?php if (!empty($result)) { ?><span class="inline-flex items-center px-3 py-1.5 ml-2 text-sm font-medium text-center text-white bg-teal-500 rounded-2xl shadow-sm"><?= $result[0]['subj_name']; ?></span><?php } ?>
+            </h1>
           </div>
           <div class="sm:flex">
             <div class="items-center hidden mb-3 sm:flex sm:divide-x sm:divide-gray-100 sm:mb-0">

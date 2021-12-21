@@ -9,6 +9,9 @@
           Name
         </th>
         <th scope="col" class="th">
+          Gender
+        </th>
+        <th scope="col" class="th">
           Address
         </th>
         <th scope="col" class="th">
@@ -40,6 +43,11 @@
               <div class="text-sm font-normal text-gray-500">
                 <?= $data['inst_email']; ?>
               </div>
+            </div>
+          </td>
+          <td class="td">
+            <div class="flex items-center capitalize">
+              <?= $data['inst_gender']; ?>
             </div>
           </td>
           <td class="td">

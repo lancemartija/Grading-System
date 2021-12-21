@@ -9,7 +9,10 @@
           Name
         </th>
         <th scope="col" class="th">
-          Position
+          Username
+        </th>
+        <th scope="col" class="th">
+          Type
         </th>
         <th scope="col" class="th">
         </th>
@@ -34,6 +37,11 @@
               <div class="text-sm font-normal text-gray-500">
                 <?= $data['account_email']; ?>
               </div>
+            </div>
+          </td>
+          <td class="td">
+            <div class="flex items-center capitalize">
+              <?= $data['account_username']; ?>
             </div>
           </td>
           <td class="td">
