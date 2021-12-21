@@ -15,7 +15,7 @@
         <div class="p-6 space-y-6">
           <div class="modal-grid">
             <div class="col-span-6 sm:col-span-3">
-              <label for="code" class="label">Code</label>
+              <label for="code" class="label">Instructor Code</label>
               <input type="number" name="code" class="input-field focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none" placeholder="0000" required>
             </div>
             <div class="col-span-6 sm:col-span-3">
