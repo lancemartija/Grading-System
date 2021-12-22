@@ -12,11 +12,11 @@ include_once '../database/database.classes.php';
 include_once '../classes/display-data.classes.php';
 include_once '../controller/display-data.contr.php';
 
-$display = new DisplayFacultyContr;
+$display = new DisplayInstructorContr;
 
-$page = $search = $breadcrumb1 = 'faculties';
-$btn = $modal = $link = $table = 'faculty';
-$searchlink = 'faculty.php';
+$page = $search = $breadcrumb1 = 'instructors';
+$btn = $modal = $link = $table = 'instructor';
+$searchlink = 'instructor.php';
 $breadcrumblink = '#';
 $search .= ' (Name, Gender, Employment Status)'
 ?>
@@ -28,12 +28,12 @@ $search .= ' (Name, Gender, Employment Status)'
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Faculty</title>
+  <title>Instructor</title>
   <link rel="stylesheet" href="../../src/css/tailwind.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <script async defer src="../../src/js/faculty-modal.js"></script>
+  <script async defer src="../../src/js/instructor-modal.js"></script>
 </head>
 
 <body>
@@ -44,7 +44,7 @@ $search .= ' (Name, Gender, Employment Status)'
       <main>
         <?php
         include_once '../templates/header.php';
-        include_once '../page/faculty/add-faculty-modal.php';
+        include_once '../page/instructor/add-instructor-modal.php';
         include_once '../includes/display-data.inc.php';
         ?>
       </main>

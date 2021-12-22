@@ -87,7 +87,7 @@ class DisplayGradeLevelContr extends DisplayGradeLevel
   }
 }
 
-class DisplayFacultyContr extends DisplayFaculty
+class DisplayInstructorContr extends DisplayInstructor
 {
   private $query;
 

@@ -1,6 +1,6 @@
 <?php
 
-class AddFacultyContr extends AddFaculty
+class AddInstructorContr extends AddInstructor
 {
   private $code;
   private $name;
@@ -21,24 +21,24 @@ class AddFacultyContr extends AddFaculty
     $this->empstatus = $empstatus;
   }
 
-  public function addFaculty()
+  public function addInstructor()
   {
     if ($this->emptyInput() == false) {
-      header('Location: ../view/faculty.php?error=emptyinput');
+      header('Location: ../view/instructor.php?error=emptyinput');
       exit;
     }
 
     if ($this->checkCode($this->code) == false) {
-      header('Location: ../view/faculty.php?error=facultyalreadyexists');
+      header('Location: ../view/instructor.php?error=instructoralreadyexists');
       exit;
     }
 
     if ($this->invalidEmail() == false) {
-      header('Location: ../view/faculty.php?error=invalidemail');
+      header('Location: ../view/instructor.php?error=invalidemail');
       exit;
     }
 
-    $this->setFaculty($this->code, $this->name, $this->address, $this->gender, $this->status, $this->email, $this->empstatus);
+    $this->setInstructor($this->code, $this->name, $this->address, $this->gender, $this->status, $this->email, $this->empstatus);
   }
 
   private function emptyInput()
@@ -58,7 +58,7 @@ class AddFacultyContr extends AddFaculty
   }
 }
 
-class EditFacultyContr extends EditFaculty
+class EditInstructorContr extends EditInstructor
 {
   private $id;
   private $name;
@@ -79,19 +79,19 @@ class EditFacultyContr extends EditFaculty
     $this->empstatus = $empstatus;
   }
 
-  public function editFaculty()
+  public function editInstructor()
   {
     if ($this->emptyInput() == false) {
-      header('Location: ../view/faculty.php?error=emptyinput');
+      header('Location: ../view/instructor.php?error=emptyinput');
       exit;
     }
 
     if ($this->invalidEmail() == false) {
-      header('Location: ../view/faculty.php?error=invalidemail');
+      header('Location: ../view/instructor.php?error=invalidemail');
       exit;
     }
 
-    $this->setFaculty($this->id, $this->name, $this->address, $this->gender, $this->status, $this->email, $this->empstatus);
+    $this->setInstructor($this->id, $this->name, $this->address, $this->gender, $this->status, $this->email, $this->empstatus);
   }
 
   private function emptyInput()
@@ -111,7 +111,7 @@ class EditFacultyContr extends EditFaculty
   }
 }
 
-class DeleteFacultyContr extends DeleteFaculty
+class DeleteInstructorContr extends DeleteInstructor
 {
   private $id;
 
@@ -120,8 +120,8 @@ class DeleteFacultyContr extends DeleteFaculty
     $this->id = $id;
   }
 
-  public function deleteFaculty()
+  public function deleteInstructor()
   {
-    $this->setFaculty($this->id);
+    $this->setInstructor($this->id);
   }
 }

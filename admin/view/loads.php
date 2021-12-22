@@ -7,7 +7,7 @@ if (!isset($_SESSION['userid']) && !isset($_SESSION['useruid'])) {
 }
 
 if (!isset($_GET['code'])) {
-  header('Location: faculty.php');
+  header('Location: instructor.php');
   exit;
 }
 
@@ -18,9 +18,9 @@ include_once '../database/database.classes.php';
 include_once '../page/loads/loads.classes.php';
 
 $table = $search = 'loads';
-$breadcrumb1 = 'faculties';
+$breadcrumb1 = 'instructors';
 $page = $breadcrumb2 = 'List of Loads';
-$breadcrumblink = 'faculty.php';
+$breadcrumblink = 'instructor.php';
 $modal = 'load';
 $btn = 'subject';
 $searchlink = 'loads.php?code=' . $instructor;
@@ -35,7 +35,7 @@ $i = 0;
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Faculty</title>
+  <title>Instructor</title>
   <link rel="stylesheet" href="../../src/css/tailwind.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

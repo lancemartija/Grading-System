@@ -221,7 +221,7 @@ class DisplayGradeLevel extends Dbh
   }
 }
 
-class DisplayFaculty extends Dbh
+class DisplayInstructor extends Dbh
 {
   protected function getData()
   {

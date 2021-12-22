@@ -1,14 +1,14 @@
 <?php
 
-class AddFaculty extends Dbh
+class AddInstructor extends Dbh
 {
-  protected function setFaculty($code, $name, $address, $gender, $status, $email, $empstatus)
+  protected function setInstructor($code, $name, $address, $gender, $status, $email, $empstatus)
   {
     $stmt = $this->connect()->prepare('INSERT INTO tblinstructor (inst_code, inst_name, inst_address, inst_gender, inst_status, inst_email, inst_empstatus) VALUES(?, ?, ?, ?, ?, ?, ?);');
 
     if (!$stmt->execute([$code, $name, $address, $gender, $status, $email, $empstatus])) {
       $stmt = null;
-      header("Location: ../view/faculty.php?error=stmtfailed");
+      header("Location: ../view/instructor.php?error=stmtfailed");
       exit;
     }
 
@@ -21,7 +21,7 @@ class AddFaculty extends Dbh
 
     if (!$stmt->execute([$code])) {
       $stmt = null;
-      header('Location: ../view/faculty.php?error=stmtfailed');
+      header('Location: ../view/instructor.php?error=stmtfailed');
       exit;
     }
 
@@ -33,15 +33,15 @@ class AddFaculty extends Dbh
   }
 }
 
-class EditFaculty extends Dbh
+class EditInstructor extends Dbh
 {
-  protected function setFaculty($id, $name, $address, $gender, $status, $email, $empstatus)
+  protected function setInstructor($id, $name, $address, $gender, $status, $email, $empstatus)
   {
     $stmt = $this->connect()->prepare('UPDATE tblinstructor SET inst_name = ?, inst_address = ?, inst_gender = ?, inst_status = ?, inst_email = ?, inst_empstatus = ? WHERE inst_id = ?; UPDATE tblclass c INNER JOIN tblinstructor i ON c.inst_code = i.inst_code SET c.class_inst = i.inst_name;');
 
     if (!$stmt->execute([$name, $address, $gender, $status, $email, $empstatus, $id])) {
       $stmt = null;
-      header("Location: ../view/faculty.php?error=stmtfailed");
+      header("Location: ../view/instructor.php?error=stmtfailed");
       exit;
     }
 
@@ -49,15 +49,15 @@ class EditFaculty extends Dbh
   }
 }
 
-class DeleteFaculty extends Dbh
+class DeleteInstructor extends Dbh
 {
-  protected function setFaculty($id)
+  protected function setInstructor($id)
   {
     $stmt = $this->connect()->prepare('DELETE FROM tblinstructor WHERE inst_id = ?; SET @num := 0; UPDATE tblinstructor SET inst_id = @num := (@num+1); ALTER TABLE tblinstructor AUTO_INCREMENT = 1;');
 
     if (!$stmt->execute([$id])) {
       $stmt = null;
-      header("Location: ../view/faculty.php?error=stmtfailed");
+      header("Location: ../view/instructor.php?error=stmtfailed");
       exit;
     }
 
