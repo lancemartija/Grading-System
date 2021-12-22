@@ -17,5 +17,13 @@ class StudentLogin extends Dbh
             header("Location: ../index.php?error=usernotfound");
             exit;
         }
+
+        $student = $stmt->fetchAll();
+        session_start();
+
+        $_SESSION["lname"] = $student[0]["student_lname"];
+        $_SESSION["fname"] = $student[0]["student_fname"];
+        $_SESSION["mname"] = $student[0]["student_mname"];
+        $stmt = null;
     }
 }
