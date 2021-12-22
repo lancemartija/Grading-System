@@ -25,14 +25,7 @@
                         <label for="studentid" class="block mb-2 text-sm font-medium text-gray-700"> Your Student ID</label>
                         <input type="text" name="studentid" class="bg-gray-50 border border-gray-300 text-gray-900 focus:outline-none sm:text-sm rounded-lg focus:ring-blue-600/50 focus:border-blue-600 focus:ring-2 block w-full p-2.5" placeholder="Student ID">
                     </div>
-
                     <div class="flex items-start">
-                        <!-- <div class="flex items-center h-5">
-              <input id="remember" aria-describedby="remember" name="remember" type="checkbox" class="w-4 h-4 border-gray-300 rounded bg-gray-50" required="">
-            </div>
-            <div class="ml-3 text-sm">
-              <label for="remember" class="font-medium text-gray-700">Remember me</label>
-            </div> -->
                         <div class="text-sm">
                             <span class="text-red-600"><?= (isset($_GET['error']) && $_GET['error'] == 'empty') ? 'Please enter your student ID.' : ((isset($_GET['error']) && $_GET['error'] == 'usernotfound') ? 'Student not found. Please try again.' : ''); ?></span>
                         </div>
