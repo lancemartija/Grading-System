@@ -1,5 +1,46 @@
 <?php
 
+class DisplayDashboard extends Dbh
+{
+  protected function getStats()
+  {
+    $sql = 'SELECT (SELECT COUNT(*) FROM tblstudents) AS students, (SELECT COUNT(*) FROM tblinstructor) AS instructors, (SELECT COUNT(*) FROM tblclass) AS classes;';
+    $stmt = $this->connect()->query($sql);
+    $result = 0;
+
+    if (!$stmt) {
+      $stmt = null;
+      exit;
+    }
+
+    while ($row = $stmt->fetchAll(PDO::FETCH_ASSOC)) {
+      $result = $row;
+    }
+
+    $stmt = null;
+    return $result;
+  }
+
+  protected function getTopPerformers()
+  {
+    $sql = 'SELECT DISTINCT student_id, student_fname,  student_mname,  student_lname, student_email, g.grade_avg, subj.subj_name FROM tblstudents s, tblgrades g, tblsubjects subj WHERE s.student_number = g.student_number AND g.grade_avg > 89 AND subj.subj_code = g.subj_code ORDER BY g.grade_avg DESC LIMIT 5;';
+    $stmt = $this->connect()->query($sql);
+    $result = 0;
+
+    if (!$stmt) {
+      $stmt = null;
+      exit;
+    }
+
+    while ($row = $stmt->fetchAll(PDO::FETCH_ASSOC)) {
+      $result = $row;
+    }
+
+    $stmt = null;
+    return $result;
+  }
+}
+
 class DisplayStudents extends Dbh
 {
   protected function getData()

@@ -1,5 +1,20 @@
 <?php
 
+class DisplayDashboardContr extends DisplayDashboard
+{
+  public function fetchStats()
+  {
+    $result = $this->getStats();
+    return $result;
+  }
+
+  public function fetchTopPerformers()
+  {
+    $result = $this->getTopPerformers();
+    return $result;
+  }
+}
+
 class DisplayStudentsContr extends DisplayStudents
 {
   private $query;
