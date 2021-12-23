@@ -82,4 +82,24 @@
   .btn-close-modal {
     @apply text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center;
   }
+
+  .alert {
+    @apply fixed bottom-0 right-0 p-4 mb-4 mr-4 text-sm rounded-lg;
+  }
+
+  .alert-success {
+    @apply text-green-700 bg-green-100;
+  }
+
+  .alert-info {
+    @apply text-blue-700 bg-blue-100;
+  }
+
+  .alert-warning {
+    @apply text-yellow-700 bg-yellow-100;
+  }
+
+  .alert-danger {
+    @apply text-red-700 bg-red-100;
+  }
 }
