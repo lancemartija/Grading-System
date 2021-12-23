@@ -29,7 +29,7 @@ class AddInstructorContr extends AddInstructor
     }
 
     if ($this->checkCode($this->code) == false) {
-      header('Location: ../view/instructor.php?error=instructoralreadyexists');
+      header('Location: ../view/instructor.php?error=alreadyexists');
       exit;
     }
 

@@ -14,7 +14,7 @@ if (isset($_POST['add'])) {
   $addYear->addYear();
 
   # Going to Years Page
-  header('Location: ../view/year.php?success=yearadded');
+  header('Location: ../view/year.php?success=added');
 }
 
 if (isset($_POST['edit'])) {
@@ -32,7 +32,7 @@ if (isset($_POST['edit'])) {
   $editYear->editYear();
 
   # Going to Years Page
-  header('Location: ../view/year.php?success=yearedited');
+  header('Location: ../view/year.php?success=edited');
 }
 
 if (isset($_GET['delete'])) {
@@ -49,5 +49,5 @@ if (isset($_GET['delete'])) {
   $deleteYear->deleteYear();
 
   # Going to Years Page
-  header('Location: ../view/year.php?success=yeardeleted');
+  header('Location: ../view/year.php?success=deleted');
 }

@@ -38,6 +38,7 @@ $i = 0;
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <script async defer src="../../src/js/student-list-modal.js"></script>
+  <script async defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -108,6 +109,14 @@ $i = 0;
       <?php include_once '../page/student-list/display-data.inc.php'; ?>
     </main>
   </div>
+  <?php if (isset($_GET['error']) && $_GET['error'] == 'stmtfailed') { ?>
+    <div class="fixed bottom-0 right-0 p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800 alert">
+      <span class="font-medium">Danger!</span> Request error. Please try again.
+    </div>
+  <?php } ?>
+  <script>
+    $(".alert").delay(6000).fadeOut(600);
+  </script>
 </body>
 
 </html>

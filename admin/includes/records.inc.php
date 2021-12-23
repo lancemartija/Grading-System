@@ -18,7 +18,7 @@ if (isset($_POST['add'])) {
   $addRecords->addRecords();
 
   # Going to Recordss Page
-  header('Location: ../view/records.php?studentnumber=' . $studentnumber . '&success=studentrecordadded');
+  header('Location: ../view/records.php?studentnumber=' . $studentnumber . '&success=added');
 }
 
 if (isset($_POST['edit'])) {
@@ -40,7 +40,7 @@ if (isset($_POST['edit'])) {
   $editRecords->editRecords();
 
   # Going to Recordss Page
-  header('Location: ../view/records.php?studentnumber=' . $studentnumber . '&success=studentrecordedited');
+  header('Location: ../view/records.php?studentnumber=' . $studentnumber . '&success=edited');
 }
 
 if (isset($_POST['delete'])) {
@@ -58,5 +58,5 @@ if (isset($_POST['delete'])) {
   $deleteRecords->deleteRecords();
 
   # Going to Recordss Page
-  header('Location: ../view/records.php?studentnumber=' . $studentnumber . '&success=studentrecorddeleted');
+  header('Location: ../view/records.php?studentnumber=' . $studentnumber . '&success=deleted');
 }

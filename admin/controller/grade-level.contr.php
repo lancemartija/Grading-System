@@ -21,7 +21,7 @@ class AddGradeLevelContr extends AddGradeLevel
     }
 
     if ($this->checkCode($this->code) == false) {
-      header('Location: ../view/grade-level.php?error=gradelevelalreadyexists');
+      header('Location: ../view/grade-level.php?error=alreadyexists');
       exit;
     }
 

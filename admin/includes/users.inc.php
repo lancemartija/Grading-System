@@ -19,7 +19,7 @@ if (isset($_POST['add'])) {
   $addUser->addUser();
 
   # Going to Users Page
-  header('Location: ../view/users.php?success=useradded');
+  header('Location: ../view/users.php?success=added');
 }
 
 if (isset($_POST['edit'])) {
@@ -42,7 +42,7 @@ if (isset($_POST['edit'])) {
   $editUser->editUser();
 
   # Going to Users Page
-  header('Location: ../view/users.php?success=useredited');
+  header('Location: ../view/users.php?success=edited');
 }
 
 if (isset($_GET['delete'])) {
@@ -59,5 +59,5 @@ if (isset($_GET['delete'])) {
   $deleteUser->deleteUser();
 
   # Going to Users Page
-  header('Location: ../view/users.php?success=userdeleted');
+  header('Location: ../view/users.php?success=deleted');
 }

@@ -43,7 +43,7 @@ class AddStudentsContr extends AddStudents
     }
 
     if ($this->checkStudentNumber($this->studentnumber) == false) {
-      header('Location: ../view/students.php?error=studentalreadyexists');
+      header('Location: ../view/students.php?error=alreadyexists');
       exit;
     }
 

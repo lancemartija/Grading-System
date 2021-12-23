@@ -29,7 +29,7 @@ class AddSubjectsContr extends AddSubjects
     }
 
     if ($this->checkCode($this->code) == false) {
-      header('Location: ../view/subjects.php?error=subjectalreadyexists');
+      header('Location: ../view/subjects.php?error=alreadyexists');
       exit;
     }
 

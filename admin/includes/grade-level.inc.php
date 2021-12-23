@@ -16,7 +16,7 @@ if (isset($_POST['add'])) {
   $addGradeLevel->addGradeLevel();
 
   # Going to GradeLevels Page
-  header('Location: ../view/grade-level.php?success=gradeleveladded');
+  header('Location: ../view/grade-level.php?success=added');
 }
 
 if (isset($_POST['edit'])) {
@@ -35,7 +35,7 @@ if (isset($_POST['edit'])) {
   $editGradeLevel->editGradeLevel();
 
   # Going to GradeLevels Page
-  header('Location: ../view/grade-level.php?success=gradeleveledited');
+  header('Location: ../view/grade-level.php?success=edited');
 }
 
 if (isset($_GET['delete'])) {
@@ -52,5 +52,5 @@ if (isset($_GET['delete'])) {
   $deleteGradeLevel->deleteGradeLevel();
 
   # Going to GradeLevels Page
-  header('Location: ../view/grade-level.php?success=gradeleveldeleted');
+  header('Location: ../view/grade-level.php?success=deleted');
 }

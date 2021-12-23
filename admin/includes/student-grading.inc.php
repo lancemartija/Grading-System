@@ -23,5 +23,5 @@ if (isset($_POST['edit'])) {
   $editStudentGrades->editStudentGrades();
 
   # Going to List of Students Page
-  header('Location: ../view/student-grading.php?code=' . $code . '&id=' . $subjcode . '&success=gradeedited');
+  header('Location: ../view/student-grading.php?code=' . $code . '&id=' . $subjcode . '&success=edited');
 }

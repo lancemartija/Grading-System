@@ -20,7 +20,7 @@ if (isset($_POST['add'])) {
   $addInstructor->addInstructor();
 
   # Going to Instructor Page
-  header('Location: ../view/instructor.php?success=instructoradded');
+  header('Location: ../view/instructor.php?success=added');
 }
 
 if (isset($_POST['edit'])) {
@@ -43,7 +43,7 @@ if (isset($_POST['edit'])) {
   $editInstructor->editInstructor();
 
   # Going to Instructor Page
-  header('Location: ../view/instructor.php?success=instructoredited');
+  header('Location: ../view/instructor.php?success=edited');
 }
 
 if (isset($_GET['delete'])) {
@@ -60,5 +60,5 @@ if (isset($_GET['delete'])) {
   $deleteInstructor->deleteInstructor();
 
   # Going to Instructor Page
-  header('Location: ../view/instructor.php?success=instructordeleted');
+  header('Location: ../view/instructor.php?success=deleted');
 }
