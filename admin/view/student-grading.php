@@ -93,6 +93,7 @@ $i = 0;
               <form class="flex lg:pr-2" action="#" method="get">
                 <label for="users-search" class="sr-only">Search</label>
                 <div class="relative mr-2 lg:w-64 xl:w-96">
+                  <input type="hidden" name="code" value="<?= $_GET['code']; ?>">
                   <input type="hidden" name="id" value="<?= $_GET['id']; ?>">
                   <input type="text" name="search" class="bg-gray-50 border border-gray-300 text-gray-900 focus:outline-none sm:text-sm rounded-lg focus:ring-gray-200 focus:ring-4 block w-full p-2.5" placeholder="Search for students (Student ID, Name, Gender, Remarks)" required>
                 </div>
@@ -120,15 +121,15 @@ $i = 0;
   </div>
   <?php if (isset($_GET['success']) && $_GET['success'] == 'edited') { ?>
     <div class="fixed bottom-0 right-0 p-4 mb-4 mr-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800 alert">
-      <span class="font-medium">Success!</span> You have successfully edited a data.
+      <span class="font-bold">Success!</span> You have successfully edited a data.
     </div>
   <?php } else if (isset($_GET['error']) && $_GET['error'] == 'emptyinput') { ?>
     <div class="fixed bottom-0 right-0 p-4 mb-4 text-sm text-blue-700 bg-blue-100 rounded-lg dark:bg-blue-200 dark:text-blue-800 alert">
-      <span class="font-medium">Info!</span> Your submission is empty. Please try again.
+      <span class="font-bold">Info!</span> Your submission is empty. Please try again.
     </div>
   <?php } else if (isset($_GET['error']) && $_GET['error'] == 'stmtfailed') { ?>
     <div class="fixed bottom-0 right-0 p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800 alert">
-      <span class="font-medium">Danger!</span> Request error. Please try again.
+      <span class="font-bold">Danger!</span> Request error. Please try again.
     </div>
   <?php } ?>
   <script>
