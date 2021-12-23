@@ -157,7 +157,7 @@ class DisplayYear extends Dbh
     $stmt = $this->connect()->prepare('SELECT * FROM tblyear WHERE ay_name = ?;');
     $result = 0;
 
-    if (!$stmt->execute([$query, $query])) {
+    if (!$stmt->execute([$query])) {
       $stmt = null;
       exit;
     }
@@ -199,10 +199,10 @@ class DisplayGradeLevel extends Dbh
 
   protected function getSearchData($query)
   {
-    $stmt = $this->connect()->prepare('SELECT * FROM tblcourse WHERE course_name = ? OR course_level = ?;');
+    $stmt = $this->connect()->prepare('SELECT * FROM tblcourse WHERE course_name = ?;');
     $result = 0;
 
-    if (!$stmt->execute([$query, $query])) {
+    if (!$stmt->execute([$query])) {
       $stmt = null;
       exit;
     }
