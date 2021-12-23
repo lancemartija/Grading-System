@@ -84,7 +84,7 @@
   }
 
   .alert {
-    @apply fixed bottom-0 right-0 p-4 mb-4 mr-4 text-sm rounded-lg;
+    @apply fixed bottom-0 right-0 p-4 mb-4 mr-4 text-sm rounded-lg shadow-md;
   }
 
   .alert-success {
