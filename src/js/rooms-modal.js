@@ -14,6 +14,15 @@ const inputFieldCode = document.querySelectorAll('#code')
 const inputFieldName = document.querySelectorAll('#name')
 const inputFieldDesc = document.querySelectorAll('#desc')
 
+addRoomsModal.classList.add('hidden')
+addRoomsModal.classList.remove('flex')
+viewRoomsModal.classList.add('hidden')
+viewRoomsModal.classList.remove('flex')
+editRoomsModal.classList.add('hidden')
+editRoomsModal.classList.remove('flex')
+deleteRoomsModal.classList.add('hidden')
+deleteRoomsModal.classList.remove('flex')
+
 addRoomsBtn.addEventListener('click', () => {
   addRoomsModal.classList.remove('hidden')
   addRoomsModal.classList.add('flex')

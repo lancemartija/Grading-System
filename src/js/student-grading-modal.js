@@ -79,3 +79,6 @@ closeBtn.forEach((btn) => {
     editStudentGradesModal.classList.remove('flex')
   })
 })
+
+editStudentGradesModal.classList.add('hidden')
+editStudentGradesModal.classList.remove('flex')

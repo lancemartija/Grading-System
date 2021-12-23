@@ -94,3 +94,12 @@ closeBtn.forEach((btn) => {
     deleteInstructorModal.classList.remove('flex')
   })
 })
+
+addInstructorModal.classList.add('hidden')
+addInstructorModal.classList.remove('flex')
+viewInstructorModal.classList.add('hidden')
+viewInstructorModal.classList.remove('flex')
+editInstructorModal.classList.add('hidden')
+editInstructorModal.classList.remove('flex')
+deleteInstructorModal.classList.add('hidden')
+deleteInstructorModal.classList.remove('flex')
