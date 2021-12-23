@@ -52,47 +52,47 @@ $search .= ' (ID, Name, Username, Type)';
     </div>
   </div>
   <?php if (isset($_GET['success']) && $_GET['success'] == 'added') { ?>
-    <div class="fixed bottom-0 right-0 p-4 mb-4 mr-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800 alert">
+    <div class="alert alert-success">
       <span class="font-bold">Success!</span> You have successfully added a new data.
     </div>
   <?php } else if (isset($_GET['success']) && $_GET['success'] == 'edited') { ?>
-    <div class="fixed bottom-0 right-0 p-4 mb-4 mr-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800 alert">
+    <div class="alert alert-success">
       <span class="font-bold">Success!</span> You have successfully edited a data.
     </div>
   <?php } else if (isset($_GET['success']) && $_GET['success'] == 'deleted') { ?>
-    <div class="fixed bottom-0 right-0 p-4 mb-4 mr-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800 alert">
+    <div class="alert alert-success">
       <span class="font-bold">Success!</span> You have successfully deleted a data.
     </div>
   <?php } else if (isset($_GET['error']) && $_GET['error'] == 'emptyinput') { ?>
-    <div class="fixed bottom-0 right-0 p-4 mb-4 text-sm text-blue-700 bg-blue-100 rounded-lg dark:bg-blue-200 dark:text-blue-800 alert">
+    <div class="alert alert-info">
       <span class="font-bold">Info!</span> Your submission is empty. Please try again.
     </div>
   <?php } else if (isset($_GET['error']) && $_GET['error'] == 'alreadyexists') { ?>
-    <div class="fixed bottom-0 right-0 p-4 mb-4 text-sm text-yellow-700 bg-yellow-100 rounded-lg dark:bg-yellow-200 dark:text-yellow-800 alert">
+    <div class="alert alert-warning">
       <span class="font-bold">Warning!</span> The data you tried to add already exists. Please try again
     </div>
   <?php } else if (isset($_GET['error']) && $_GET['error'] == 'invalidusername') { ?>
-    <div class="fixed bottom-0 right-0 p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800 alert">
+    <div class="alert alert-danger">
       <span class="font-bold">Danger!</span> Invalid username. Please try again.
     </div>
   <?php } else if (isset($_GET['error']) && $_GET['error'] == 'invalidemail') { ?>
-    <div class="fixed bottom-0 right-0 p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800 alert">
+    <div class="alert alert-danger">
       <span class="font-bold">Danger!</span> Invalid email. Please try again.
     </div>
   <?php } else if (isset($_GET['error']) && $_GET['error'] == 'usernametaken') { ?>
-    <div class="fixed bottom-0 right-0 p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800 alert">
+    <div class="alert alert-danger">
       <span class="font-bold">Danger!</span> The username you entered is already taken. Please try again.
     </div>
   <?php } else if (isset($_GET['error']) && $_GET['error'] == 'emailtaken') { ?>
-    <div class="fixed bottom-0 right-0 p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800 alert">
+    <div class="alert alert-danger">
       <span class="font-bold">Danger!</span> The email you entered is already taken. Please try again.
     </div>
   <?php } else if (isset($_GET['error']) && $_GET['error'] == 'usernameoremailtaken') { ?>
-    <div class="fixed bottom-0 right-0 p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800 alert">
+    <div class="alert alert-danger">
       <span class="font-bold">Danger!</span> The username or email you entered is already taken. Please try again.
     </div>
   <?php } else if (isset($_GET['error']) && $_GET['error'] == 'stmtfailed') { ?>
-    <div class="fixed bottom-0 right-0 p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800 alert">
+    <div class="alert alert-danger">
       <span class="font-bold">Danger!</span> Request error. Please try again.
     </div>
   <?php } ?>
