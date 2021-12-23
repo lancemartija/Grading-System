@@ -40,7 +40,7 @@
         View all
       </a>
     </div>
-    <div class="block w-full overflow-x-auto">
+    <div class="block w-full overflow-x-auto h-96">
       <table class="items-center w-full bg-transparent border-collapse">
         <thead>
           <tr>

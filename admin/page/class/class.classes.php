@@ -61,7 +61,7 @@ class DisplayClass extends Dbh
 
   protected function getClass()
   {
-    $stmt = $this->connect()->query('SELECT * FROM tblclass LIMIT 6;');
+    $stmt = $this->connect()->query('SELECT * FROM tblclass;');
     $result = 0;
 
     if (!$stmt) {
