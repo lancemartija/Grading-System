@@ -87,6 +87,10 @@ $search .= ' (ID, Name, Username, Type)';
     <div class="fixed bottom-0 right-0 p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800 alert">
       <span class="font-medium">Danger!</span> The email you entered is already taken. Please try again.
     </div>
+  <?php } else if (isset($_GET['error']) && $_GET['error'] == 'usernameoremailtaken') { ?>
+    <div class="fixed bottom-0 right-0 p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800 alert">
+      <span class="font-medium">Danger!</span> The username or email you entered is already taken. Please try again.
+    </div>
   <?php } else if (isset($_GET['error']) && $_GET['error'] == 'stmtfailed') { ?>
     <div class="fixed bottom-0 right-0 p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800 alert">
       <span class="font-medium">Danger!</span> Request error. Please try again.
