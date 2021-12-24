@@ -7,7 +7,7 @@ if (!isset($_SESSION['userid']) && !isset($_SESSION['useruid'])) {
 }
 
 if (!isset($_GET['code'])) {
-  header('Location: faculty.php');
+  header('Location: instructor.php');
   exit;
 }
 
@@ -18,9 +18,9 @@ include_once '../database/database.classes.php';
 include_once '../page/loads/loads.classes.php';
 
 $table = $search = 'loads';
-$breadcrumb1 = 'faculties';
+$breadcrumb1 = 'instructors';
 $page = $breadcrumb2 = 'List of Loads';
-$breadcrumblink = 'faculty.php';
+$breadcrumblink = 'instructor.php';
 $modal = 'load';
 $btn = 'subject';
 $searchlink = 'loads.php?code=' . $instructor;
@@ -35,12 +35,13 @@ $i = 0;
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Faculty</title>
+  <title>Instructor</title>
   <link rel="stylesheet" href="../../src/css/tailwind.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <script async defer src="../../src/js/loads-modal.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -57,6 +58,30 @@ $i = 0;
       </main>
     </div>
   </div>
+  <?php if (isset($_GET['success']) && $_GET['success'] == 'added') { ?>
+    <div class="alert alert-success">
+      <span class="font-bold">Success!</span> You have successfully added a new data.
+    </div>
+  <?php } else if (isset($_GET['success']) && $_GET['success'] == 'edited') { ?>
+    <div class="alert alert-success">
+      <span class="font-bold">Success!</span> You have successfully edited a data.
+    </div>
+  <?php } else if (isset($_GET['success']) && $_GET['success'] == 'deleted') { ?>
+    <div class="alert alert-success">
+      <span class="font-bold">Success!</span> You have successfully deleted a data.
+    </div>
+  <?php } else if (isset($_GET['error']) && $_GET['error'] == 'emptyinput') { ?>
+    <div class="alert alert-info">
+      <span class="font-bold">Info!</span> Your submission is empty. Please try again.
+    </div>
+  <?php } else if (isset($_GET['error']) && $_GET['error'] == 'stmtfailed') { ?>
+    <div class="alert alert-danger">
+      <span class="font-bold">Danger!</span> Request error. Please try again.
+    </div>
+  <?php } ?>
+  <script>
+    $(".alert").delay(6000).fadeOut(600);
+  </script>
 </body>
 
 </html>

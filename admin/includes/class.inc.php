@@ -18,5 +18,5 @@ if (isset($_POST['edit'])) {
   $editClass->editClass();
 
   # Going to Classs Page
-  header('Location: ../view/class.php?success=classedited');
+  header('Location: ../view/class.php?success=edited');
 }

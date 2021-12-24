@@ -27,7 +27,7 @@ if (isset($_POST['add'])) {
   $addStudents->addStudents();
 
   # Going to Students Page
-  header('Location: ../view/students.php?success=studentadded');
+  header('Location: ../view/students.php?success=added');
 }
 
 if (isset($_POST['edit'])) {
@@ -57,7 +57,7 @@ if (isset($_POST['edit'])) {
   $editStudents->editStudents();
 
   # Going to Students Page
-  header('Location: ../view/students.php?success=studentedited');
+  header('Location: ../view/students.php?success=edited');
 }
 
 if (isset($_GET['delete'])) {
@@ -75,5 +75,5 @@ if (isset($_GET['delete'])) {
   $deleteStudents->deleteStudents();
 
   # Going to Students Page
-  header('Location: ../view/students.php?success=studentdeleted');
+  header('Location: ../view/students.php?success=deleted');
 }

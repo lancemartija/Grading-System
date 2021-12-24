@@ -21,7 +21,7 @@ class AddRoomsContr extends AddRooms
     }
 
     if ($this->checkCode($this->code) == false) {
-      header('Location: ../view/rooms.php?error=roomalreadyexists');
+      header('Location: ../view/rooms.php?error=alreadyexists');
       exit;
     }
 

@@ -75,3 +75,8 @@ closeBtn.forEach((btn) => {
     editClassModal.classList.remove('flex')
   })
 })
+
+viewClassModal.classList.add('hidden')
+viewClassModal.classList.remove('flex')
+editClassModal.classList.add('hidden')
+editClassModal.classList.remove('flex')

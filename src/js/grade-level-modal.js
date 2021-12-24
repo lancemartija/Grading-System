@@ -76,3 +76,12 @@ closeBtn.forEach((btn) => {
     deleteGradeLevelModal.classList.remove('flex')
   })
 })
+
+addGradeLevelModal.classList.add('hidden')
+addGradeLevelModal.classList.remove('flex')
+viewGradeLevelModal.classList.add('hidden')
+viewGradeLevelModal.classList.remove('flex')
+editGradeLevelModal.classList.add('hidden')
+editGradeLevelModal.classList.remove('flex')
+deleteGradeLevelModal.classList.add('hidden')
+deleteGradeLevelModal.classList.remove('flex')

@@ -21,7 +21,7 @@ class AddDeptContr extends AddDept
     }
 
     if ($this->checkCode($this->code) == false) {
-      header('Location: ../view/department.php?error=deptalreadyexists');
+      header('Location: ../view/department.php?error=alreadyexists');
       exit;
     }
 

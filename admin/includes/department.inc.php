@@ -16,7 +16,7 @@ if (isset($_POST['add'])) {
   $addDept->addDept();
 
   # Going to Depts Page
-  header('Location: ../view/department.php?success=deptadded');
+  header('Location: ../view/department.php?success=added');
 }
 
 if (isset($_POST['edit'])) {
@@ -35,7 +35,7 @@ if (isset($_POST['edit'])) {
   $editDept->editDept();
 
   # Going to Depts Page
-  header('Location: ../view/department.php?success=deptedited');
+  header('Location: ../view/department.php?success=edited');
 }
 
 if (isset($_GET['delete'])) {
@@ -52,5 +52,5 @@ if (isset($_GET['delete'])) {
   $deleteDept->deleteDept();
 
   # Going to Depts Page
-  header('Location: ../view/department.php?success=deptdeleted');
+  header('Location: ../view/department.php?success=deleted');
 }

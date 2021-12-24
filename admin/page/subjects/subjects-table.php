@@ -9,7 +9,7 @@
           Subject Name
         </th>
         <th scope="col" class="th">
-          Grade Level
+          Course
         </th>
         <th scope="col" class="th">
           Units

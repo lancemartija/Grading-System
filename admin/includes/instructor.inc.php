@@ -10,17 +10,17 @@ if (isset($_POST['add'])) {
   $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
   $empstatus = filter_var(trim($_POST['empstatus']), FILTER_SANITIZE_STRING);
 
-  # Instantiate AddFacultyContr class
+  # Instantiate AddInstructorContr class
   include_once '../database/database.classes.php';
-  include_once '../classes/faculty.classes.php';
-  include_once '../controller/faculty.contr.php';
-  $addFaculty = new AddFacultyContr($code, $name, $address, $gender, $status, $email, $empstatus);
+  include_once '../classes/instructor.classes.php';
+  include_once '../controller/instructor.contr.php';
+  $addInstructor = new AddInstructorContr($code, $name, $address, $gender, $status, $email, $empstatus);
 
-  # Running error handlers and add faculty function
-  $addFaculty->addFaculty();
+  # Running error handlers and add instructor function
+  $addInstructor->addInstructor();
 
-  # Going to Faculty Page
-  header('Location: ../view/faculty.php?success=facultyadded');
+  # Going to Instructor Page
+  header('Location: ../view/instructor.php?success=added');
 }
 
 if (isset($_POST['edit'])) {
@@ -33,32 +33,32 @@ if (isset($_POST['edit'])) {
   $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
   $empstatus = filter_var(trim($_POST['empstatus']), FILTER_SANITIZE_STRING);
 
-  # Instantiate AddFacultyContr class
+  # Instantiate AddInstructorContr class
   include_once '../database/database.classes.php';
-  include_once '../classes/faculty.classes.php';
-  include_once '../controller/faculty.contr.php';
-  $editFaculty = new EditFacultyContr($id, $name, $address, $gender, $status, $email, $empstatus);
+  include_once '../classes/instructor.classes.php';
+  include_once '../controller/instructor.contr.php';
+  $editInstructor = new EditInstructorContr($id, $name, $address, $gender, $status, $email, $empstatus);
 
-  # Running error handlers and add faculty function
-  $editFaculty->editFaculty();
+  # Running error handlers and add instructor function
+  $editInstructor->editInstructor();
 
-  # Going to Faculty Page
-  header('Location: ../view/faculty.php?success=facultyedited');
+  # Going to Instructor Page
+  header('Location: ../view/instructor.php?success=edited');
 }
 
 if (isset($_GET['delete'])) {
   # Grabbing data
   $id = filter_var(trim($_GET['id']), FILTER_SANITIZE_NUMBER_INT);
 
-  # Instantiate AddFacultyContr class
+  # Instantiate AddInstructorContr class
   include_once '../database/database.classes.php';
-  include_once '../classes/faculty.classes.php';
-  include_once '../controller/faculty.contr.php';
-  $deleteFaculty = new DeleteFacultyContr($id);
+  include_once '../classes/instructor.classes.php';
+  include_once '../controller/instructor.contr.php';
+  $deleteInstructor = new DeleteInstructorContr($id);
 
-  # Running error handlers and add faculty function
-  $deleteFaculty->deleteFaculty();
+  # Running error handlers and add instructor function
+  $deleteInstructor->deleteInstructor();
 
-  # Going to Faculty Page
-  header('Location: ../view/faculty.php?success=facultydeleted');
+  # Going to Instructor Page
+  header('Location: ../view/instructor.php?success=deleted');
 }

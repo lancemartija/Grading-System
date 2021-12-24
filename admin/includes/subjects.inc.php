@@ -20,7 +20,7 @@ if (isset($_POST['add'])) {
   $addSubjects->addSubjects();
 
   # Going to Subjects Page
-  header('Location: ../view/subjects.php?success=subjectadded');
+  header('Location: ../view/subjects.php?success=added');
 }
 
 if (isset($_POST['edit'])) {
@@ -43,7 +43,7 @@ if (isset($_POST['edit'])) {
   $editSubjects->editSubjects();
 
   # Going to Subjects Page
-  header('Location: ../view/subjects.php?success=subjectedited');
+  header('Location: ../view/subjects.php?success=edited');
 }
 
 if (isset($_GET['delete'])) {
@@ -61,5 +61,5 @@ if (isset($_GET['delete'])) {
   $deleteSubjects->deleteSubjects();
 
   # Going to Subjects Page
-  header('Location: ../view/subjects.php?success=subjectdeleted');
+  header('Location: ../view/subjects.php?success=deleted');
 }

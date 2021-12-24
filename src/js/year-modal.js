@@ -66,3 +66,12 @@ closeBtn.forEach((btn) => {
     deleteYearModal.classList.remove('flex')
   })
 })
+
+addYearModal.classList.add('hidden')
+addYearModal.classList.remove('flex')
+viewYearModal.classList.add('hidden')
+viewYearModal.classList.remove('flex')
+editYearModal.classList.add('hidden')
+editYearModal.classList.remove('flex')
+deleteYearModal.classList.add('hidden')
+deleteYearModal.classList.remove('flex')

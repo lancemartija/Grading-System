@@ -34,3 +34,8 @@ closeBtn.forEach((btn) => {
     unassignSubjectListModal.classList.remove('flex')
   })
 })
+
+assignSubjectListModal.classList.add('hidden')
+assignSubjectListModal.classList.remove('flex')
+unassignSubjectListModal.classList.add('hidden')
+unassignSubjectListModal.classList.remove('flex')

@@ -16,7 +16,7 @@ if (isset($_POST['add'])) {
   $addRooms->addRooms();
 
   # Going to Roomss Page
-  header('Location: ../view/rooms.php?success=roomadded');
+  header('Location: ../view/rooms.php?success=added');
 }
 
 if (isset($_POST['edit'])) {
@@ -35,7 +35,7 @@ if (isset($_POST['edit'])) {
   $editRooms->editRooms();
 
   # Going to Roomss Page
-  header('Location: ../view/rooms.php?success=roomedited');
+  header('Location: ../view/rooms.php?success=edited');
 }
 
 if (isset($_GET['delete'])) {
@@ -52,5 +52,5 @@ if (isset($_GET['delete'])) {
   $deleteRooms->deleteRooms();
 
   # Going to Roomss Page
-  header('Location: ../view/rooms.php?success=roomdeleted');
+  header('Location: ../view/rooms.php?success=deleted');
 }

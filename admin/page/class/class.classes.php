@@ -2,6 +2,19 @@
 
 class DisplayClassContr extends DisplayClass
 {
+  public function dashboardFetch($subjcode)
+  {
+    $this->subjcode = $subjcode;
+    $result = $this->getDashboardData($this->subjcode);
+    return $result;
+  }
+
+  public function fetchClass()
+  {
+    $result = $this->getClass();
+    return $result;
+  }
+
   public function fetchData()
   {
     $result = $this->getData();
@@ -27,6 +40,44 @@ class DisplayOptionsContr extends DisplayOptions
 
 class DisplayClass extends Dbh
 {
+  protected function getDashboardData($subjcode)
+  {
+    $stmt = $this->connect()->prepare('SELECT COUNT(*) FROM tblgrades g, tblstudents s, tblsubjects sub WHERE g.subj_code = ? AND g.student_number = s.student_number AND sub.subj_code = g.subj_code;');
+    $result = 0;
+
+    if (!$stmt->execute([$subjcode])) {
+      $stmt = null;
+      echo "error";
+      exit;
+    }
+
+    while ($row = $stmt->fetchAll(PDO::FETCH_ASSOC)) {
+      $result = $row;
+    }
+
+    $stmt = null;
+    return $result;
+  }
+
+  protected function getClass()
+  {
+    $stmt = $this->connect()->query('SELECT * FROM tblclass;');
+    $result = 0;
+
+    if (!$stmt) {
+      $stmt = null;
+      echo "error";
+      exit;
+    }
+
+    while ($row = $stmt->fetchAll(PDO::FETCH_ASSOC)) {
+      $result = $row;
+    }
+
+    $stmt = null;
+    return $result;
+  }
+
   protected function getData()
   {
     $stmt = $this->connect()->query('SELECT * FROM tblclass;');

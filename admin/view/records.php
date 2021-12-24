@@ -43,6 +43,7 @@ $i = 0;
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <script async defer src="../../src/js/records-modal.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -59,6 +60,30 @@ $i = 0;
       </main>
     </div>
   </div>
+  <?php if (isset($_GET['success']) && $_GET['success'] == 'added') { ?>
+    <div class="alert alert-success">
+      <span class="font-bold">Success!</span> You have successfully added a new data.
+    </div>
+  <?php } else if (isset($_GET['success']) && $_GET['success'] == 'edited') { ?>
+    <div class="alert alert-success">
+      <span class="font-bold">Success!</span> You have successfully edited a data.
+    </div>
+  <?php } else if (isset($_GET['success']) && $_GET['success'] == 'deleted') { ?>
+    <div class="alert alert-success">
+      <span class="font-bold">Success!</span> You have successfully deleted a data.
+    </div>
+  <?php } else if (isset($_GET['error']) && $_GET['error'] == 'emptyinput') { ?>
+    <div class="alert alert-info">
+      <span class="font-bold">Info!</span> Your submission is empty. Please try again.
+    </div>
+  <?php } else if (isset($_GET['error']) && $_GET['error'] == 'stmtfailed') { ?>
+    <div class="alert alert-danger">
+      <span class="font-bold">Danger!</span> Request error. Please try again.
+    </div>
+  <?php } ?>
+  <script>
+    $(".alert").delay(6000).fadeOut(600);
+  </script>
 </body>
 
 </html>
