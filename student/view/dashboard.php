@@ -13,9 +13,11 @@ include_once "../classes/student-login.classes.php";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/365a34f9d5.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <title>Dashboard</title>
 </head>
+
 <style>
     .hr1 {
         margin: 50px -8px 20px;
@@ -25,13 +27,15 @@ include_once "../classes/student-login.classes.php";
     .dash {
         position: absolute;
         top: 70px;
-        left: 300px;
+        left: 400px;
     }
 
     .name {
         font-size: 24px;
         position: absolute;
-        top: 20px;
+        top: 10px;
+        font-weight: bold;
+        padding: 14px 100px 14px 15px;
 
     }
 
@@ -60,26 +64,27 @@ include_once "../classes/student-login.classes.php";
     }
 
     li a:hover {
-        background-color: #555;
+        background-color: royalblue;
         color: white;
+        border-radius: 10px;
+        padding: 15px;
+        width: 310px;
     }
+
 </style>
 
+
 <body>
-    <span class="name"><i class="fas fa-user"></i>&nbsp;&nbsp;<?php echo $_SESSION["lname"] . " " . $_SESSION["fname"]; ?></span><br>
+    <span class="name"><i class="bi bi-person-circle"></i>&nbsp;<?php echo $_SESSION["lname"] . " " . $_SESSION["fname"]; ?></span><br>
     <hr class="hr1">
     <hr class="line">
     <h1 class="dash">Dashboard</h1>
 
     <ul>
-        <li><a href="#home">
-                <span><i class="fas fa-home"></i>Home</span>
-            </a></li>
-        <li><a href="#news">
-                <span><i class="fas fa-book"></i>Subjects</span>
-            </a></li>
-        <li><a href="#contact"><span><i class="fas fa-signal"></i>Student Info</span></a></li>
-        <li><a href="#about"><span><i class="fas fa-person-booth"></i>Rooms</span></a></li>
+        <li><a href="#home"><span><i class="bi bi-house"></i>&nbsp;Home</span></a></li>
+        <li><a href="#news"><span><i class="bi bi-journals"></i>&nbsp;Subjects</span></a></li>
+        <li><a href="#contact"><span><i class="bi bi-bar-chart"></i>&nbsp;Student Info</span></a></li>
+        <li><a href="#about"><span><i class="bi bi-door-open"></i>&nbsp;Rooms</span></a></li>
     </ul>
 
 
