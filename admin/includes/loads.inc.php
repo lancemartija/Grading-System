@@ -21,7 +21,7 @@ if (isset($_POST['assign'])) {
   }
 
   # Going to Loads Page
-  header('Location: ../view/loads.php?code=' . $instcode . '&success=subjectassigned');
+  header('Location: ../view/loads.php?code=' . $instcode . '&success=assigned');
 }
 
 if (isset($_GET['delete'])) {
@@ -39,5 +39,5 @@ if (isset($_GET['delete'])) {
   $deleteLoads->deleteLoads();
 
   # Going to Loads Page
-  header('Location: ../view/loads.php?code=' . $instcode . '&success=subjectunassigned');
+  header('Location: ../view/loads.php?code=' . $instcode . '&success=unassigned');
 }

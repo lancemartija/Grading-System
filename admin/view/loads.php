@@ -58,17 +58,13 @@ $i = 0;
       </main>
     </div>
   </div>
-  <?php if (isset($_GET['success']) && $_GET['success'] == 'added') { ?>
+  <?php if (isset($_GET['success']) && $_GET['success'] == 'assigned') { ?>
     <div class="alert alert-success">
-      <span class="font-bold">Success!</span> You have successfully added a new data.
+      <span class="font-bold">Success!</span> You have successfully assigned a new data.
     </div>
-  <?php } else if (isset($_GET['success']) && $_GET['success'] == 'edited') { ?>
+  <?php } else if (isset($_GET['success']) && $_GET['success'] == 'unassigned') { ?>
     <div class="alert alert-success">
-      <span class="font-bold">Success!</span> You have successfully edited a data.
-    </div>
-  <?php } else if (isset($_GET['success']) && $_GET['success'] == 'deleted') { ?>
-    <div class="alert alert-success">
-      <span class="font-bold">Success!</span> You have successfully deleted a data.
+      <span class="font-bold">Success!</span> You have successfully unassigned a data.
     </div>
   <?php } else if (isset($_GET['error']) && $_GET['error'] == 'emptyinput') { ?>
     <div class="alert alert-info">

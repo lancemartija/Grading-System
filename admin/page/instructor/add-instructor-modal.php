@@ -37,7 +37,7 @@
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
                 <option value="Others">Others</option>
-                <option value="">Prefer not to say</option>
+                <option value="N/A">Prefer not to say</option>
               </select>
             </div>
             <div class="col-span-6 sm:col-span-3">

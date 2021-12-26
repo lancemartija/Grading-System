@@ -22,7 +22,7 @@ if (isset($_POST['assign'])) {
   }
 
   # Going to SubjectList Page
-  header('Location: ../view/subject-list.php?id=' . $syid . '&studentnumber=' . $studentnumber . '&course=' . $course . '&success=subjectassigned');
+  header('Location: ../view/subject-list.php?id=' . $syid . '&studentnumber=' . $studentnumber . '&course=' . $course . '&success=assigned');
 }
 
 if (isset($_GET['delete'])) {
@@ -42,5 +42,5 @@ if (isset($_GET['delete'])) {
   $deleteSubjectList->deleteSubjectList();
 
   # Going to SubjectList Page
-  header('Location: ../view/subject-list.php?id=' . $syid . '&studentnumber=' . $studentnumber . '&course=' . $course . '&success=subjectunassigned');
+  header('Location: ../view/subject-list.php?id=' . $syid . '&studentnumber=' . $studentnumber . '&course=' . $course . '&success=unassigned');
 }
