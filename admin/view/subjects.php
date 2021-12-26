@@ -34,8 +34,8 @@ $search .= ' (Name, Course, School Year, Semester)';
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <script async defer src="../../src/js/subjects-modal.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script async defer src="../../src/js/subjects-modal.js"></script>
 </head>
 
 <body>
