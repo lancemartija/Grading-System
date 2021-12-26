@@ -2,28 +2,28 @@
 
 class StudentLoginContr extends StudentLogin
 {
-    private $studentid;
+  private $studentid;
 
-    public function __construct($studentid)
-    {
-        $this->studentid = $studentid;
+  public function __construct($studentid)
+  {
+    $this->studentid = $studentid;
+  }
+
+  public function loginUser()
+  {
+    if ($this->emptyInput() == false) {
+      header("location: ../index.php?error=emptyinput");
+      exit;
     }
 
-    public function loginUser()
-    {
-        if ($this->emptyInput() == false) {
-            header("location: ../index.php?error=empty");
-            exit;
-        }
+    $this->getUser($this->studentid);
+  }
 
-        $this->getUser($this->studentid);
+  private function emptyInput()
+  {
+    if (empty($this->studentid)) {
+      return false;
     }
-
-    private function emptyInput()
-    {
-        if (empty($this->studentid)) {
-            return false;
-        }
-        return true;
-    }
+    return true;
+  }
 }
