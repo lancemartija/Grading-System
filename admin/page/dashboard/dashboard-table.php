@@ -52,7 +52,7 @@
           </tr>
         </thead>
         <tbody class="divide-y divide-gray-100">
-          <?php if (!empty($topperformers)) { ?>
+          <?php if (!empty($result)) { ?>
             <?php foreach ($result as $data) : ?>
               <?php $topclasses = $class->dashboardFetch($data['class_code']); ?>
               <?php foreach ($topclasses as $value) : ?>
