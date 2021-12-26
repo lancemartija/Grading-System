@@ -39,7 +39,7 @@ $user = $_SESSION['useruid'];
                 <div class="overflow-hidden rounded ">
                   <div class="absolute flex justify-center w-full -mt-20">
                     <div class="w-32 h-32">
-                      <img src="https://scontent.fmnl6-2.fna.fbcdn.net/v/t39.30808-6/269843269_4886920621330049_1244534225231057519_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeGmWr8AA36YsAQ5yByocf_A3uW3Kh7yx87e5bcqHvLHzswAlSOaS48l2ezpBsOWwFOll8w7QfNsV8BxBAG7EVCO&_nc_ohc=IiKoVcDv5JwAX-lLE6p&_nc_ht=scontent.fmnl6-2.fna&oh=00_AT-ieaLYEHGNkfUwOE1tQyKciYFYAlY0DZcI5atmtFchwg&oe=61CDF281" alt="Display Picture of Lance Martija" role="img" class="object-cover w-full h-full rounded-full " />
+                      <img src="../../src/img/lance.jpg" alt="Display Picture of Lance Martija" role="img" class="object-cover w-full h-full rounded-full " />
                     </div>
                   </div>
                   <div class="px-6 mt-16">
@@ -52,7 +52,7 @@ $user = $_SESSION['useruid'];
                 <div class="overflow-hidden rounded ">
                   <div class="absolute flex justify-center w-full -mt-20">
                     <div class="w-32 h-32">
-                      <img src="https://scontent.fmnl6-2.fna.fbcdn.net/v/t1.6435-9/80500970_3231758290232862_7857426678421651456_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeEBdsdE71C6d3I2yiVrJLkmh5KCR71YV2SHkoJHvVhXZAKKKk31gM5YJhy91SiTPmMH6HYk7zG_Ykakz4NsYI2K&_nc_ohc=WTlodiSI_VkAX9koVcl&tn=jSUmIEfNXXr1zfXL&_nc_ht=scontent.fmnl6-2.fna&oh=00_AT8-PcWk21_yez991z2Q-96Rb1BltRxqYUroI4J3H0qlvg&oe=61EC8270" alt="Display Picture of Alistaire" role="img" class="object-cover w-full h-full rounded-full " />
+                      <img src="../../src/img/alistaire.jpg" alt="Display Picture of Alistaire" role="img" class="object-cover w-full h-full rounded-full " />
                     </div>
                   </div>
                   <div class="px-6 mt-16">
@@ -65,7 +65,7 @@ $user = $_SESSION['useruid'];
                 <div class="overflow-hidden rounded ">
                   <div class="absolute flex justify-center w-full -mt-20">
                     <div class="w-32 h-32">
-                      <img src="https://scontent.fmnl6-2.fna.fbcdn.net/v/t1.6435-9/131965553_4169432756418956_2705444025583127046_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=174925&_nc_eui2=AeE9abIkYAzcSiw2kHb47eSKdM6TTz0EH5h0zpNPPQQfmJ-LKvEZI6OnQp520BS2Z_C6Ps-zE4PAcjjP8e5IaKig&_nc_ohc=BB8FMFH-hCMAX-jaLSO&_nc_ht=scontent.fmnl6-2.fna&oh=00_AT-fX4sNv7JLmaRhZfRsWmJP2I6c69eC9QlzOed5zdnUbg&oe=61ECAC4D" alt="Display Picture of Carl" role="img" class="object-cover w-full h-full rounded-full " />
+                      <img src="../../src/img/carl.jpg" alt="Display Picture of Carl" role="img" class="object-cover w-full h-full rounded-full " />
                     </div>
                   </div>
                   <div class="px-6 mt-16">
