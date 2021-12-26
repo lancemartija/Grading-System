@@ -37,7 +37,6 @@ session_start();
             <div class="text-sm">
               <span class="text-red-600"><?= (isset($_GET['error']) && $_GET['error'] == 'invalid') ? 'Invalid Username or Password' : ((isset($_GET['error']) && $_GET['error'] == 'usernotfound') ? 'User not found. Please try again.' : ''); ?></span>
             </div>
-
             <a href="#" onclick="alert('Please contact other administrators for further instructions.');" class="ml-auto text-sm text-green-600 hover:underline">Lost Password?</a>
           </div>
           <button type="submit" name="submit" class="w-full px-5 py-3 text-base font-medium text-center text-white transition duration-200 bg-green-600 rounded-lg hover:bg-green-700 focus:outline-none focus:ring-4 focus:ring-green-500 focus:ring-opacity-50 sm:w-auto">Login to account</button>

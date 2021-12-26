@@ -28,8 +28,8 @@ $user = $_SESSION['useruid'];
       <div class="m-6 bg-white rounded-lg shadow">
         <div class="container flex justify-center mx-auto">
           <div>
-            <p class="pb-3 mt-6 text-lg font-normal text-center text-gray-500">OUR TEAM - GROUP 1</p>
-            <h1 class="w-5/6 pb-6 mx-auto text-3xl font-extrabold text-center text-gray-700 xl:text-4xl sm:w-4/6">The Talented People Behind This Project</h1>
+            <p class="pb-3 mt-6 text-lg font-normal text-center text-gray-700">OUR TEAM - GROUP 1</p>
+            <h1 class="w-5/6 pb-6 mx-auto text-3xl font-extrabold text-center text-gray-900 xl:text-4xl sm:w-4/6">The Talented People Behind This Project</h1>
           </div>
         </div>
         <div class="w-auto px-10 pt-10">
@@ -44,7 +44,7 @@ $user = $_SESSION['useruid'];
                   </div>
                   <div class="px-6 mt-16">
                     <h1 class="mb-1 text-3xl font-bold text-center">Lance Martija</h1>
-                    <p class="text-sm text-center text-gray-700">Frontend / Backend Developer / Leader</p>
+                    <p class="text-sm text-center text-gray-700">Lead Frontend/Backend Developer</p>
                   </div>
                 </div>
               </div>
