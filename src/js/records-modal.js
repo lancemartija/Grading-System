@@ -13,7 +13,7 @@ const inputFieldId = document.querySelectorAll('#id')
 const inputFieldStatus = document.querySelectorAll('#status')
 const inputFieldLevel = document.querySelectorAll('#level')
 const inputFieldYear = document.querySelectorAll('#year')
-const inputFieldDate = document.querySelector('#date')
+const inputFieldDate = document.querySelectorAll('#date')
 
 addRecordsBtn.addEventListener('click', () => {
   addRecordsModal.classList.remove('hidden')
@@ -31,7 +31,7 @@ viewRecordsBtn.forEach((btn) => {
     inputFieldStatus[0].value = status
     inputFieldLevel[0].value = level
     inputFieldYear[0].value = year
-    inputFieldDate.value = date
+    inputFieldDate[0].value = date
 
     viewRecordsModal.classList.remove('hidden')
     viewRecordsModal.classList.add('flex')
@@ -44,11 +44,13 @@ editRecordsBtn.forEach((btn) => {
     let status = btn.getAttribute('data-status')
     let level = btn.getAttribute('data-level')
     let year = btn.getAttribute('data-year')
+    let date = btn.getAttribute('data-date')
 
     inputFieldId[0].value = id
     inputFieldStatus[1].value = status
     inputFieldLevel[1].value = level
     inputFieldYear[1].value = year
+    inputFieldDate[1].value = date
 
     editRecordsModal.classList.remove('hidden')
     editRecordsModal.classList.add('flex')
