@@ -40,18 +40,23 @@ if (!isset($_SESSION['student']) && !isset($_SESSION['studentid'])) {
           </div>
           <div class="hidden md:block">
             <div class="flex items-center ml-4 md:ml-6">
-              <div class="relative ml-3 group">
+              <div class="relative group">
                 <div class="flex items-center">
-                  <span class="mr-3 text-sm font-semibold text-white cursor-pointer"><?= $_SESSION['student']; ?></span>
+                  <span class="mr-3 text-sm font-semibold text-gray-300 cursor-pointer group-hover:text-white"><?= $_SESSION['student']; ?></span>
                   <button type="button" class="flex items-center max-w-xs text-sm bg-gray-800 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
                     <span class="sr-only">Open user menu</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-gray-300 group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </button>
                 </div>
-                <div class="absolute right-0 hidden w-48 pt-3 origin-top-right rounded-md shadow-lg group-hover:block ring-1 ring-black ring-opacity-5 focus:outline-none">
-                  <a href="../includes/logout.inc.php" class="block px-4 py-2 text-sm text-gray-700 bg-white rounded-md hover:bg-gray-100">Sign out</a>
+                <div class="absolute right-0 hidden w-48 pt-3 origin-top-right rounded-md shadow-lg group-hover:block">
+                  <a href="../includes/logout.inc.php" class="flex px-4 py-2 text-sm text-gray-700 bg-white rounded-md hover:bg-gray-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                    </svg>
+                    <span class="flex-1 ml-3 whitespace-nowrap">Sign out</span>
+                  </a>
                 </div>
               </div>
             </div>
