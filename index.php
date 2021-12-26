@@ -19,7 +19,7 @@
       <p class="text-lg font-light text-center text-blue-100">A data and information management system for highschool students</p>
     </header>
     <section class="flex items-center justify-center pt-4" method="post">
-      <div class="grid grid-cols-1 grid-rows-1 p-6 mr-6 transition duration-300 transform bg-white shadow w-72 h-96 rounded-xl hover:shadow-lg hover:scale-105">
+      <div class="grid grid-cols-1 grid-rows-1 p-6 mr-6 duration-300 transform bg-white shadow active:scale-100 w-72 h-96 rounded-xl hover:shadow-lg hover:scale-105">
         <svg class="w-full h-auto" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="991.13988" height="770.17774" viewBox="0 0 991.13988 770.17774" xmlns:xlink="http://www.w3.org/1999/xlink">
           <title>professor</title>
           <path d="M394.01076,64.91113,236.15757,150.41336a40.156,40.156,0,1,1-70.5866,38.23373l-53.82344,29.15382L251.16683,475.1951,533.43006,322.30535Z" transform="translate(-104.43006 -64.91113)" fill="#f2f2f2" />
@@ -74,9 +74,9 @@
           <h2 class="text-xl font-bold text-gray-700">Administrator</h2>
           <p class="text-sm font-light leading-5 text-gray-500">Manage users, update student information, and generate reports</p>
         </div>
-        <a href="admin/" class="w-full bg-green-600 mr-3 py-2.5 focus:outline-none focus:ring-4 focus:ring-green-500 focus:ring-opacity-50 text-white text-center rounded hover:bg-green-700 transition duration-200">Admin</a>
+        <a href="admin/" class="w-full bg-green-600 mr-3 py-2.5 focus:outline-none focus:ring-4 focus:ring-green-500 focus:ring-opacity-50 text-white text-center rounded hover:bg-green-700 active:scale-100 duration-200">Admin</a>
       </div>
-      <div class="grid grid-cols-1 grid-rows-1 p-6 mr-6 transition duration-300 transform bg-white shadow w-72 h-96 rounded-xl hover:shadow-lg hover:scale-105">
+      <div class="grid grid-cols-1 grid-rows-1 p-6 mr-6 duration-300 transform bg-white shadow active:scale-100 w-72 h-96 rounded-xl hover:shadow-lg hover:scale-105">
         <svg class="w-full h-auto" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 982.89 803.03" xmlns:xlink="http://www.w3.org/1999/xlink">
           <title>exams</title>
           <path d="M1067.54,514c0,.61,0,1.22,0,1.82q-.16,15.78-1.87,31.48a1.11,1.11,0,0,1,0,.19c-.09.87-.19,1.73-.29,2.6-.17,1.47-.35,2.93-.55,4.4a316.48,316.48,0,0,1-11.53,52.79h0a284.68,284.68,0,0,1-30.1,66.28q-5.92,9.5-12.61,18.39h0c-2.38,3.14-4.81,6.21-7.32,9.23q-2.64,3.17-5.38,6.24l-1.14,1.26a296.69,296.69,0,0,1-31,29.46c-18,14.92-37.38,27.9-57.07,39.94-1.12.69-2.25,1.37-3.38,2a1.65,1.65,0,0,1-.25.15c-26.76,16.18-54.51,30.78-83.1,42.47-31.3,12.83-63.62,22.16-96.78,26.24-46.22,5.68-93,1.06-138.94-6.88a902.93,902.93,0,0,1-113-27l-6.1-1.91q-4.74-1.51-9.47-3.08-28.57-9.45-56.5-21a742.68,742.68,0,0,1-133.33-71.59q-8-5.38-15.77-11-10.86-7.82-21.46-16.1L226.24,687a448.26,448.26,0,0,1-51.82-47.59c-21.52-23.42-39.91-49.84-52-80q-2.86-7.11-5.24-14.49l-.15-.49c-.8-2.5-1.54-5-2.22-7.6q-1.5-5.58-2.63-11.3c-.16-.73-.3-1.46-.43-2.2a189.21,189.21,0,0,1-3.15-38.93,180,180,0,0,1,4-34h0a153.38,153.38,0,0,1,11.33-33.57l0,0a121,121,0,0,1,17.33-26.73h0a102.23,102.23,0,0,1,16.33-15.26c10.85-8.08,22.88-13.71,35.35-18.16h0c5.86-2.1,11.8-3.94,17.77-5.65,4.23-1.22,8.48-2.38,12.71-3.52l12.48-3.37c8-2.18,16-4.42,23.88-6.84,21.48-6.56,42.53-14.5,62-26.34,3.08-1.87,6.22-3.92,9.36-6.12,4-2.78,7.94-5.8,11.84-9.06h0c3.94-3.3,7.8-6.83,11.48-10.57.57-.58,1.13-1.16,1.69-1.75,3-3.16,5.91-6.47,8.61-9.91,1.32-1.68,2.6-3.39,3.82-5.13,1.69-2.41,3.29-4.86,4.77-7.38h0c7.42-12.6,12-26.5,11.46-41.15a63.3,63.3,0,0,0-.65-7.21c-1.3-8.83-2.55-17.45-3.47-25.88-3.86-34.87-2.23-66.49,23.94-96.2,32.54-36.93,83.61-44.46,130.1-41.51,134.41,8.5,256.77,85.24,364.3,176.6q13.95,11.84,27.56,24,3.43,3.06,6.87,6.16c17,15.31,33.74,31.19,49.33,48.2,1.26,1.38,2.52,2.76,3.76,4.15.76.86,1.53,1.71,2.28,2.58q7.29,8.25,14.15,16.9a320.16,320.16,0,0,1,32.32,49,278.17,278.17,0,0,1,28.38,86.67h0a308.82,308.82,0,0,1,3.43,33.17c.17,3.27.28,6.55.34,9.82,0,1.05,0,2.09,0,3.14C1067.55,511,1067.55,512.48,1067.54,514Z" transform="translate(-108.55 -48.49)" fill="#6c63ff" opacity="0.1" />
@@ -146,9 +146,9 @@
           <h2 class="text-xl font-bold text-gray-700">Student</h2>
           <p class="text-sm font-light leading-5 text-gray-500">Edit your personal information and view your midterm and final grades</p>
         </div>
-        <a href="student/" class="w-full bg-blue-500 py-2.5 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 text-white text-center rounded hover:bg-blue-600 transition duration-200">Student</a>
+        <a href="student/" class="w-full bg-blue-500 py-2.5 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 text-white text-center rounded hover:bg-blue-600 active:scale-100 duration-200">Student</a>
       </div>
-      <div class="grid grid-cols-1 grid-rows-1 p-6 transition duration-300 transform bg-white shadow opacity-60 w-72 h-96 rounded-xl">
+      <div class="grid grid-cols-1 grid-rows-1 p-6 duration-300 transform bg-white shadow active:scale-100 opacity-60 w-72 h-96 rounded-xl">
         <svg class="w-full h-auto" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 924.76626 641.9894" xmlns:xlink="http://www.w3.org/1999/xlink">
           <path d="M901.84039,677.83256c3.74046-30.07761,22.38093-59.7128,51.06588-69.50087a139.64665,139.64665,0,0,0,.00692,95.87682c4.40777,11.92286,10.55173,24.725,6.40563,36.74145-2.57964,7.477-8.89041,13.1975-15.94457,16.7744-7.0546,3.5769-14.88373,5.28172-22.61488,6.95243l-1.52153,1.25839C906.96476,738.22193,898.09992,707.91018,901.84039,677.83256Z" transform="translate(-137.61687 -129.0053)" fill="#f0f0f0" />
           <path d="M953.19092,608.90041a119.36031,119.36031,0,0,0-29.67278,67.17592,51.40093,51.40093,0,0,0,.58468,16.09418,29.48054,29.48054,0,0,0,7.33219,13.67368c3.30477,3.631,7.10567,6.96234,9.47027,11.33341a18.051,18.051,0,0,1,.88188,14.73616c-2.08769,5.98787-6.20242,10.86849-10.39214,15.50149-4.65189,5.14407-9.56524,10.41344-11.54265,17.23311-.23959.8263-1.50772.40622-1.26849-.41883,3.44035-11.865,14.95818-18.60464,20.451-29.29134,2.563-4.98661,3.63886-10.77584,1.236-16.03972-2.10117-4.603-6.01776-8.04173-9.39569-11.68923a31.458,31.458,0,0,1-7.66744-13.10281,47.51861,47.51861,0,0,1-1.20129-16.01232,115.8007,115.8007,0,0,1,8.45741-35.19088,121.4766,121.4766,0,0,1,21.84309-35.0047c.57116-.63958,1.45134.36648.88391,1.00188Z" transform="translate(-137.61687 -129.0053)" fill="#fff" />
