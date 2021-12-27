@@ -18,7 +18,8 @@ $page = $search = $breadcrumb1 = 'instructors';
 $btn = $modal = $link = $table = 'instructor';
 $searchlink = 'instructor.php';
 $breadcrumblink = '#';
-$search .= ' (Name, Gender, Employment Status)'
+$search .= ' (Name, Gender, Employment Status)';
+$currentpage = 'Instructors';
 ?>
 
 <!DOCTYPE html>

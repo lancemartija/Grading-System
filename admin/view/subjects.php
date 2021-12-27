@@ -20,6 +20,7 @@ $btn = $modal = 'subject';
 $searchlink = 'subjects.php';
 $breadcrumblink = '#';
 $search .= ' (Name, Course, School Year, Semester)';
+$currentpage = 'Subjects';
 ?>
 
 <!DOCTYPE html>

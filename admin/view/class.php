@@ -11,6 +11,7 @@ $user = $_SESSION['useruid'];
 include_once '../database/database.classes.php';
 include_once '../page/class/class.classes.php';
 
+$currentpage = 'Class';
 $i = 0;
 ?>
 

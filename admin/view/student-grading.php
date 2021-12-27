@@ -24,6 +24,7 @@ $search = 'students (Subject Name, Instructor, Remarks)';
 $table = 'student-grading';
 $searchlink = 'student-grading.php?id=' . $subjcode;
 $i = 0;
+$currentpage = 'Instructors';
 ?>
 
 <!DOCTYPE html>

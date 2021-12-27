@@ -19,6 +19,7 @@ $btn = $modal = 'user';
 $searchlink = 'users.php';
 $breadcrumblink = '#';
 $search .= ' (ID, Name, Username, Type)';
+$currentpage = 'Users';
 ?>
 
 <!DOCTYPE html>

@@ -7,6 +7,7 @@ if (!isset($_SESSION['userid']) && !isset($_SESSION['useruid'])) {
 }
 
 $user = $_SESSION['useruid'];
+$currentpage = 'Our Team';
 ?>
 
 <!DOCTYPE html>

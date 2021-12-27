@@ -19,6 +19,7 @@ $btn = $table = $modal = $link = 'year';
 $searchlink = 'year.php';
 $breadcrumblink = '#';
 $i = 0;
+$currentpage = 'Academic Year';
 ?>
 
 <!DOCTYPE html>

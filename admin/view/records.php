@@ -28,6 +28,7 @@ $modal = $btn = 'record';
 $searchlink = 'records.php?studentnumber=' . $studentnumber;
 $search .= ' (Course, AY, Status, Date of Enrollment)';
 $i = 0;
+$currentpage = 'Students';
 ?>
 
 <!DOCTYPE html>

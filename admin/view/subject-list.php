@@ -30,6 +30,7 @@ $modal = $btn = 'subject';
 $searchlink = 'subject-list.php?id=' . $syid . '&studentnumber=' . $studentnumber . '&course=' . $course;
 $page = $breadcrumb3 = 'Enrolled Subjects';
 $i = 0;
+$currentpage = 'Students';
 ?>
 
 <!DOCTYPE html>

@@ -26,6 +26,7 @@ $btn = 'subject';
 $searchlink = 'loads.php?code=' . $instructor;
 $search .= ' (Subject Name, Course, Room, Schedule)';
 $i = 0;
+$currentpage = 'Instructors';
 ?>
 
 <!DOCTYPE html>

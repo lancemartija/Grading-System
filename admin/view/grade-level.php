@@ -19,6 +19,7 @@ $page = $search = $breadcrumb1 = 'grade levels';
 $table = $modal = $link = 'grade-level';
 $searchlink = 'grade-level.php';
 $breadcrumblink = '#';
+$currentpage = 'Grade Level';
 ?>
 
 <!DOCTYPE html>

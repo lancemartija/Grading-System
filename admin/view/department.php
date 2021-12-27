@@ -19,6 +19,7 @@ $btn = $table = $link = 'department';
 $modal = 'dept';
 $breadcrumblink = '#';
 $searchlink = 'department.php';
+$currentpage = 'Department';
 ?>
 
 <!DOCTYPE html>

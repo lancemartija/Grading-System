@@ -20,6 +20,7 @@ $searchlink = 'students.php';
 $breadcrumblink = '#';
 $search .= ' (Student ID, Name, Gender)';
 $i = 0;
+$currentpage = 'Students';
 ?>
 
 <!DOCTYPE html>

@@ -18,6 +18,7 @@ $page = $search = $table = $breadcrumb1 = $link = 'rooms';
 $btn = $modal = 'room';
 $searchlink = 'rooms.php';
 $breadcrumblink = '#';
+$currentpage = 'Rooms';
 ?>
 
 <!DOCTYPE html>

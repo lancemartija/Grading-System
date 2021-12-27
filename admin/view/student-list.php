@@ -23,6 +23,7 @@ $search = 'students (Subject Name, Instructor, Remarks)';
 $table = 'student-list';
 $searchlink = 'student-list.php?id=' . $subjcode;
 $i = 0;
+$currentpage = 'Class';
 ?>
 
 <!DOCTYPE html>

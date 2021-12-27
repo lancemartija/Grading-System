@@ -19,6 +19,7 @@ $topperformers = $display->fetchTopPerformers();
 
 $class = new DisplayClassContr;
 $result = $class->fetchClass();
+$currentpage = 'Dashboard';
 ?>
 
 <!DOCTYPE html>
