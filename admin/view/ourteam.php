@@ -21,77 +21,39 @@ $currentpage = 'Our Team';
   <link rel="stylesheet" href="../../src/css/tailwind.css">
 </head>
 
-<body>
+<body class="bg-gray-50">
   <?php include_once '../templates/navbar.php'; ?>
   <div class="flex pt-16 overflow-hidden bg-white">
     <?php include_once '../templates/sidebar.php'; ?>
-    <main id="main-content" class="relative w-full ml-64 overflow-y-auto bg-gray-50">
-      <div class="m-6 bg-white rounded-lg shadow">
-        <div class="container flex justify-center mx-auto">
-          <div>
-            <p class="pb-3 mt-6 text-lg font-normal text-center text-gray-700">OUR TEAM - GROUP 1</p>
-            <h1 class="w-5/6 pb-6 mx-auto text-3xl font-extrabold text-center text-gray-900 xl:text-4xl sm:w-4/6">The Talented People Behind This Project</h1>
-          </div>
-        </div>
-        <div class="w-auto px-10 pt-10">
-          <div class="container mx-auto">
-            <div class="grid items-center grid-cols-2">
-              <div class="relative mt-16 mb-32">
-                <div class="overflow-hidden rounded ">
-                  <div class="absolute flex justify-center w-full -mt-20">
-                    <div class="w-32 h-32">
-                      <img src="../../src/img/lance.jpg" alt="Display Picture of Lance Martija" role="img" class="object-cover w-full h-full rounded-full " />
-                    </div>
-                  </div>
-                  <div class="px-6 mt-16">
-                    <h1 class="mb-1 text-3xl font-bold text-center">Lance Martija</h1>
-                    <p class="text-sm text-center text-gray-700">Lead Frontend/Backend Developer</p>
-                  </div>
-                </div>
-              </div>
-              <div class="relative mt-16 mb-32">
-                <div class="overflow-hidden rounded ">
-                  <div class="absolute flex justify-center w-full -mt-20">
-                    <div class="w-32 h-32">
-                      <img src="../../src/img/alistaire.jpg" alt="Display Picture of Alistaire" role="img" class="object-cover w-full h-full rounded-full " />
-                    </div>
-                  </div>
-                  <div class="px-6 mt-16">
-                    <h1 class="mb-1 text-3xl font-bold text-center">Alistaire Carandang</h1>
-                    <p class="text-sm text-center text-gray-700">Backend Developer</p>
-                  </div>
-                </div>
-              </div>
-              <div class="relative mt-16 mb-32">
-                <div class="overflow-hidden rounded ">
-                  <div class="absolute flex justify-center w-full -mt-20">
-                    <div class="w-32 h-32">
-                      <img src="../../src/img/carl.jpg" alt="Display Picture of Carl" role="img" class="object-cover w-full h-full rounded-full " />
-                    </div>
-                  </div>
-                  <div class="px-6 mt-16">
-                    <h1 class="mb-1 text-3xl font-bold text-center">Carl Gonzales</h1>
-                    <p class="text-sm text-center text-gray-700">Tester / Quality Assurance</p>
-                  </div>
-                </div>
-              </div>
-              <div class="relative mt-16 mb-32">
-                <div class="overflow-hidden rounded ">
-                  <div class="absolute flex justify-center w-full -mt-20">
-                    <div class="w-32 h-32">
-                      <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="Display Picture of Diosdado" role="img" class="object-cover w-full h-full rounded-full " />
-                    </div>
-                  </div>
-                  <div class="px-6 mt-16">
-                    <h1 class="mb-1 text-3xl font-bold text-center">Diosdado Umali Jr.</h1>
-                    <p class="text-sm text-center text-gray-700">Frontend Developer</p>
-                  </div>
-                </div>
-              </div>
+    <main id="main-content" class="relative w-full ml-64 overflow-hidden bg-gray-50">
+      <section class="py-6">
+        <div class="flex flex-col items-center justify-center p-10 mx-auto space-y-8 ">
+          <h1 class="text-5xl font-bold leading-none text-center">Our team</h1>
+          <p class="max-w-2xl text-center ">The Talented People Behind This Project</p>
+          <div class="flex flex-row flex-wrap-reverse justify-center">
+            <div class="flex flex-col justify-center m-8 text-center">
+              <img alt="Display Picture of Lance" class="self-center w-24 h-24 mb-4 bg-center bg-cover rounded-full" src="../../src/img/lance.jpg">
+              <p class="text-xl font-semibold leading-tight">Lance Martija</p>
+              <p class="text-sm text-gray-500">Lead Developer</p>
+            </div>
+            <div class="flex flex-col justify-center m-8 text-center">
+              <img alt="Display Picture of Alistaire" class="self-center w-24 h-24 mb-4 bg-center bg-cover rounded-full" src="../../src/img/alistaire.jpg">
+              <p class="text-xl font-semibold leading-tight">Alistaire Carandang</p>
+              <p class="text-sm text-gray-500">Backend Developer</p>
+            </div>
+            <div class="flex flex-col justify-center m-8 text-center">
+              <img alt="Display Picture of Carl" class="self-center w-24 h-24 mb-4 bg-center bg-cover rounded-full" src="../../src/img/carl.jpg">
+              <p class="text-xl font-semibold leading-tight">Carl Gonzales</p>
+              <p class="text-sm text-gray-500">Quality Assurance</p>
+            </div>
+            <div class="flex flex-col justify-center m-8 text-center">
+              <img alt="Display Picture of Diosdado" class="self-center w-24 h-24 mb-4 bg-center bg-cover rounded-full" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png">
+              <p class="text-xl font-semibold leading-tight">Diosdado Umali Jr.</p>
+              <p class="text-sm text-gray-500">Frontend Developer</p>
             </div>
           </div>
         </div>
-      </div>
+      </section>
       <footer class="mt-10 mb-6">
         <p class="text-sm text-center text-gray-400">&#169; 2021 Webdvt SA3 <b>Group 1</b>. All rights reserved.</p>
       </footer>
