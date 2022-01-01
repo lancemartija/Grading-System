@@ -33,6 +33,11 @@
               <div class="flex items-center capitalize">
                 <?= $data['subj_name']; ?>
               </div>
+              <?php if (!isset($_GET['course'])) { ?>
+                <div class="inline-flex items-center px-3 py-1 ml-2 text-sm text-center text-white bg-blue-500 shadow-sm font-sm rounded-2xl">
+                  <?= $data['subj_level']; ?>
+                </div>
+              <?php } ?>
               <div class="inline-flex items-center px-3 py-1 ml-2 text-sm text-center text-white shadow-sm font-sm rounded-2xl <?= ($data['subj_sem'] == 'First Semester') ? 'bg-emerald-500' : (($data['subj_sem'] == 'Second Semester') ? 'bg-amber-500' : 'bg-neutral-500'); ?>">
                 <?= $data['subj_sem']; ?>
               </div>
