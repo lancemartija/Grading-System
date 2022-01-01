@@ -11,7 +11,6 @@
           <a href="dashboard.php" class="px-3 py-2 text-sm font-medium rounded-md <?= ($page == 'Dashboard') ? 'text-white bg-gray-900' : 'text-gray-300 hover:bg-gray-700 hover:text-white'; ?>" aria-current="page">Dashboard</a>
           <a href="subjects.php" class="px-3 py-2 text-sm font-medium rounded-md <?= ($page == 'Subjects') ? 'text-white bg-gray-900' : 'text-gray-300 hover:bg-gray-700 hover:text-white'; ?>">Subjects</a>
           <a href="grades.php" class="px-3 py-2 text-sm font-medium rounded-md <?= ($page == 'Grades') ? 'text-white bg-gray-900' : 'text-gray-300 hover:bg-gray-700 hover:text-white'; ?>">Grades</a>
-          <a href="studentinfo.php" class="px-3 py-2 text-sm font-medium rounded-md <?= ($page == 'Student Info') ? 'text-white bg-gray-900' : 'text-gray-300 hover:bg-gray-700 hover:text-white'; ?>">Student Info</a>
         </div>
       </div>
       <div class="relative px-3 py-2 rounded-md cursor-pointer group">

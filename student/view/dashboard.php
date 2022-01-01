@@ -41,22 +41,6 @@ $page = 'Dashboard';
             </div>
           </div>
         </a>
-        <a href="#">
-          <div class="relative grid overflow-hidden duration-200 transform bg-gray-600 rounded shadow-lg place-items-center hover:-translate-y-2 hover:shadow-2xl h-80">
-            <img class="w-1/2" src="../../src/img/<?= ($_SESSION['student'][0]['student_gender'] == 'Male') ? 'male' : 'female'; ?>.png" alt="" />
-            <div class="absolute bottom-0 left-0 right-0 px-6 py-4 space-x-3 duration-200">
-              <p class="text-2xl font-bold text-center text-gray-100">Student Info</p>
-            </div>
-          </div>
-        </a>
-        <a href="#" class="cursor-default">
-          <div class="relative grid overflow-hidden duration-200 transform bg-red-600 rounded shadow-lg place-items-center opacity-30 h-80">
-            <img class="w-1/2" src="../../src/img/report.png" alt="" />
-            <div class="absolute bottom-0 left-0 right-0 px-6 py-4 space-x-3 duration-200">
-              <p class="text-2xl font-bold text-center text-gray-100">Reports</p>
-            </div>
-          </div>
-        </a>
       </div>
     </div>
   </main>
