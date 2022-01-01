@@ -22,9 +22,10 @@ class StudentLogin extends Dbh
 
     session_start();
 
-    $_SESSION['student'] = $_SESSION["lname"] = $student[0]["student_lname"];
-    $_SESSION['student'] .= ', ' . $_SESSION["fname"] = $student[0]["student_fname"];
-    $_SESSION['student'] .= ' ' . $_SESSION["mname"] = $student[0]["student_mname"];
+    $_SESSION['student'] = $student;
+    $_SESSION['name'] = $_SESSION["lname"] = $student[0]["student_lname"];
+    $_SESSION['name'] .= ', ' . $_SESSION["fname"] = $student[0]["student_fname"];
+    $_SESSION['name'] .= ' ' . $_SESSION["mname"] = $student[0]["student_mname"];
     $_SESSION["studentid"] = $student[0]["student_number"];
 
     $stmt = null;
