@@ -30,10 +30,10 @@
         <?php foreach ($result as $data) : ?>
           <tr class="hover:bg-gray-100 group">
             <td class="flex td">
-              <div class="flex items-center capitalize">
+              <div class="flex items-center">
                 <?= $data['subj_name']; ?>
               </div>
-              <?php if (!isset($_GET['course'])) { ?>
+              <?php if (!isset($_GET['course']) || empty($_GET['course'])) { ?>
                 <div class="inline-flex items-center px-3 py-1 ml-2 text-sm text-center text-white bg-blue-500 shadow-sm font-sm rounded-2xl">
                   <?= $data['subj_level']; ?>
                 </div>
@@ -43,32 +43,32 @@
               </div>
             </td>
             <td class="td">
-              <div class="flex items-center capitalize">
+              <div class="flex items-center">
                 <?= $data['grade_first']; ?>
               </div>
             </td>
             <td class="td">
-              <div class="flex items-center capitalize">
+              <div class="flex items-center">
                 <?= $data['grade_second']; ?>
               </div>
             </td>
             <td class="td">
-              <div class="flex items-center capitalize">
+              <div class="flex items-center">
                 <?= $data['grade_third']; ?>
               </div>
             </td>
             <td class="td">
-              <div class="flex items-center capitalize">
+              <div class="flex items-center">
                 <?= $data['grade_fourth']; ?>
               </div>
             </td>
             <td class="td">
-              <div class="flex items-center capitalize">
+              <div class="flex items-center">
                 <?= $data['grade_avg']; ?>
               </div>
             </td>
             <td class="td">
-              <div class="flex items-center capitalize">
+              <div class="flex items-center">
                 <?= $data['grade_remarks']; ?>
               </div>
             </td>

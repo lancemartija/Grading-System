@@ -33,7 +33,7 @@ $page = 'Grades';
         <form method="get">
           <ul class="flex flex-wrap border-b border-gray-200">
             <li class="mr-2">
-              <button type="submit" name="" value="" class="inline-block px-4 py-4 text-sm font-medium text-center rounded-t-lg <?= (!isset($_GET['course'])) ? 'bg-gray-200 text-gray-600' : 'hover:text-gray-600 hover:bg-gray-200 text-gray-400'; ?>">All Courses</button>
+              <button type="submit" name="" value="" class="inline-block px-4 py-4 text-sm font-medium text-center rounded-t-lg <?= (!isset($_GET['course']) || empty($_GET['course'])) ? 'bg-gray-200 text-gray-600' : 'hover:text-gray-600 hover:bg-gray-200 text-gray-400'; ?>">All Courses</button>
             </li>
             <li class="mr-2">
               <button type="submit" name="course" value="Grade 12" class="inline-block px-4 py-4 text-sm font-medium text-center rounded-t-lg <?= (isset($_GET['course']) && $_GET['course'] == 'Grade 12') ? 'bg-gray-200 text-gray-600' : 'hover:text-gray-600 hover:bg-gray-200 text-gray-400'; ?>">Grade 12</button>
