@@ -37,11 +37,11 @@ $currentpage = 'Dashboard';
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
-<body>
+<body class="bg-gray-50">
   <?php include_once '../templates/navbar.php'; ?>
   <div class="flex pt-16 overflow-hidden bg-white">
     <?php include_once '../templates/sidebar.php'; ?>
-    <main id="main-content" class="relative w-full h-screen ml-64 overflow-y-auto bg-gray-50">
+    <main id="main-content" class="relative w-full ml-64 overflow-y-auto bg-gray-50">
       <div class="p-4">
         <section class="grid w-full grid-cols-1 gap-4 xl:grid-cols-3">
           <?php
