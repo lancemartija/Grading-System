@@ -19,7 +19,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
-          <span class="ml-3 text-sm text-white"><?= $_SESSION['student']; ?></span>
+          <span class="ml-3 text-sm text-white"><?= $_SESSION['name']; ?></span>
         </div>
         <div class="absolute right-0 hidden w-32 pt-3 origin-top-right rounded-md shadow-lg group-hover:block">
           <a href="../includes/logout.inc.php" class="flex px-4 py-2 text-sm text-gray-700 bg-white rounded-md hover:bg-gray-100">
