@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Dec 26, 2021 at 09:28 AM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 7.3.0
+-- Host: 127.0.0.1:3306
+-- Generation Time: Jan 02, 2022 at 12:34 PM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 7.4.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -48,7 +47,6 @@ CREATE TABLE `tblclass` (
 --
 
 INSERT INTO `tblclass` (`class_id`, `class_code`, `class_name`, `class_desc`, `inst_code`, `class_inst`, `class_level`, `class_ay`, `class_day`, `class_time`, `class_room`, `class_section`) VALUES
-(19, 133576, 'Hiragana 101', 'Foreign Languages 1', 1152, 'Maya Wilkins Hawke', 'Grade  10', '2021-2022', 'MWF', '8:30am-9:30am', 'Room 404', 'Section B'),
 (20, 133575, 'Hangul 101', 'Foreign Languages 1', 1152, 'Maya Wilkins Hawke', 'Grade 11', '2021-2022', '', '', '', ''),
 (21, 5135, 'JavaScript Essentials', 'Web Development 101', 36256, 'Henry Gesault Fabien', 'Grade 12', '2021-2022', '', '', '', ''),
 (23, 42345, 'Eloquent English', 'Eloquent English 101', 111, 'Jimmy Nickelson Cricket', 'Grade 11', '2022-2023', 'TTH', '4:30pm-5:30pm', 'Room 404', ''),
@@ -57,7 +55,8 @@ INSERT INTO `tblclass` (`class_id`, `class_code`, `class_name`, `class_desc`, `i
 (61, 42643, 'Fundamentals of SQL', 'Web Development 101', 36256, 'Henry Gesault Fabien', 'Grade 12', '2021-2022', '', '', '', ''),
 (63, 234523, 'Life of Jose Rizal', 'History 101', 233425345, 'Terrence Magsino Mendoza', 'Grade 7', '2021-2022', '', '', '', ''),
 (65, 12345, 'Advanced Math', 'Mathematics Made Easy', 5456345, 'Boris Olga Kovac', 'Grade 12', '2021-2022', '', '', '', ''),
-(66, 245234, 'Artificial Intelligence 1', 'Computer Science', 234245, 'Kazuhira Miller', 'Grade 12', '2021-2022', '', '', '', '');
+(66, 245234, 'Artificial Intelligence 1', 'Computer Science', 234245, 'Kazuhira Miller', 'Grade 12', '2021-2022', '', '', '', ''),
+(67, 133576, 'Hiragana 101', 'Foreign Languages 1', 1152, 'Maya Wilkins Hawke', 'Grade 10', '2021-2022', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -79,7 +78,7 @@ CREATE TABLE `tblcourse` (
 INSERT INTO `tblcourse` (`course_id`, `course_code`, `course_name`, `course_desc`) VALUES
 (1, 1234, 'Grade 12', 'Senior High School'),
 (2, 2351, 'Grade 11', 'Senior High School'),
-(3, 3264, 'Grade  10', 'Junior High School'),
+(3, 3264, 'Grade 10', 'Junior High School'),
 (4, 765345, 'Grade 9', 'Junior High School'),
 (5, 53425, 'Grade 8', 'Junior High School'),
 (6, 3673, 'Grade 7', 'Junior High School');
@@ -122,33 +121,35 @@ CREATE TABLE `tblgrades` (
   `grade_third` int(11) NOT NULL,
   `grade_fourth` int(11) NOT NULL,
   `grade_avg` double NOT NULL,
-  `grade_remarks` varchar(255) NOT NULL,
-  `grade_comment` varchar(255) NOT NULL
+  `grade_remarks` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tblgrades`
 --
 
-INSERT INTO `tblgrades` (`grade_id`, `student_number`, `sy_id`, `subj_code`, `grade_first`, `grade_second`, `grade_third`, `grade_fourth`, `grade_avg`, `grade_remarks`, `grade_comment`) VALUES
-(6, 123513, 14, 12345, 90, 90, 90, 90, 90, 'Passed', ''),
-(7, 123513, 14, 5135, 0, 0, 0, 0, 0, '', ''),
-(10, 1234125, 5, 5135, 0, 0, 0, 0, 0, '', ''),
-(13, 1234125, 6, 42345, 90, 90, 90, 90, 90, 'Passed', ''),
-(14, 1234125, 6, 133575, 98, 90, 96, 99, 96, 'Passed', ''),
-(39, 235324, 4, 234523, 0, 0, 0, 0, 0, '', ''),
-(41, 235324, 4, 324234, 0, 0, 0, 0, 0, '', ''),
-(42, 1234125, 5, 234324, 98, 98, 97, 98, 97.75, 'Passed', ''),
-(45, 123513, 14, 234324, 99, 99, 97, 99, 98.5, 'Passed', ''),
-(46, 123513, 14, 245234, 0, 0, 0, 0, 0, '', ''),
-(47, 235324, 15, 133576, 0, 0, 0, 0, 0, '', ''),
-(49, 1426435, 17, 133576, 0, 0, 0, 0, 0, '', ''),
-(50, 2147483647, 18, 123634, 99, 99, 99, 99, 99, 'Passed', ''),
-(53, 234235, 16, 133576, 0, 0, 0, 0, 0, '', ''),
-(54, 123513, 14, 42643, 0, 0, 0, 0, 0, '', ''),
-(61, 1234125, 5, 12345, 0, 0, 0, 0, 0, '', ''),
-(62, 1234125, 5, 245234, 0, 0, 0, 0, 0, '', ''),
-(63, 1234125, 5, 42643, 0, 0, 0, 0, 0, '', '');
+INSERT INTO `tblgrades` (`grade_id`, `student_number`, `sy_id`, `subj_code`, `grade_first`, `grade_second`, `grade_third`, `grade_fourth`, `grade_avg`, `grade_remarks`) VALUES
+(6, 123513, 14, 12345, 90, 90, 90, 90, 90, 'Passed'),
+(7, 123513, 14, 5135, 0, 0, 0, 0, 0, ''),
+(10, 1234125, 5, 5135, 0, 0, 0, 0, 0, ''),
+(13, 1234125, 6, 42345, 70, 70, 70, 70, 70, 'Failed'),
+(14, 1234125, 6, 133575, 98, 90, 96, 99, 96, 'Passed'),
+(39, 235324, 4, 234523, 0, 0, 0, 0, 0, ''),
+(41, 235324, 4, 324234, 0, 0, 0, 0, 0, ''),
+(42, 1234125, 5, 234324, 98, 98, 97, 98, 97.75, 'Passed'),
+(45, 123513, 14, 234324, 99, 99, 97, 99, 98.5, 'Passed'),
+(46, 123513, 14, 245234, 0, 0, 0, 0, 0, ''),
+(47, 235324, 15, 133576, 0, 0, 0, 0, 0, ''),
+(49, 1426435, 17, 133576, 0, 0, 0, 0, 0, ''),
+(50, 2147483647, 18, 123634, 99, 99, 99, 99, 99, 'Passed'),
+(54, 123513, 14, 42643, 0, 0, 0, 0, 0, ''),
+(61, 1234125, 5, 12345, 0, 0, 0, 0, 0, ''),
+(62, 1234125, 5, 245234, 0, 0, 0, 0, 0, ''),
+(63, 1234125, 5, 42643, 0, 0, 0, 0, 0, ''),
+(64, 423425234, 19, 12345, 0, 0, 0, 0, 0, ''),
+(65, 423425234, 19, 245234, 0, 0, 0, 0, 0, ''),
+(66, 423425234, 19, 42643, 0, 0, 0, 0, 0, ''),
+(68, 234235, 21, 133576, 0, 0, 0, 0, 0, '');
 
 -- --------------------------------------------------------
 
@@ -237,9 +238,11 @@ INSERT INTO `tblschoolyear` (`sy_id`, `sy_ay`, `sy_level`, `class_id`, `student_
 (6, '2022-2023', 'Grade 11', 0, 1234125, 'ENROLLED', '2021-12-14', 'Transferee'),
 (14, '2021-2022', 'Grade 12', 0, 123513, 'ENROLLED', '2021-12-08', 'New Student'),
 (15, '2022-2023', 'Grade  10', 0, 235324, 'ENROLLED', '2021-12-08', 'Transferee'),
-(16, '2022-2023', 'Grade  10', 0, 234235, 'ENROLLED', '2021-12-31', 'New Student'),
 (17, '2021-2022', 'Grade  10', 0, 1426435, 'ENROLLED', '2021-12-31', 'New Student'),
-(18, '2021-2022', 'Grade 8', 0, 2147483647, 'ENROLLED', '2021-12-31', 'Continuing');
+(18, '2021-2022', 'Grade 8', 0, 2147483647, 'ENROLLED', '2021-12-31', 'Continuing'),
+(19, '2021-2022', 'Grade 12', 0, 423425234, 'ENROLLED', '2021-12-31', 'New Student'),
+(21, '2021-2022', 'Grade 10', 0, 234235, 'ENROLLED', '2022-01-28', 'New Student'),
+(22, '2022-2023', 'Grade 10', 0, 123513, 'ENROLLED', '2022-01-20', 'New Student');
 
 -- --------------------------------------------------------
 
@@ -275,7 +278,8 @@ INSERT INTO `tblstudents` (`student_id`, `student_number`, `student_fname`, `stu
 (4, 235324, 'George', 'Trinidad', 'Martinez', 'Male', '2004-12-01', 'Single', 17, 'Mexican', 'Catholic', '09785554872', 'martinez.george@email.com', 'Yucatan, Mexico', ''),
 (5, 2147483647, 'William', 'Terry', 'Goddard', 'Male', '2007-03-05', 'Single', 14, 'American', 'Christian', '09975634225', 'goddard_william@email.com', 'New York', 'New York, USA'),
 (6, 1426435, 'Hailey', 'Asher', 'Goodman', 'Female', '2004-04-08', 'Single', 17, 'American', 'Christian', '09956378822', 'hailey.a.goodman@email.com', 'Wichita', 'USA'),
-(7, 234235, 'Mitch', 'Perez', 'Fajutag', 'Male', '2005-02-05', 'Single', 16, 'Filipino', 'Catholic', '09147882536', 'mitch05@email.com', 'Lipa City', 'Batangas');
+(7, 234235, 'Mitch', 'Perez', 'Fajutag', 'Female', '2005-02-05', 'Single', 16, 'Filipino', 'Catholic', '09147882536', 'mitch05@email.com', 'Lipa City', 'Batangas'),
+(8, 423425234, 'Yvonne', 'Magana', 'Hwang', 'Female', '1999-07-15', 'Female', 22, 'Korean', 'Buddhist', '09066259230', 'tresmae@email.com', 'Seoul', 'South Korea');
 
 -- --------------------------------------------------------
 
@@ -299,10 +303,10 @@ CREATE TABLE `tblsubjects` (
 --
 
 INSERT INTO `tblsubjects` (`subj_id`, `subj_code`, `subj_name`, `subj_desc`, `subj_level`, `subj_unit`, `subj_ay`, `subj_sem`) VALUES
-(1, 12345, 'Advanced Math', 'Mathematics Made Easy', 'Grade 12', 3, '2021-2022', 'First Semester'),
+(1, 12345, 'Advanced Math', 'Mathematics Made Easy', 'Grade 12', 3, '2021-2022', 'Summer'),
 (2, 42345, 'Eloquent English', 'Eloquent English 101', 'Grade 11', 3, '2022-2023', 'First Semester'),
 (3, 133575, 'Hangul 101', 'Foreign Languages 1', 'Grade 11', 2, '2021-2022', 'Second Semester'),
-(4, 133576, 'Hiragana 101', 'Foreign Languages 1', 'Grade  10', 2, '2021-2022', 'First Semester'),
+(4, 133576, 'Hiragana 101', 'Foreign Languages 1', 'Grade 10', 2, '2021-2022', 'First Semester'),
 (5, 5135, 'JavaScript Essentials', 'Web Development 101', 'Grade 12', 3, '2021-2022', 'Second Semester'),
 (6, 234324, 'PHP Essentials', 'Programming Class 1', 'Grade 12', 3, '2022-2023', 'Second Semester'),
 (7, 234523, 'Life of Jose Rizal', 'History 101', 'Grade 7', 2, '2021-2022', 'First Semester'),
@@ -437,7 +441,7 @@ ALTER TABLE `tblyear`
 -- AUTO_INCREMENT for table `tblclass`
 --
 ALTER TABLE `tblclass`
-  MODIFY `class_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
+  MODIFY `class_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 
 --
 -- AUTO_INCREMENT for table `tblcourse`
@@ -455,7 +459,7 @@ ALTER TABLE `tbldepartment`
 -- AUTO_INCREMENT for table `tblgrades`
 --
 ALTER TABLE `tblgrades`
-  MODIFY `grade_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
+  MODIFY `grade_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
 
 --
 -- AUTO_INCREMENT for table `tblinstructor`
@@ -473,13 +477,13 @@ ALTER TABLE `tblrooms`
 -- AUTO_INCREMENT for table `tblschoolyear`
 --
 ALTER TABLE `tblschoolyear`
-  MODIFY `sy_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `sy_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `tblstudents`
 --
 ALTER TABLE `tblstudents`
-  MODIFY `student_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `student_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `tblsubjects`
