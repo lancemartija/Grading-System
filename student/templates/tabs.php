@@ -28,13 +28,15 @@ function existsInArray($arr, $data)
       <li class="mr-2">
         <button type="submit" name="" value="" class="inline-block px-4 py-4 text-sm font-medium text-center rounded-t-lg focus:outline-none <?= (!isset($_GET['course']) || empty($_GET['course'])) ? 'bg-gray-200 text-gray-600' : 'hover:text-gray-600 hover:bg-gray-200 text-gray-400'; ?>">All Courses</button>
       </li>
-      <?php foreach ($courses as $course) : ?>
-        <?php if (existsInArray($result, $course)) { ?>
-          <li class="mr-2">
-            <button type="submit" name="course" value="<?= $course; ?>" class="inline-block px-4 py-4 text-sm font-medium text-center rounded-t-lg focus:outline-none <?= (isset($_GET['course']) && $_GET['course'] == $course) ? 'bg-gray-200 text-gray-600' : 'hover:text-gray-600 hover:bg-gray-200 text-gray-400'; ?>"><?= $course; ?></button>
-          </li>
-        <?php } ?>
-      <?php endforeach; ?>
+      <?php if (!empty($result)) { ?>
+        <?php foreach ($courses as $course) : ?>
+          <?php if (existsInArray($result, $course)) { ?>
+            <li class="mr-2">
+              <button type="submit" name="course" value="<?= $course; ?>" class="inline-block px-4 py-4 text-sm font-medium text-center rounded-t-lg focus:outline-none <?= (isset($_GET['course']) && $_GET['course'] == $course) ? 'bg-gray-200 text-gray-600' : 'hover:text-gray-600 hover:bg-gray-200 text-gray-400'; ?>"><?= $course; ?></button>
+            </li>
+          <?php } ?>
+        <?php endforeach; ?>
+      <?php } ?>
     </ul>
   </form>
 </nav>
