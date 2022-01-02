@@ -9,7 +9,7 @@ if (!isset($_SESSION['student']) && !isset($_SESSION['studentid'])) {
 $studentnumber = $_SESSION['studentid'];
 
 include_once '../database/database.classes.php';
-include_once '../page/grades/grades.classes.php';
+include_once '../page/subjects/subjects.classes.php';
 
 $page = 'Subjects';
 ?>

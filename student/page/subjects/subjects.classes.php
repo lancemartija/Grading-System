@@ -1,6 +1,6 @@
 <?php
 
-class DisplayGrades extends Dbh
+class DisplaySubjects extends Dbh
 {
   protected function getData($studentnumber)
   {
@@ -46,7 +46,7 @@ class DisplayGrades extends Dbh
   }
 }
 
-class DisplayGradesContr extends DisplayGrades
+class DisplaySubjectsContr extends DisplaySubjects
 {
   private $studentnumber;
 
@@ -69,5 +69,5 @@ class DisplayGradesContr extends DisplayGrades
   }
 }
 
-$display = new DisplayGradesContr($studentnumber);
+$display = new DisplaySubjectsContr($studentnumber);
 $result = $display->fetchData();
