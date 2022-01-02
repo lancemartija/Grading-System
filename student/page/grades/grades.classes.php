@@ -2,6 +2,26 @@
 
 class DisplayGrades extends Dbh
 {
+  protected function getCourses()
+  {
+    $sql = 'SELECT course_name FROM tblcourse ORDER BY course_name DESC;';
+    $stmt = $this->connect()->query($sql);
+    $courses = 0;
+
+    if (!$stmt) {
+      $stmt = null;
+      echo "error";
+      exit;
+    }
+
+    while ($row = $stmt->fetchAll(PDO::FETCH_ASSOC)) {
+      $courses = $row;
+    }
+
+    $stmt = null;
+    return $courses;
+  }
+
   protected function getData($studentnumber)
   {
     $stmt = $this->connect()->prepare('SELECT * FROM tblgrades g, tblsubjects s, tblclass c WHERE g.student_number = ? AND s.subj_code = g.subj_code AND c.class_code = g.subj_code ORDER BY s.subj_sem;');
@@ -55,6 +75,12 @@ class DisplayGradesContr extends DisplayGrades
     $this->studentnumber = $studentnumber;
   }
 
+  public function fetchCourses()
+  {
+    $courses = $this->getCourses();
+    return $courses;
+  }
+
   public function fetchData()
   {
     $result = $this->getData($this->studentnumber);
@@ -70,4 +96,5 @@ class DisplayGradesContr extends DisplayGrades
 }
 
 $display = new DisplayGradesContr($studentnumber);
+$courses = $display->fetchCourses();
 $result = $display->fetchData();
