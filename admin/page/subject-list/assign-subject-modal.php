@@ -15,7 +15,7 @@
         <input type="hidden" name="syid" value="<?= $syid; ?>">
         <input type="hidden" name="studentnumber" value="<?= $studentnumber; ?>">
         <input type="hidden" name="course" value="<?= $course; ?>">
-        <div class="p-6">
+        <div class="p-6 overflow-y-auto h-96">
           <div class="flex flex-col min-w-full overflow-hidden overflow-x-auto align-middle shadow">
             <table class="min-w-full divide-y divide-gray-200 table-fixed">
               <thead class="bg-gray-100">
