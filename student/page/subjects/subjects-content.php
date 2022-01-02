@@ -57,7 +57,7 @@
                   None
                 <?php } ?>
               </dt>
-              <dd class="sr-only">Class time</dd>
+              <dd class="sr-only">Instructor name</dd>
             </span>
           </div>
         </dl>
