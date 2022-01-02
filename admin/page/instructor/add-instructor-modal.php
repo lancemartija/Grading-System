@@ -45,7 +45,7 @@
               <select name="status" class="input-field focus:ring-2 focus:ring-green-600/50 focus:border-green-600 focus:outline-none">
                 <option value="" disabled selected hidden>Choose Status...</option>
                 <option value="Single">Single</option>
-                <option value="Female">Married</option>
+                <option value="Married">Married</option>
                 <option value="Divorced">Divorced</option>
                 <option value="Widowed">Widowed</option>
               </select>
