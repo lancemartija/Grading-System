@@ -36,9 +36,9 @@ class DeleteRecords extends Dbh
 {
   protected function setRecords($id, $studentnumber)
   {
-    $stmt = $this->connect()->prepare('DELETE FROM tblschoolyear WHERE sy_id = ?;');
+    $stmt = $this->connect()->prepare('DELETE FROM tblschoolyear WHERE sy_id = ?; DELETE FROM tblgrades WHERE student_number = ? AND sy_id = ?;');
 
-    if (!$stmt->execute([$id])) {
+    if (!$stmt->execute([$id, $studentnumber, $id])) {
       $stmt = null;
       header('Location: ../view/records.php?studentnumber=' . $studentnumber . '&error=stmtfailed');
       exit;
