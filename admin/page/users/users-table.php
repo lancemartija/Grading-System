@@ -40,7 +40,7 @@
             </div>
           </td>
           <td class="td">
-            <div class="flex items-center capitalize">
+            <div class="flex items-center">
               <?= $data['account_username']; ?>
             </div>
           </td>
