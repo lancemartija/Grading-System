@@ -1,34 +1,34 @@
 <section class="w-full">
-  <div class="flex flex-col min-w-full overflow-hidden overflow-x-auto align-middle shadow">
-    <table class="min-w-full divide-y divide-gray-200 table-fixed">
-      <thead class="bg-gray-100">
+  <div class="flex flex-col min-w-full overflow-hidden overflow-x-auto align-middle rounded-md shadow">
+    <table class="min-w-full divide-y divide-indigo-200 table-fixed">
+      <thead class="bg-indigo-400">
         <tr>
-          <th scope="col" class="th">
+          <th class="text-white th">
             Subject
           </th>
-          <th scope="col" class="th">
+          <th class="text-white th">
             1st
           </th>
-          <th scope="col" class="th">
+          <th class="text-white th">
             2nd
           </th>
-          <th scope="col" class="th">
+          <th class="text-white th">
             3rd
           </th>
-          <th scope="col" class="th">
+          <th class="text-white th">
             4th
           </th>
-          <th scope="col" class="th">
+          <th class="text-white th">
             Final
           </th>
-          <th scope="col" class="th">
+          <th class="text-white th">
             Remarks
           </th>
         </tr>
       </thead>
-      <tbody class="bg-white divide-y divide-gray-200 ">
+      <tbody class="bg-white divide-y divide-gray-200">
         <?php foreach ($result as $data) : ?>
-          <tr class="hover:bg-gray-100 group">
+          <tr class="group">
             <td class="flex td">
               <div class="flex items-center">
                 <?= $data['subj_name']; ?>
@@ -68,7 +68,7 @@
               </div>
             </td>
             <td class="td">
-              <div class="flex items-center">
+              <div class="inline-flex items-center px-3 py-1 ml-2 text-sm text-center text-white font-sm rounded-2xl <?= ($data['grade_remarks'] == 'Passed') ? 'bg-green-500 shadow-sm' : (($data['grade_remarks'] == 'Failed') ? 'bg-red-500 shadow-sm' : ''); ?>">
                 <?= $data['grade_remarks']; ?>
               </div>
             </td>
