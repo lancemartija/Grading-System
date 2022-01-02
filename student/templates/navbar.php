@@ -8,7 +8,7 @@
           </svg>
         </div>
         <div class="flex items-baseline ml-10 space-x-4">
-          <a href="dashboard.php" class="px-3 py-2 text-sm font-medium rounded-md <?= ($page == 'Dashboard') ? 'text-white bg-gray-900' : 'text-gray-300 hover:bg-gray-700 hover:text-white'; ?>" aria-current="page">Dashboard</a>
+          <a href="homepage.php" class="px-3 py-2 text-sm font-medium rounded-md <?= ($page == 'Home') ? 'text-white bg-gray-900' : 'text-gray-300 hover:bg-gray-700 hover:text-white'; ?>" aria-current="page">Home</a>
           <a href="subjects.php" class="px-3 py-2 text-sm font-medium rounded-md <?= ($page == 'Subjects') ? 'text-white bg-gray-900' : 'text-gray-300 hover:bg-gray-700 hover:text-white'; ?>">Subjects</a>
           <a href="grades.php" class="px-3 py-2 text-sm font-medium rounded-md <?= ($page == 'Grades') ? 'text-white bg-gray-900' : 'text-gray-300 hover:bg-gray-700 hover:text-white'; ?>">Grades</a>
         </div>
