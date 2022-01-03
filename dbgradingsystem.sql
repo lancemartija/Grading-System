@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jan 02, 2022 at 12:34 PM
+-- Generation Time: Jan 03, 2022 at 04:32 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.26
 
@@ -50,13 +50,15 @@ INSERT INTO `tblclass` (`class_id`, `class_code`, `class_name`, `class_desc`, `i
 (20, 133575, 'Hangul 101', 'Foreign Languages 1', 1152, 'Maya Wilkins Hawke', 'Grade 11', '2021-2022', '', '', '', ''),
 (21, 5135, 'JavaScript Essentials', 'Web Development 101', 36256, 'Henry Gesault Fabien', 'Grade 12', '2021-2022', '', '', '', ''),
 (23, 42345, 'Eloquent English', 'Eloquent English 101', 111, 'Jimmy Nickelson Cricket', 'Grade 11', '2022-2023', 'TTH', '4:30pm-5:30pm', 'Room 404', ''),
-(59, 123634, 'Ang Wikang Filipino', 'Filipino 1', 233425345, 'Terrence Magsino Mendoza', 'Grade 8', '2021-2022', '', '', '', ''),
-(60, 234324, 'PHP Essentials', 'Programming Class 1', 36256, 'Henry Gesault Fabien', 'Grade 12', '2022-2023', '', '', '', ''),
-(61, 42643, 'Fundamentals of SQL', 'Web Development 101', 36256, 'Henry Gesault Fabien', 'Grade 12', '2021-2022', '', '', '', ''),
-(63, 234523, 'Life of Jose Rizal', 'History 101', 233425345, 'Terrence Magsino Mendoza', 'Grade 7', '2021-2022', '', '', '', ''),
-(65, 12345, 'Advanced Math', 'Mathematics Made Easy', 5456345, 'Boris Olga Kovac', 'Grade 12', '2021-2022', '', '', '', ''),
+(65, 12345, 'Advanced Math', 'Mathematics Made Easy', 5456345, 'Boris Olga Kovac', 'Grade 12', '2021-2022', 'MWF', '10:30am-11:30am', 'Room 107', ''),
 (66, 245234, 'Artificial Intelligence 1', 'Computer Science', 234245, 'Kazuhira Miller', 'Grade 12', '2021-2022', '', '', '', ''),
-(67, 133576, 'Hiragana 101', 'Foreign Languages 1', 1152, 'Maya Wilkins Hawke', 'Grade 10', '2021-2022', '', '', '', '');
+(67, 133576, 'Hiragana 101', 'Foreign Languages 1', 1152, 'Maya Wilkins Hawke', 'Grade 10', '2021-2022', '', '', '', ''),
+(69, 1634, 'Purposive Communication', 'Eloquent English 101', 111, 'Jimmy Nickelson Cricket', 'Grade 12', '2022-2023', '', '', '', ''),
+(70, 124123, 'English Literature', 'Eloquent English 101', 111, 'Jimmy Nickelson Cricket', 'Grade 7', '2021-2022', '', '', '', ''),
+(71, 3143434, 'MAPEH 2', 'MAPEH 101', 124345, 'Wilson Mendoza Perez', 'Grade 9', '2022-2023', '', '', '', ''),
+(72, 34523, 'Advanced Math 2', 'Mathematics Made Easy', 235, 'Michael Johnson Ash', 'Grade 12', '2022-2023', '', '', '', ''),
+(73, 2343513, 'Algebra Essentials', 'Mathematics Made Easy', 235, 'Michael Johnson Ash', 'Grade 7', '2022-2023', '', '', '', ''),
+(74, 7756453, 'JavaScript Essentials 2', 'Programming Class 2', 234245, 'Kazuhira Miller', 'Grade 12', '2022-2023', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -149,7 +151,9 @@ INSERT INTO `tblgrades` (`grade_id`, `student_number`, `sy_id`, `subj_code`, `gr
 (64, 423425234, 19, 12345, 0, 0, 0, 0, 0, ''),
 (65, 423425234, 19, 245234, 0, 0, 0, 0, 0, ''),
 (66, 423425234, 19, 42643, 0, 0, 0, 0, 0, ''),
-(68, 234235, 21, 133576, 0, 0, 0, 0, 0, '');
+(68, 234235, 21, 133576, 0, 0, 0, 0, 0, ''),
+(72, 423425234, 19, 5135, 0, 0, 0, 0, 0, ''),
+(73, 423425234, 19, 234324, 0, 0, 0, 0, 0, '');
 
 -- --------------------------------------------------------
 
@@ -181,7 +185,7 @@ INSERT INTO `tblinstructor` (`inst_id`, `inst_code`, `inst_name`, `inst_address`
 (6, 5456345, 'Boris Olga Kovac', 'Novosibirsk, RU', 'Male', 'Female', 'kovac.boris@email.com', 'Contract'),
 (7, 233425345, 'Terrence Magsino Mendoza', 'Lipa City, Batangas, PH', 'Male', 'Single', 'wine.enthusiast@email.com', 'Intern'),
 (8, 234245, 'Kazuhira Miller', 'Outer Heaven', 'Male', 'Widowed', 'kaz.miller@email.com', 'Contract'),
-(9, 542345324, 'Nathan Drake', 'N/A', 'Male', 'Female', 'nate122@email.com', 'Part-time');
+(9, 542345324, 'Nathan Drake', 'N/A', 'Male', 'Married', 'nate122@email.com', 'Part-time');
 
 -- --------------------------------------------------------
 
@@ -242,7 +246,8 @@ INSERT INTO `tblschoolyear` (`sy_id`, `sy_ay`, `sy_level`, `class_id`, `student_
 (18, '2021-2022', 'Grade 8', 0, 2147483647, 'ENROLLED', '2021-12-31', 'Continuing'),
 (19, '2021-2022', 'Grade 12', 0, 423425234, 'ENROLLED', '2021-12-31', 'New Student'),
 (21, '2021-2022', 'Grade 10', 0, 234235, 'ENROLLED', '2022-01-28', 'New Student'),
-(22, '2022-2023', 'Grade 10', 0, 123513, 'ENROLLED', '2022-01-20', 'New Student');
+(22, '2022-2023', 'Grade 10', 0, 123513, 'ENROLLED', '2022-01-20', 'New Student'),
+(24, '2021-2022', 'test', 0, 1234125, 'ENROLLED', '2022-01-12', 'New Student');
 
 -- --------------------------------------------------------
 
@@ -303,7 +308,7 @@ CREATE TABLE `tblsubjects` (
 --
 
 INSERT INTO `tblsubjects` (`subj_id`, `subj_code`, `subj_name`, `subj_desc`, `subj_level`, `subj_unit`, `subj_ay`, `subj_sem`) VALUES
-(1, 12345, 'Advanced Math', 'Mathematics Made Easy', 'Grade 12', 3, '2021-2022', 'Summer'),
+(1, 12345, 'Advanced Math', 'Mathematics Made Easy', 'Grade 12', 3, '2021-2022', 'First Semester'),
 (2, 42345, 'Eloquent English', 'Eloquent English 101', 'Grade 11', 3, '2022-2023', 'First Semester'),
 (3, 133575, 'Hangul 101', 'Foreign Languages 1', 'Grade 11', 2, '2021-2022', 'Second Semester'),
 (4, 133576, 'Hiragana 101', 'Foreign Languages 1', 'Grade 10', 2, '2021-2022', 'First Semester'),
@@ -312,7 +317,16 @@ INSERT INTO `tblsubjects` (`subj_id`, `subj_code`, `subj_name`, `subj_desc`, `su
 (7, 234523, 'Life of Jose Rizal', 'History 101', 'Grade 7', 2, '2021-2022', 'First Semester'),
 (8, 245234, 'Artificial Intelligence 1', 'Computer Science', 'Grade 12', 3, '2021-2022', 'First Semester'),
 (9, 42643, 'Fundamentals of SQL', 'Web Development 101', 'Grade 12', 3, '2021-2022', 'First Semester'),
-(10, 123634, 'Ang Wikang Filipino', 'Filipino 1', 'Grade 8', 2, '2021-2022', 'First Semester');
+(10, 123634, 'Ang Wikang Filipino', 'Filipino 1', 'Grade 8', 2, '2021-2022', 'First Semester'),
+(11, 34523, 'Advanced Math 2', 'Mathematics Made Easy', 'Grade 12', 3, '2022-2023', 'Second Semester'),
+(12, 1634, 'Purposive Communication', 'Eloquent English 101', 'Grade 12', 2, '2022-2023', 'Second Semester'),
+(13, 54345, 'Fundamentals of HTML', 'Web Development 101', 'Grade 10', 2, '2021-2022', 'First Semester'),
+(14, 2343513, 'Algebra Essentials', 'Mathematics Made Easy', 'Grade 7', 3, '2022-2023', 'Second Semester'),
+(15, 124123, 'English Literature', 'Eloquent English 101', 'Grade 7', 2, '2021-2022', 'First Semester'),
+(16, 3143434, 'MAPEH 2', 'MAPEH 101', 'Grade 9', 2, '2022-2023', 'Second Semester'),
+(17, 234654, 'Ang Wikang Filipino - Wikang Minamahal', 'Filipino 2', 'Grade 9', 2, '2021-2022', 'First Semester'),
+(18, 5324234, 'Noli Me Tangere', 'Filipino 2', 'Grade 9', 2, '2021-2022', 'First Semester'),
+(19, 7756453, 'JavaScript Essentials 2', 'Programming Class 2', 'Grade 12', 3, '2022-2023', 'Second Semester');
 
 -- --------------------------------------------------------
 
@@ -441,7 +455,7 @@ ALTER TABLE `tblyear`
 -- AUTO_INCREMENT for table `tblclass`
 --
 ALTER TABLE `tblclass`
-  MODIFY `class_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+  MODIFY `class_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
 
 --
 -- AUTO_INCREMENT for table `tblcourse`
@@ -459,7 +473,7 @@ ALTER TABLE `tbldepartment`
 -- AUTO_INCREMENT for table `tblgrades`
 --
 ALTER TABLE `tblgrades`
-  MODIFY `grade_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
+  MODIFY `grade_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
 
 --
 -- AUTO_INCREMENT for table `tblinstructor`
@@ -477,7 +491,7 @@ ALTER TABLE `tblrooms`
 -- AUTO_INCREMENT for table `tblschoolyear`
 --
 ALTER TABLE `tblschoolyear`
-  MODIFY `sy_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `sy_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `tblstudents`
@@ -489,7 +503,7 @@ ALTER TABLE `tblstudents`
 -- AUTO_INCREMENT for table `tblsubjects`
 --
 ALTER TABLE `tblsubjects`
-  MODIFY `subj_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `subj_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `tbluseraccounts`
