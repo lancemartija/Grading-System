@@ -8,6 +8,9 @@ This project serves as our final output for our Summative Assessment 3 in Web De
 
 - [PHP](https://www.php.net/)
 - [Tailwind CSS 3.0](https://tailwindcss.com/)
+- [Flowbite](https://flowbite.com/)
+- [Mamba UI](https://mambaui.com/)
+- [HyperUI](https://hyperui.dev/)
 - Vanilla JavaScript
 - [JQuery](https://jquery.com)
 - MySQL
@@ -35,7 +38,7 @@ Also, don't forget to download and install [XAMPP](https://www.apachefriends.org
    ```sh
    npm install
    ```
-3. Create a database and name it as "***dbgradingsystem***" in **phpMyAdmin**
+3. Create a database and name it as "**_dbgradingsystem_**" in **phpMyAdmin**
 4. Import the sql file located in this repository _(dbgradingsystem.sql)_
 5. Run the system
 
@@ -43,12 +46,12 @@ Also, don't forget to download and install [XAMPP](https://www.apachefriends.org
 
 In order to access the administrator dashboard of the system, you must enter a username and password, and for the student dashboard, you must enter a student number that exists inside the database.
 
-- Admin username & password: ***admin***
-- Student Number: ***1234125*** or any other student number located in the Admin's site
+- Admin username & password: **_admin_**
+- Student Number: **_1234125_** or any other student number located in the Admin's site
 
 ## Contact
 
-### Lance Martija 
+### Lance Martija
 
 - Twitter: [@lancemartija](https://twitter.com/lancemartija)
 - Frontend Mentor: [@lancemartija](https://www.frontendmentor.io/profile/lancemartija)
