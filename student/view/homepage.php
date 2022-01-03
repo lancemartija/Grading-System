@@ -116,6 +116,9 @@ $page = 'Home';
         </div>
       </section>
     </div>
+    <footer class="pt-8 pb-6">
+      <p class="text-sm text-center text-gray-400">&#169; 2022 Webdvt SA3 <b>Group 1</b>. All rights reserved.</p>
+    </footer>
   </main>
 
 </body>
