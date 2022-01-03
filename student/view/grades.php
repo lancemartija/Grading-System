@@ -22,7 +22,7 @@ $page = 'Grades';
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Student's Grades</title>
-  <link rel="stylesheet" href="../../src/css/tailwind.css?v=<?= time(); ?>">
+  <link rel="stylesheet" href="../../src/css/tailwind.css">
 </head>
 
 <body class="h-full">
@@ -32,6 +32,9 @@ $page = 'Grades';
       <?php include_once '../templates/tabs.php'; ?>
       <?php include_once '../page/grades/display-data.inc.php'; ?>
     </div>
+    <footer class="pt-8 pb-6">
+      <p class="text-sm text-center text-gray-400">&#169; 2022 Webdvt SA3 <b>Group 1</b>. All rights reserved.</p>
+    </footer>
   </main>
 
 </body>
