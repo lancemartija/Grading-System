@@ -1,5 +1,9 @@
 # Grading System
 
+![Selection Menu](screenshots/selection-menu.png)
+![Admin Dashboard](screenshots/admin-dashboard-page.png)
+![Student Subjects Page](screenshots/student-subjects-page.png)
+
 ## About The Project
 
 This project serves as our final output for our Summative Assessment 3 in Web Development (Webdvt) subject in De La Salle Lipa, which utilizes basic CRUD (Create, Read, Update, Delete) operations and database management.
