@@ -1,9 +1,1 @@
 node_modules
-
-*.json
-
-*.css
-
-*.config.json
-
-.gitignore
