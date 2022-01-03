@@ -55,7 +55,7 @@ $currentpage = 'Our Team';
         </div>
       </section>
       <footer class="mt-10 mb-6">
-        <p class="text-sm text-center text-gray-400">&#169; 2021 Webdvt SA3 <b>Group 1</b>. All rights reserved.</p>
+        <p class="text-sm text-center text-gray-400">&#169; 2022 Webdvt SA3 <b>Group 1</b>. All rights reserved.</p>
       </footer>
     </main>
   </div>
