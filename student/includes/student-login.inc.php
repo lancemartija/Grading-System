@@ -12,5 +12,5 @@ if (isset($_POST["submit"])) {
 
     $login->loginUser();
 
-    header('Location: ../view/dashboard.php');
+    header('Location: ../view/homepage.php');
 }
